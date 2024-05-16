@@ -3,7 +3,7 @@ package com.lorenzotardini.clrestaurant;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class CLRController {
     @FXML
     private Label welcomeText;
 
