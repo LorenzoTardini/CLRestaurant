@@ -3,9 +3,25 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('file:../CLRestaurant/src/main/assets/mainpantemp.jpg');" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button layoutX="274.0" layoutY="188.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="42.0" layoutY="55.0" mnemonicParsing="false" text="bacon" />
+      <Button layoutX="42.0" layoutY="94.0" mnemonicParsing="false" text="fomaggio" />
+      <Button layoutX="42.0" layoutY="134.0" mnemonicParsing="false" text="uova" />
+      <Button layoutX="42.0" layoutY="176.0" mnemonicParsing="false" text="lattuga" />
+      <Button layoutX="42.0" layoutY="213.0" mnemonicParsing="false" text="funghi" />
+      <Button layoutX="42.0" layoutY="255.0" mnemonicParsing="false" text="svizzera" />
+      <Button layoutX="42.0" layoutY="301.0" mnemonicParsing="false" text="pomodoro" />
+      <Button layoutX="470.0" layoutY="55.0" mnemonicParsing="false" text="pomodoro" />
+      <Button layoutX="470.0" layoutY="94.0" mnemonicParsing="false" text="mozzaerella" />
+      <Button layoutX="470.0" layoutY="134.0" mnemonicParsing="false" text="verdure" />
+      <Button layoutX="470.0" layoutY="176.0" mnemonicParsing="false" text="salsiccia" />
+      <Button layoutX="470.0" layoutY="213.0" mnemonicParsing="false" text="salame" />
+      <Button layoutX="470.0" layoutY="255.0" mnemonicParsing="false" text="ananas" />
+      <Button layoutX="470.0" layoutY="289.0" mnemonicParsing="false" text="acciughe" />
+      <Button layoutX="222.0" layoutY="238.0" mnemonicParsing="false" text="bread 1 " />
+      <Button layoutX="222.0" layoutY="277.0" mnemonicParsing="false" text="bread 2" />
+      <Button layoutX="342.0" layoutY="255.0" mnemonicParsing="false" text="impasto" />
    </children>
 </AnchorPane>
