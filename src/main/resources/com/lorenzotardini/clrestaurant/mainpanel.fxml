@@ -3,25 +3,29 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('file:../CLRestaurant/src/main/assets/mainpantemp.jpg');" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxWidth="400.0" minHeight="600.0" minWidth="400.0" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button fx:id="button" layoutX="274.0" layoutY="188.0" mnemonicParsing="false" text="Button" />
-      <Button fx:id="bacon" layoutX="42.0" layoutY="55.0" mnemonicParsing="false" text="bacon" />
-      <Button fx:id="cheese" layoutX="42.0" layoutY="94.0" mnemonicParsing="false" text="fomaggio" />
-      <Button fx:id="egg" layoutX="42.0" layoutY="134.0" mnemonicParsing="false" text="uova" />
-      <Button fx:id="lettuce" layoutX="42.0" layoutY="176.0" mnemonicParsing="false" text="lattuga" />
-      <Button fx:id="mushrooms" layoutX="42.0" layoutY="213.0" mnemonicParsing="false" text="funghi" />
-      <Button fx:id="patty" layoutX="42.0" layoutY="255.0" mnemonicParsing="false" text="svizzera" />
-      <Button fx:id="tomatoh" layoutX="42.0" layoutY="301.0" mnemonicParsing="false" text="pomodoro" />
-      <Button fx:id="tomatop" layoutX="470.0" layoutY="55.0" mnemonicParsing="false" text="pomodoro" />
-      <Button fx:id="mozzarella" layoutX="470.0" layoutY="94.0" mnemonicParsing="false" text="mozzaerella" />
-      <Button fx:id="vegetable" layoutX="470.0" layoutY="134.0" mnemonicParsing="false" text="verdure" />
-      <Button fx:id="sausage" layoutX="470.0" layoutY="176.0" mnemonicParsing="false" text="salsiccia" />
-      <Button fx:id="salami" layoutX="470.0" layoutY="213.0" mnemonicParsing="false" text="salame" />
-      <Button fx:id="pineapple" layoutX="470.0" layoutY="255.0" mnemonicParsing="false" text="ananas" />
-      <Button fx:id="fish" layoutX="470.0" layoutY="289.0" mnemonicParsing="false" text="acciughe" />
-      <Button fx:id="bread1" layoutX="222.0" layoutY="238.0" mnemonicParsing="false" text="bread 1 " />
-      <Button fx:id="bread2" layoutX="222.0" layoutY="277.0" mnemonicParsing="false" text="bread 2" />
-      <Button fx:id="impasto" layoutX="342.0" layoutY="255.0" mnemonicParsing="false" text="impasto" />
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('file:../CLRestaurant/src/main/assets/mainpantemp.jpg');">
+         <children>
+            <Button fx:id="button" layoutX="274.0" layoutY="188.0" mnemonicParsing="false" text="Button" />
+            <Button fx:id="bacon" layoutX="42.0" layoutY="55.0" mnemonicParsing="false" text="bacon" />
+            <Button fx:id="cheese" layoutX="42.0" layoutY="94.0" mnemonicParsing="false" text="fomaggio" />
+            <Button fx:id="egg" layoutX="42.0" layoutY="134.0" mnemonicParsing="false" text="uova" />
+            <Button fx:id="lettuce" layoutX="42.0" layoutY="176.0" mnemonicParsing="false" text="lattuga" />
+            <Button fx:id="mushrooms" layoutX="42.0" layoutY="213.0" mnemonicParsing="false" text="funghi" />
+            <Button fx:id="patty" layoutX="42.0" layoutY="255.0" mnemonicParsing="false" text="svizzera" />
+            <Button fx:id="tomatoh" layoutX="42.0" layoutY="301.0" mnemonicParsing="false" text="pomodoro" />
+            <Button fx:id="tomatop" layoutX="470.0" layoutY="55.0" mnemonicParsing="false" text="pomodoro" />
+            <Button fx:id="mozzarella" layoutX="470.0" layoutY="94.0" mnemonicParsing="false" text="mozzaerella" />
+            <Button fx:id="vegetable" layoutX="470.0" layoutY="134.0" mnemonicParsing="false" text="verdure" />
+            <Button fx:id="sausage" layoutX="470.0" layoutY="176.0" mnemonicParsing="false" text="salsiccia" />
+            <Button fx:id="salami" layoutX="470.0" layoutY="213.0" mnemonicParsing="false" text="salame" />
+            <Button fx:id="pineapple" layoutX="470.0" layoutY="255.0" mnemonicParsing="false" text="ananas" />
+            <Button fx:id="fish" layoutX="470.0" layoutY="289.0" mnemonicParsing="false" text="acciughe" />
+            <Button fx:id="bread1" layoutX="222.0" layoutY="238.0" mnemonicParsing="false" text="bread 1 " />
+            <Button fx:id="bread2" layoutX="222.0" layoutY="277.0" mnemonicParsing="false" text="bread 2" />
+            <Button fx:id="impasto" layoutX="342.0" layoutY="255.0" mnemonicParsing="false" text="impasto" />
+         </children>
+      </AnchorPane>
    </children>
-</AnchorPane>
+</Pane>
