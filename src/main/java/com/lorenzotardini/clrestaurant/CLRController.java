@@ -25,7 +25,6 @@ public class CLRController {
     private Button bread1;
     @FXML
     private Button bread2;
-
     @FXML
     private Button tomatop;
     @FXML
