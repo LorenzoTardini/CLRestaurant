@@ -6,9 +6,9 @@
 <Pane maxWidth="400.0" minHeight="600.0" minWidth="400.0" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lorenzotardini.clrestaurant.CLRController">
    <children>
 
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('file:../CLRestaurant/src/main/assets/mainpantemp.jpg');">
+      <AnchorPane layoutY="57.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('file:../CLRestaurant/src/main/assets/mainpantemp.jpg');">
          <children>
-            <Button fx:id="button" layoutX="274.0" layoutY="188.0" mnemonicParsing="false" text="Button" />
+            <Button fx:id="start" layoutX="280.0" layoutY="30.0" mnemonicParsing="false" onAction="#clickedStart" text="start" />
             <Button fx:id="bacon" layoutX="42.0" layoutY="55.0" mnemonicParsing="false" onAction="#clickedBacon" text="bacon" AnchorPane.leftAnchor="42.0" />
             <Button fx:id="cheese" layoutX="42.0" layoutY="94.0" mnemonicParsing="false" onAction="#clickedCheese" text="fomaggio" />
             <Button fx:id="egg" layoutX="42.0" layoutY="134.0" mnemonicParsing="false" onAction="#clickedEgg" text="uova" />

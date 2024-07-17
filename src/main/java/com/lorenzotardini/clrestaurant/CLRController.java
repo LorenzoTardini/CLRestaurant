@@ -133,6 +133,12 @@ public class CLRController {
         impasto.setDisable(true);
 
     }
+    @FXML
+    protected void clickedStart() {
+        int[] order = CLRgame.ordergenerator();
+        System.out.println("\n");
+    }
+
 
 
 }

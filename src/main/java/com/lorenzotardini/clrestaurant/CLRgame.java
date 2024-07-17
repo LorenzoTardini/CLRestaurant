@@ -1,19 +1,16 @@
 package com.lorenzotardini.clrestaurant;
 
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
 
 public class CLRgame{
-    Random randomgen = new Random();
-    int randomsize = randomgen.nextInt(8);
-    int[] retarr = new int[randomsize];
-    Integer[] referencearr = new Integer[7];
+    static Random randomgen = new Random();
+    static int randomsize = randomgen.nextInt(8);
+    static int[] retarr = new int[randomsize];
+    static Integer[] referencearr = new Integer[7];
 
-    public void ordergenerator() {
+    public static int[] ordergenerator() {
         for(int i = 0; i< referencearr.length; i++)
         {
             referencearr[i] = i+1;
@@ -24,5 +21,6 @@ public class CLRgame{
             retarr[i] = referencearr[i];
             System.out.println(retarr[i]);
         }
+        return retarr;
     }
 }
