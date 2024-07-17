@@ -50,191 +50,88 @@ public class CLRController {
     }
     @FXML
     protected void clickedMushrooms() {
-        mushrooms.disarm();
-
-        if(mushrooms.isDisable())
-        {
-            mushrooms.setDisable(false);
-        }
-        else mushrooms.setDisable(true);
+        mushrooms.setDisable(true);
 
     }
 
-
+    @FXML
     protected void clickedCheese() {
-        cheese.disarm();
-
-        if(cheese.isDisable())
-        {
-            cheese.setDisable(false);
-        }
-        else cheese.setDisable(true);
+        cheese.setDisable(true);
 
     }
-
+    @FXML
     protected void clickedEgg() {
-        egg.disarm();
-
-        if(egg.isDisable())
-        {
-            egg.setDisable(false);
-        }
-        else egg.setDisable(true);
+        egg.setDisable(true);
 
     }
-
+    @FXML
     protected void clickedBacon() {
-        bacon.disarm();
-
-        if(bacon.isDisable())
-        {
-            bacon.setDisable(false);
-        }
-        else bacon.setDisable(true);
-
+        bacon.setDisable(true);
     }
-
+    @FXML
     protected void clickedLettuce() {
-        lettuce.disarm();
-
-        if(lettuce.isDisable())
-        {
-            lettuce.setDisable(false);
-        }
-        else lettuce.setDisable(true);
+        lettuce.setDisable(true);
 
     }
-
+    @FXML
     protected void clickedPatty() {
-        patty.disarm();
-
-        if(patty.isDisable())
-        {
-            patty.setDisable(false);
-        }
-        else patty.setDisable(true);
+        patty.setDisable(true);
 
     }
-
+    @FXML
     protected void clickedTomatoh() {
-        tomatoh.disarm();
-
-        if(tomatoh.isDisable())
-        {
-            tomatoh.setDisable(false);
-        }
-        else tomatoh.setDisable(true);
+        tomatoh.setDisable(true);
 
     }
-
+    @FXML
     protected void clickedBread1() {
-        bread1.disarm();
-
-        if(bread1.isDisable())
-        {
-            bread1.setDisable(false);
-        }
-        else bread1.setDisable(true);
+        bread1.setDisable(true);
 
     }
-
+    @FXML
     protected void clickedBread2() {
-        bread2.disarm();
-
-        if(bread2.isDisable())
-        {
-            bread2.setDisable(false);
-        }
-        else bread2.setDisable(true);
+        bread2.setDisable(true);
 
     }
-
+    @FXML
     protected void clickedTomatop() {
-        tomatop.disarm();
-
-        if(tomatop.isDisable())
-        {
-            tomatop.setDisable(false);
-        }
-        else tomatop.setDisable(true);
+        tomatop.setDisable(true);
 
     }
 
-
+    @FXML
     protected void clickedMozzarella() {
-        mozzarella.disarm();
-
-        if(mozzarella.isDisable())
-        {
-            mozzarella.setDisable(false);
-        }
-        else mozzarella.setDisable(true);
+        mozzarella.setDisable(true);
 
     }
-
+    @FXML
     protected void clickedVegetable() {
-        vegetable.disarm();
-
-        if(vegetable.isDisable())
-        {
-            vegetable.setDisable(false);
-        }
-        else vegetable.setDisable(true);
+        vegetable.setDisable(true);
 
     }
-
+    @FXML
     protected void clickedSausage() {
-        sausage.disarm();
-
-        if(sausage.isDisable())
-        {
-            sausage.setDisable(false);
-        }
-        else sausage.setDisable(true);
+        sausage.setDisable(true);
 
     }
-
+    @FXML
     protected void clickedSalami() {
-        salami.disarm();
-
-        if(salami.isDisable())
-        {
-            salami.setDisable(false);
-        }
-        else salami.setDisable(true);
+        salami.setDisable(true);
 
     }
-
+    @FXML
     protected void clickedPineapple() {
-        pineapple.disarm();
-
-        if(pineapple.isDisable())
-        {
-            pineapple.setDisable(false);
-        }
-        else pineapple.setDisable(true);
+        pineapple.setDisable(true);
 
     }
-
+    @FXML
     protected void clickedFish() {
-        fish.disarm();
-
-        if(fish.isDisable())
-        {
-            fish.setDisable(false);
-        }
-        else fish.setDisable(true);
+        fish.setDisable(true);
 
     }
-
+    @FXML
     protected void clickedImpasto() {
-        impasto.disarm();
-
-        if(impasto.isDisable())
-        {
-            impasto.setDisable(false);
-        }
-        else impasto.setDisable(true);
+        impasto.setDisable(true);
 
     }
 
