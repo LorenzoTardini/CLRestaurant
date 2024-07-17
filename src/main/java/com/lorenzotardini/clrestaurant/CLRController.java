@@ -9,9 +9,23 @@ public class CLRController {
     private Label welcomeText;
     @FXML
     private Button bacon;
+    @FXML
+    private Button baconn;
 
     @FXML
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to JavaFX Application!");
+    }
+    @FXML
+    protected void clickedMushrooms() {
+        System.out.println("hello world");
+        bacon.disarm();
+
+        if(baconn.isDisable())
+        {
+            baconn.setDisable(false);
+        }
+        else baconn.setDisable(true);
+
     }
 }
