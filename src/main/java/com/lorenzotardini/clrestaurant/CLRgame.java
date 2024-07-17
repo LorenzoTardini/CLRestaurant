@@ -3,14 +3,15 @@ package com.lorenzotardini.clrestaurant;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
+import java.lang.*;
 
 public class CLRgame{
-    static Random randomgen = new Random();
-    static int randomsize = randomgen.nextInt(8);
-    static int[] retarr = new int[randomsize];
-    static Integer[] referencearr = new Integer[7];
-
     public static int[] ordergenerator() {
+        Random randomgen = new Random(System.currentTimeMillis());
+        int randomsize = randomgen.nextInt(8);
+        int[] retarr = new int[randomsize];
+        Integer[] referencearr = new Integer[7];
+        
         for(int i = 0; i< referencearr.length; i++)
         {
             referencearr[i] = i+1;

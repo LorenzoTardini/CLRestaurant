@@ -137,6 +137,7 @@ public class CLRController {
     protected void clickedStart() {
         int[] order = CLRgame.ordergenerator();
         System.out.println("\n");
+
     }
 
 
