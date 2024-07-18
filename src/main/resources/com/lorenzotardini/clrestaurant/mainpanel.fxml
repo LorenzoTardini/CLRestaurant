@@ -23,9 +23,9 @@
             <Button fx:id="salami" layoutX="470.0" layoutY="213.0" mnemonicParsing="false" onAction="#clickedSalami" text="salame" />
             <Button fx:id="pineapple" layoutX="470.0" layoutY="255.0" mnemonicParsing="false" onAction="#clickedPineapple" text="ananas" />
             <Button fx:id="fish" layoutX="470.0" layoutY="289.0" mnemonicParsing="false" onAction="#clickedFish" text="acciughe" />
-            <Button fx:id="bread1" layoutX="222.0" layoutY="238.0" mnemonicParsing="false" onAction="#clickedBread1" text="bread 1 " />
-            <Button fx:id="bread2" layoutX="222.0" layoutY="277.0" mnemonicParsing="false" onAction="#clickedBread2" text="bread 2" />
-            <Button fx:id="impasto" layoutX="342.0" layoutY="255.0" mnemonicParsing="false" onAction="#clickedImpasto" text="impasto" />
+            <Button fx:id="bread1" layoutX="222.0" layoutY="238.0" mnemonicParsing="false" text="bread 1 " />
+            <Button fx:id="bread2" layoutX="222.0" layoutY="277.0" mnemonicParsing="false" text="bread 2" />
+            <Button fx:id="impasto" layoutX="342.0" layoutY="255.0" mnemonicParsing="false" text="impasto" />
          </children>
       </AnchorPane>
    </children>

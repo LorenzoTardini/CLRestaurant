@@ -82,16 +82,7 @@ public class CLRController {
         tomatoh.setDisable(true);
 
     }
-    @FXML
-    protected void clickedBread1() {
-        bread1.setDisable(true);
 
-    }
-    @FXML
-    protected void clickedBread2() {
-        bread2.setDisable(true);
-
-    }
     @FXML
     protected void clickedTomatop() {
         tomatop.setDisable(true);
@@ -126,11 +117,6 @@ public class CLRController {
     @FXML
     protected void clickedFish() {
         fish.setDisable(true);
-
-    }
-    @FXML
-    protected void clickedImpasto() {
-        impasto.setDisable(true);
 
     }
     @FXML
