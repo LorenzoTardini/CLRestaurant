@@ -11,7 +11,7 @@ public class CLRgame{
         int randomsize = randomgen.nextInt(8);
         int[] retarr = new int[randomsize];
         Integer[] referencearr = new Integer[7];
-        
+
         for(int i = 0; i< referencearr.length; i++)
         {
             referencearr[i] = i+1;
