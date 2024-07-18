@@ -14,8 +14,8 @@ public class CLRApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("Hello!");
         stage.setResizable(false);
-        stage.setMinHeight(400.0);
-        stage.setMinWidth(600.0);
+        stage.setMinHeight(900.0);
+        stage.setMinWidth(900.0);
         stage.setScene(scene);
         stage.show();
     }

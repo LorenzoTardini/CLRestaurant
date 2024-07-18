@@ -1,14 +1,44 @@
 package com.lorenzotardini.clrestaurant;
 
+import javafx.scene.image.Image;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
 import java.lang.*;
 
 public class CLRgame{
-    public static int[] ordergenerator() {
+
+    static Image imagepatty;
+    static Image imagetomatoh;
+    static Image imagemushrooms;
+    static Image imagelettuce;
+    static Image imageegg;
+    static Image imagecheese;
+    static Image imagebread1;
+    static Image imagebread2;
+    static Image imagebacon;
+    static Image imageanchovy;
+    static Image imageaubergine;
+    static Image imagesalami;
+    static Image imagepineapple;
+    static Image imagemozzarella;
+    static Image imagetomatop;
+    static Image imageimpasto;
+    static Image imagesausage;
+
+
+
+
+
+
+    public static int[] ingredientgenerator() {
         Random randomgen = new Random(System.currentTimeMillis());
-        int randomsize = randomgen.nextInt(8);
+        int randomsize=0;
+        while(randomsize==0)
+            randomsize = randomgen.nextInt(8);
         int[] retarr = new int[randomsize];
         Integer[] referencearr = new Integer[7];
 
@@ -23,5 +53,39 @@ public class CLRgame{
             System.out.println(retarr[i]);
         }
         return retarr;
+    }
+
+    public static int[] ordercreator(){
+        Random randomgen = new Random();
+        boolean decision = randomgen.nextBoolean();
+        int[] order = CLRgame.ingredientgenerator();
+        return order;
+    }
+
+
+    public void initimages(){
+        try {
+            imagepatty = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\hamburger\\patty.png"));
+            imagetomatoh = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\hamburger\\tomatoh.png"));
+            imagemushrooms = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\hamburger\\mushrooms.png"));
+            imagelettuce = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\hamburger\\lettuce.png"));
+            imageegg = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\hamburger\\egg.png"));
+            imagecheese = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\hamburger\\cheese.png"));
+            imagebread1 = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\hamburger\\bread1.png"));
+            imagebread2 = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\hamburger\\bread2.png"));
+            imagebacon = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\hamburger\\bacon.png"));
+            imageanchovy = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\anchovy.PNG"));
+            imageaubergine = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\aubergine.PNG"));
+            imagesalami = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\salami.PNG"));
+            imagepineapple = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\pineapple.PNG"));
+            imagetomatop = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\PLACEHOLDER.PNG"));
+            imagemozzarella = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\PLACEHOLDER.PNG"));
+            imagesausage = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\PLACEHOLDER.PNG"));
+            imageimpasto = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\PLACEHOLDER.PNG"));
+
+
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
