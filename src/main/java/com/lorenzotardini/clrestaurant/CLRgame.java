@@ -28,6 +28,7 @@ public class CLRgame{
     static Image imagetomatop;
     static Image imageimpasto;
     static Image imagesausage;
+    static int[] localorder;
 
 
 
@@ -59,9 +60,17 @@ public class CLRgame{
         Random randomgen = new Random();
         boolean decision = randomgen.nextBoolean();
         int[] order = CLRgame.ingredientgenerator();
+        localorder = order;
         return order;
     }
 
+    public static int[] getLocalorder() {
+        return localorder;
+    }
+
+    public static void setLocalorder(int[] localorder) {
+        CLRgame.localorder = localorder;
+    }
 
     public Image[] initimages(){
         try {

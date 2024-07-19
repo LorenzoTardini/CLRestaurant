@@ -5,12 +5,21 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.*;
 
-import java.nio.InvalidMarkException;
 import java.util.Random;
 
-public class CLRController {
+public class CLRController{
     @FXML
     private Label welcomeText;
+    @FXML
+    private Button submit;
+
+
+
+    @FXML
+    private Button bread1;
+    @FXML
+    private Button bread2;
+
     @FXML
     private Button bacon;
     @FXML
@@ -25,10 +34,12 @@ public class CLRController {
     private Button patty;
     @FXML
     private Button tomatoh;
+
+
+
     @FXML
-    private Button bread1;
-    @FXML
-    private Button bread2;
+    private Button impasto;
+
     @FXML
     private Button tomatop;
     @FXML
@@ -43,10 +54,9 @@ public class CLRController {
     private Button pineapple;
     @FXML
     private Button fish;
-    @FXML
-    private Button impasto;
-    @FXML
-    private Button submit;
+
+
+
 
 
 
@@ -54,6 +64,7 @@ public class CLRController {
     private ImageView base1;
     @FXML
     private ImageView base2;
+
     @FXML
     private ImageView bubble1 = new ImageView();
     @FXML
@@ -68,6 +79,8 @@ public class CLRController {
     private ImageView bubble6 = new ImageView();
     @FXML
     private ImageView bubble7 = new ImageView();
+
+
 
 
     @FXML
@@ -91,11 +104,10 @@ public class CLRController {
     private ImageView ingredient7 = new ImageView();
 
 
+
+
     int count = 0;
-    double last = 0.0;
-
-
-    private CLRgame order = new CLRgame();
+    private CLRgame orderistance = new CLRgame();
     private boolean validcreation = false;
 
 
@@ -181,8 +193,10 @@ public class CLRController {
             //ingredients[count].setImage(CLRgame.imagetomatoh);
             count++;
         }
-
     }
+
+
+
 
     @FXML
     protected void clickedBread1() {
@@ -201,6 +215,8 @@ public class CLRController {
         }
     }
 
+
+
     private void buttonfiller(int identifier) {
         ImageView[] ingredients = {
                 ingredient1, ingredient2,
@@ -208,7 +224,7 @@ public class CLRController {
                 ingredient5, ingredient6,
                 ingredient7
         };
-        Image[] images = order.initimages();
+        Image[] images = orderistance.initimages();
 
         for (int i = 0; i < ingredients.length; i++) {
             if (i == identifier) {
@@ -216,6 +232,14 @@ public class CLRController {
                 ingredients[count].setImage(images[identifier]);
                 break;
             }
+        }
+    }
+
+    @FXML
+    protected void clickedSubmit(){
+        int[] prova = orderistance.getLocalorder();
+        for(int i=0; i<prova.length; i++){
+            System.out.println(prova[i]+"\n");
         }
     }
 
@@ -283,8 +307,8 @@ public class CLRController {
                 bubble7
         };
         cleanup(bubbles);
-        int[] generatedorder = order.ordercreator();
-        order.initimages();
+        int[] generatedorder = orderistance.ordercreator();
+        orderistance.initimages();
         showhamburgerbubble(generatedorder,bubbles);
 
 
@@ -311,7 +335,7 @@ public class CLRController {
 
     @FXML
     protected void showhamburgerbubble(int []generatedorder, ImageView[] bubbles){
-        base1.setImage(order.imagebread1);
+        base1.setImage(orderistance.imagebread1);
         base1.setVisible(true);
         double last=0;
         //placeholderfiller(-1,CLRgame.imagetomatop);
@@ -377,7 +401,7 @@ public class CLRController {
         }
         double coordY = last-80;
         base2.setLayoutY(coordY);
-        base2.setImage(order.imagebread2);
+        base2.setImage(orderistance.imagebread2);
         base2.setVisible(true);
     }
 
