@@ -3,8 +3,9 @@ package com.lorenzotardini.clrestaurant;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
+import javafx.scene.image.*;
 
+import java.nio.InvalidMarkException;
 import java.util.Random;
 
 public class CLRController {
@@ -44,6 +45,9 @@ public class CLRController {
     private Button fish;
     @FXML
     private Button impasto;
+    @FXML
+    private Button submit;
+
 
 
     @FXML
@@ -70,6 +74,7 @@ public class CLRController {
     private ImageView orderbase1 = new ImageView();
     @FXML
     private ImageView orderbase2 = new ImageView();
+
     @FXML
     private ImageView ingredient1 = new ImageView();
     @FXML
@@ -85,7 +90,6 @@ public class CLRController {
     @FXML
     private ImageView ingredient7 = new ImageView();
 
-    @FXML
 
     int count = 0;
     double last = 0.0;
@@ -94,6 +98,7 @@ public class CLRController {
     private CLRgame order = new CLRgame();
     private boolean validcreation = false;
 
+
     @FXML
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to JavaFX Application!");
@@ -101,7 +106,7 @@ public class CLRController {
 
     @FXML
     protected void clickedMushrooms() {
-        if(validcreation)
+        if (validcreation) {
             mushrooms.setDisable(true);
             buttonfiller(2);
             //ingredients[count].setVisible(true);
@@ -180,6 +185,44 @@ public class CLRController {
     }
 
     @FXML
+    protected void clickedBread1() {
+        validcreation = true;
+        bread1.setDisable(true);
+        orderbase1.setVisible(true);
+        orderbase1.setImage(CLRgame.imagebread1);
+    }
+
+    @FXML
+    protected void clickedBread2() {
+        if (validcreation) {
+            bread2.setDisable(true);
+            orderbase2.setVisible(true);
+            orderbase2.setImage(CLRgame.imagebread2);
+        }
+    }
+
+    private void buttonfiller(int identifier) {
+        ImageView[] ingredients = {
+                ingredient1, ingredient2,
+                ingredient3, ingredient4,
+                ingredient5, ingredient6,
+                ingredient7
+        };
+        Image[] images = order.initimages();
+
+        for (int i = 0; i < ingredients.length; i++) {
+            if (i == identifier) {
+                ingredients[count].setVisible(true);
+                ingredients[count].setImage(images[identifier]);
+                break;
+            }
+        }
+    }
+
+
+
+
+    @FXML
     protected void clickedTomatop() {
         if(validcreation)
             tomatop.setDisable(true);
@@ -222,16 +265,7 @@ public class CLRController {
             fish.setDisable(true);
 
     }
-    @FXML
-    protected void clickedBread1() {
-            validcreation=true;
-            bread1.setDisable(true);
-    }
-    @FXML
-    protected void clickedBread2() {
-        if(validcreation)
-            bread2.setDisable(true);
-    }
+
     @FXML
     protected void clickedImpasto() {
             validcreation=true;
@@ -265,6 +299,8 @@ public class CLRController {
             System.out.println("hello mama");
         }*/
     }
+
+
 
     protected void cleanup(ImageView[] bubbles){
            for( int i=0; i<bubbles.length; i++){

@@ -74,6 +74,7 @@ public class CLRgame{
             imagebread1 = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\hamburger\\bread1.png"));
             imagebread2 = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\hamburger\\bread2.png"));
             imagebacon = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\hamburger\\bacon.png"));
+
             imageanchovy = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\anchovy.PNG"));
             imageaubergine = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\aubergine.PNG"));
             imagesalami = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\salami.PNG"));
@@ -82,9 +83,8 @@ public class CLRgame{
             imagemozzarella = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\PLACEHOLDER.PNG"));
             imagesausage = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\PLACEHOLDER.PNG"));
             imageimpasto = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\PLACEHOLDER.PNG"));
-
-
-        } catch (FileNotFoundException e) {
+        }
+        catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
         //here we define which image corresponds to which identifier in the "buttonfiller" function

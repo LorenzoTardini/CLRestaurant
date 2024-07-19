@@ -10,6 +10,7 @@
       <AnchorPane layoutY="57.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1000.0" style="-fx-background-image: url('file:../CLRestaurant/src/main/assets/mainpantemp.jpg');">
          <children>
             <Button fx:id="start" layoutX="280.0" layoutY="30.0" mnemonicParsing="false" onAction="#clickedStart" text="start" />
+
             <Button fx:id="bacon" layoutX="42.0" layoutY="55.0" mnemonicParsing="false" onAction="#clickedBacon" text="bacon" AnchorPane.leftAnchor="42.0" />
             <Button fx:id="cheese" layoutX="42.0" layoutY="94.0" mnemonicParsing="false" onAction="#clickedCheese" text="fomaggio" />
             <Button fx:id="egg" layoutX="42.0" layoutY="134.0" mnemonicParsing="false" onAction="#clickedEgg" text="uova" />
@@ -17,6 +18,8 @@
             <Button fx:id="mushrooms" layoutX="42.0" layoutY="213.0" mnemonicParsing="false" onAction="#clickedMushrooms" text="funghi" />
             <Button fx:id="patty" layoutX="42.0" layoutY="255.0" mnemonicParsing="false" onAction="#clickedPatty" text="svizzera" />
             <Button fx:id="tomatoh" layoutX="42.0" layoutY="301.0" mnemonicParsing="false" onAction="#clickedTomatoh" text="pomodoro" />
+
+
             <Button fx:id="tomatop" layoutX="470.0" layoutY="55.0" mnemonicParsing="false" onAction="#clickedTomatop" text="pomodoro" />
             <Button fx:id="mozzarella" layoutX="470.0" layoutY="94.0" mnemonicParsing="false" onAction="#clickedMozzarella" text="mozzaerella" />
             <Button fx:id="vegetable" layoutX="470.0" layoutY="134.0" mnemonicParsing="false" onAction="#clickedVegetable" text="verdure" />
@@ -24,9 +27,12 @@
             <Button fx:id="salami" layoutX="470.0" layoutY="213.0" mnemonicParsing="false" onAction="#clickedSalami" text="salame" />
             <Button fx:id="pineapple" layoutX="470.0" layoutY="255.0" mnemonicParsing="false" onAction="#clickedPineapple" text="ananas" />
             <Button fx:id="fish" layoutX="470.0" layoutY="289.0" mnemonicParsing="false" onAction="#clickedFish" text="acciughe" />
+
+
             <Button fx:id="bread1" layoutX="222.0" layoutY="238.0" mnemonicParsing="false" onAction="#clickedBread1" text="bread 1 " />
             <Button fx:id="bread2" layoutX="222.0" layoutY="277.0" mnemonicParsing="false" onAction="#clickedBread2" text="bread 2" />
             <Button fx:id="impasto" layoutX="342.0" layoutY="255.0" mnemonicParsing="false" onAction="#clickedImpasto" text="impasto" />
+
 
             <ImageView fx:id="base1" fitHeight="150.0" fitWidth="214.0" layoutX="600.0" layoutY="670.0" pickOnBounds="true" preserveRatio="true" visible="false">
             </ImageView>
@@ -41,17 +47,18 @@
             <ImageView fx:id="bubble7" fitHeight="150.0" fitWidth="200.0" layoutX="600.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
 
 
-            <ImageView fx:id="orderbase1" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="601.0" pickOnBounds="true" preserveRatio="true"
-            />
-            <ImageView fx:id="orderbase2" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="601.0" pickOnBounds="true" preserveRatio="true"
-            />
-            <ImageView fx:id="ingredient1" fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="ingredient2" fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="398.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="ingredient3" fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="ingredient4" fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="548.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="ingredient5" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="601.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="ingredient6" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="601.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="ingredient7" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="601.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="orderbase1" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="670.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="orderbase2" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="ingredient1" fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="640.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="ingredient2" fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="610.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="ingredient3" fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="580.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="ingredient4" fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="ingredient5" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="ingredient6" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="490.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="ingredient7" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="submit" layoutX="294.0" layoutY="362.0" mnemonicParsing="false" onAction="#clickedSubmit" text="invia ordine" />
+            <Label fx:id="wrong" layoutX="280.0" layoutY="86.0" text="ORDINE SBAGLIATO!" />
+            <Label fx:id="right" layoutX="288.0" layoutY="111.0" text="ORDINE GIUSTO!" />
 
          </children>
       </AnchorPane>
