@@ -1,6 +1,7 @@
 package com.lorenzotardini.clrestaurant;
 
 import javafx.scene.image.Image;
+import org.controlsfx.control.tableview2.filter.filtereditor.SouthFilter;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -28,7 +29,12 @@ public class CLRgame{
     static Image imagetomatop;
     static Image imageimpasto;
     static Image imagesausage;
+    static Image imageconfetti;
+
+
+
     static int[] localorder;
+
 
 
 
@@ -43,6 +49,8 @@ public class CLRgame{
         int[] retarr = new int[randomsize];
         Integer[] referencearr = new Integer[7];
 
+        System.out.print("Array generato randomicamente: \n");
+
         for(int i = 0; i< referencearr.length; i++)
         {
             referencearr[i] = i+1;
@@ -51,7 +59,7 @@ public class CLRgame{
         for(int i = 0; i< retarr.length; i++)
         {
             retarr[i] = referencearr[i];
-            System.out.println(retarr[i]);
+            System.out.print(retarr[i]+" ");
         }
         return retarr;
     }
@@ -70,6 +78,10 @@ public class CLRgame{
 
     public static void setLocalorder(int[] localorder) {
         CLRgame.localorder = localorder;
+    }
+
+    public static void buttonlistadd(){
+
     }
 
     public Image[] initimages(){
@@ -92,14 +104,19 @@ public class CLRgame{
             imagemozzarella = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\PLACEHOLDER.PNG"));
             imagesausage = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\PLACEHOLDER.PNG"));
             imageimpasto = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\PLACEHOLDER.PNG"));
+
+
+
+            imageconfetti = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\coriandoli.gif"));
         }
         catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
         //here we define which image corresponds to which identifier in the "buttonfiller" function
-        Image[] ret = {imagepatty,imagetomatoh,imagemushrooms,imagelettuce,imageegg,imagecheese,
-                imagebacon, imagebread1,imagebread2,imageanchovy,imageaubergine,imagesalami,
+        Image[] ret = {imagetomatoh,imagebacon,imagecheese,imageegg,imagelettuce,imagemushrooms,
+                imagepatty,imagebread1,imagebread2,imageanchovy,imageaubergine,imagesalami,
                 imagepineapple, imagetomatop,imagemozzarella,imagesausage,imageimpasto};
+
         return ret;
     }
 }

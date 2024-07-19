@@ -10,7 +10,7 @@
       <AnchorPane layoutY="57.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1000.0" style="-fx-background-image: url('file:../CLRestaurant/src/main/assets/mainpantemp.jpg');">
          <children>
             <Button fx:id="start" layoutX="280.0" layoutY="30.0" mnemonicParsing="false" onAction="#clickedStart" text="start" />
-            <Button fx:id="submit" layoutX="256.0" layoutY="121.0" mnemonicParsing="false" text="SUBMIT" onAction="#clickedSubmit"/>
+            <Button fx:id="submit" layoutX="256.0" layoutY="121.0" mnemonicParsing="false" onAction="#clickedSubmit" text="SUBMIT" />
 
 
 
@@ -33,7 +33,7 @@
             <Button fx:id="fish" layoutX="470.0" layoutY="289.0" mnemonicParsing="false" onAction="#clickedFish" text="acciughe" />
 
 
-            <Button fx:id="bread1" layoutX="222.0" layoutY="238.0" mnemonicParsing="false" onAction="#clickedBread1" text="bread 1 " />
+            <Button fx:id="bread1" layoutX="222.0" layoutY="238.0" mnemonicParsing="false" onAction="#clickedBread1" text="bread 1" />
             <Button fx:id="bread2" layoutX="222.0" layoutY="277.0" mnemonicParsing="false" onAction="#clickedBread2" text="bread 2" />
             <Button fx:id="impasto" layoutX="342.0" layoutY="255.0" mnemonicParsing="false" onAction="#clickedImpasto" text="impasto" />
 
@@ -60,6 +60,8 @@
             <ImageView fx:id="ingredient5" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="ingredient6" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="490.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="ingredient7" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true" />
+
+            <ImageView fx:id="confetti" fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true" />
 
          </children>
       </AnchorPane>

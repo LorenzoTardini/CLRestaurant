@@ -5,6 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.*;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class CLRController{
@@ -19,6 +20,8 @@ public class CLRController{
     private Button bread1;
     @FXML
     private Button bread2;
+
+
 
     @FXML
     private Button bacon;
@@ -102,13 +105,15 @@ public class CLRController{
     private ImageView ingredient6 = new ImageView();
     @FXML
     private ImageView ingredient7 = new ImageView();
-
+    @FXML
+    private ImageView confetti = new ImageView();
 
 
 
     int count = 0;
     private CLRgame orderistance = new CLRgame();
     private boolean validcreation = false;
+    ArrayList<Integer> generatedbyuser = new ArrayList<Integer>();
 
 
     @FXML
@@ -120,7 +125,7 @@ public class CLRController{
     protected void clickedMushrooms() {
         if (validcreation) {
             mushrooms.setDisable(true);
-            buttonfiller(2);
+            buttonfiller(5);
             //ingredients[count].setVisible(true);
             //ingredients[count].setImage(CLRgame.imagemushrooms);
             count++;
@@ -131,7 +136,7 @@ public class CLRController{
     protected void clickedCheese() {
         if (validcreation) {
             cheese.setDisable(true);
-            buttonfiller(5);
+            buttonfiller(2);
             count++;
         }
 
@@ -141,7 +146,7 @@ public class CLRController{
     protected void clickedEgg() {
         if (validcreation) {
             egg.setDisable(true);
-            buttonfiller(4);
+            buttonfiller(3);
             //ingredients[count].setVisible(true);
             //ingredients[count].setImage(CLRgame.imageegg);
             count++;
@@ -153,7 +158,7 @@ public class CLRController{
     protected void clickedBacon() {
         if (validcreation) {
             bacon.setDisable(true);
-            buttonfiller(6);
+            buttonfiller(1);
             //ingredients[count].setVisible(true);
             //ingredients[count].setImage(CLRgame.imagebacon);
             count++;
@@ -164,7 +169,7 @@ public class CLRController{
     protected void clickedLettuce() {
         if (validcreation) {
             lettuce.setDisable(true);
-            buttonfiller(3);
+            buttonfiller(4);
             //ingredients[count].setVisible(true);
             //ingredients[count].setImage(CLRgame.imagelettuce);
             count++;
@@ -176,7 +181,7 @@ public class CLRController{
     protected void clickedPatty() {
         if (validcreation) {
             patty.setDisable(true);
-            buttonfiller(0);
+            buttonfiller(6);
             //ingredients[count].setVisible(true);
             //ingredients[count].setImage(CLRgame.imagepatty);
             count++;
@@ -188,7 +193,7 @@ public class CLRController{
     protected void clickedTomatoh() {
         if (validcreation) {
             tomatoh.setDisable(true);
-            buttonfiller(1);
+            buttonfiller(0);
             //ingredients[count].setVisible(true);
             //ingredients[count].setImage(CLRgame.imagetomatoh);
             count++;
@@ -210,6 +215,7 @@ public class CLRController{
     protected void clickedBread2() {
         if (validcreation) {
             bread2.setDisable(true);
+            //orderbase2.setLayoutY(lastingredient);
             orderbase2.setVisible(true);
             orderbase2.setImage(CLRgame.imagebread2);
         }
@@ -230,6 +236,7 @@ public class CLRController{
             if (i == identifier) {
                 ingredients[count].setVisible(true);
                 ingredients[count].setImage(images[identifier]);
+                generatedbyuser.add(1+identifier);
                 break;
             }
         }
@@ -237,13 +244,57 @@ public class CLRController{
 
     @FXML
     protected void clickedSubmit(){
-        int[] prova = orderistance.getLocalorder();
-        for(int i=0; i<prova.length; i++){
-            System.out.println(prova[i]+"\n");
+        int[] randomlygenerated = orderistance.getLocalorder();
+        int submitcount=0;
+        boolean checkequal=true;
+        System.out.print("\nArray generato dall'utente: \n");
+        for(int i = 0; i< generatedbyuser.size(); i++){
+            System.out.print(generatedbyuser.get(i)+" ");
         }
+        if(generatedbyuser.size()<randomlygenerated.length)
+            submitcount = generatedbyuser.size();
+        else
+            submitcount = randomlygenerated.length;
+        for(int i=0; i<submitcount; i++)
+        {
+            if(generatedbyuser.get(i)!=randomlygenerated[i])
+                checkequal=false;
+        }
+        if(!checkequal) {
+            System.out.println("Ordine sbagliato!");
+            resetplate();
+        }
+        else{
+            System.out.println("Ordine giusto!!!");
+            confetti.setVisible(true);
+            confetti.setImage(CLRgame.imageconfetti);
+        }
+        generatedbyuser.clear();
+        checkequal=true;
     }
 
-
+    protected void resetplate() {
+        Button[] buttonsvector = {tomatoh, bacon, egg, lettuce, mushrooms, patty, cheese};
+        for (int i = 0; i < buttonsvector.length; i++) {
+            buttonsvector[i].setDisable(false);
+        }
+        count = 0; //TO FIX: VECTOR "INGREDIENT" IS DECLARED TWICE. MUST BE OPTIMIZED
+        ImageView[] ingredients = {
+                ingredient1, ingredient2,
+                ingredient3, ingredient4,
+                ingredient5, ingredient6,
+                ingredient7
+        };
+        for (int i = 0; i < ingredients.length; i++)
+        {
+            ingredients[i].setVisible(false);
+        }
+        orderbase1.setVisible(false);
+        orderbase2.setVisible(false);
+        bread1.setDisable(false);
+        bread2.setDisable(false);
+        validcreation=false;
+    }
 
 
     @FXML
@@ -306,6 +357,8 @@ public class CLRController{
                 bubble6,
                 bubble7
         };
+        confetti.setVisible(false);
+        resetplate();
         cleanup(bubbles);
         int[] generatedorder = orderistance.ordercreator();
         orderistance.initimages();
