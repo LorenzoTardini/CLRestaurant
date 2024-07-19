@@ -99,8 +99,6 @@ public class CLRController {
     };
 
 
-
-
     private CLRgame order = new CLRgame();
     private boolean validcreation = false;
 
@@ -222,14 +220,12 @@ public class CLRController {
         };
         cleanup(bubbles);
         int[] generatedorder = order.ordercreator();
-        order.ingredients();
-        Random decision = new Random();
-
+        order.initimages();
         showhamburgerbubble(generatedorder,bubbles);
 
 
 
-
+        Random decision = new Random();
         /*if(decision.nextBoolean()){ //se decision == true allora abbiamo un hamburger
             System.out.println("hello world");
             showhamburgerbubble(generatedorder);
@@ -240,14 +236,14 @@ public class CLRController {
         }*/
     }
 
-    protected void cleanup(ImageView[]bubbles.length; i++)
-
+    protected void cleanup(ImageView[] bubbles){
+           for( int i=0; i<bubbles.length; i++){
             bubbles[i].setVisible(false);
         }
     }
 
     @FXML
-   protected void showhamburgerbubble(int []generatedorder, ImageView[] ingredients){
+    protected void showhamburgerbubble(int []generatedorder, ImageView[] bubbles){
         base1.setImage(order.imagebread1);
         base1.setVisible(true);
         double last=0;
@@ -258,56 +254,56 @@ public class CLRController {
                 case 1:
                     //last = placeholderfiller(i,CLRgame.imagetomatoh);
                     //break;
-                    ingredients[i].setVisible(true);
-                    ingredients[i].setImage(CLRgame.imagetomatoh);
-                    last=ingredients[i].getLayoutY();
+                    bubbles[i].setVisible(true);
+                    bubbles[i].setImage(CLRgame.imagetomatoh);
+                    last=bubbles[i].getLayoutY();
                     break;
 
                 case 2:
                     //last = placeholderfiller(i,CLRgame.imagebacon);
                     //break;
-                    ingredients[i].setVisible(true);
-                    ingredients[i].setImage(CLRgame.imagebacon);
-                    last=ingredients[i].getLayoutY();
+                    bubbles[i].setVisible(true);
+                    bubbles[i].setImage(CLRgame.imagebacon);
+                    last=bubbles[i].getLayoutY();
                     break;
 
                 case 3:
                     //last = placeholderfiller(i,CLRgame.imagecheese);
                     //break;
-                    ingredients[i].setVisible(true);
-                    ingredients[i].setImage(CLRgame.imagecheese);
-                    last=ingredients[i].getLayoutY();
+                    bubbles[i].setVisible(true);
+                    bubbles[i].setImage(CLRgame.imagecheese);
+                    last=bubbles[i].getLayoutY();
                     break;
 
                 case 4:
                     //last = placeholderfiller(i,CLRgame.imageegg);
                     //break;
-                    ingredients[i].setVisible(true);
-                    ingredients[i].setImage(CLRgame.imageegg);
-                    last=ingredients[i].getLayoutY();
+                    bubbles[i].setVisible(true);
+                    bubbles[i].setImage(CLRgame.imageegg);
+                    last=bubbles[i].getLayoutY();
                     break;
 
                 case 5:
                     //last = placeholderfiller(i,CLRgame.imagelettuce);
                     //break;
-                    ingredients[i].setVisible(true);
-                    ingredients[i].setImage(CLRgame.imagelettuce);
-                    last=ingredients[i].getLayoutY();
+                    bubbles[i].setVisible(true);
+                    bubbles[i].setImage(CLRgame.imagelettuce);
+                    last=bubbles[i].getLayoutY();
                     break;
                 case 6:
                     //last = placeholderfiller(i,CLRgame.imagemushrooms);
                     //break;
-                    ingredients[i].setVisible(true);
-                    ingredients[i].setImage(CLRgame.imagemushrooms);
-                    last=ingredients[i].getLayoutY();
+                    bubbles[i].setVisible(true);
+                    bubbles[i].setImage(CLRgame.imagemushrooms);
+                    last=bubbles[i].getLayoutY();
                     break;
 
                 case 7:
                     //last = placeholderfiller(i,CLRgame.imagepatty);
                     //break;
-                    ingredients[i].setVisible(true);
-                    ingredients[i].setImage(CLRgame.imagepatty);
-                    last=ingredients[i].getLayoutY();
+                    bubbles[i].setVisible(true);
+                    bubbles[i].setImage(CLRgame.imagepatty);
+                    last=bubbles[i].getLayoutY();
                     break;
 
             }
