@@ -56,10 +56,6 @@
             <ImageView fx:id="ingredient5" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="ingredient6" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="490.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="ingredient7" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="submit" layoutX="294.0" layoutY="362.0" mnemonicParsing="false" onAction="#clickedSubmit" text="invia ordine" />
-            <Label fx:id="wrong" layoutX="280.0" layoutY="86.0" text="ORDINE SBAGLIATO!" />
-            <Label fx:id="right" layoutX="288.0" layoutY="111.0" text="ORDINE GIUSTO!" />
-
          </children>
       </AnchorPane>
    </children>
