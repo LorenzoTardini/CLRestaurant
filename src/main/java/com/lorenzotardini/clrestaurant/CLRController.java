@@ -3,7 +3,6 @@ package com.lorenzotardini.clrestaurant;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.util.Random;
@@ -45,8 +44,6 @@ public class CLRController {
     private Button fish;
     @FXML
     private Button impasto;
-    @FXML
-    private Button test;
 
 
 
@@ -55,28 +52,57 @@ public class CLRController {
     @FXML
     private ImageView base2;
     @FXML
-    private ImageView ingredient1;
+    private ImageView bubble1 = new ImageView();
     @FXML
-    private ImageView ingredient2;
+    private ImageView bubble2 = new ImageView();
     @FXML
-    private ImageView ingredient3;
+    private ImageView bubble3 = new ImageView();
     @FXML
-    private ImageView ingredient4;
+    private ImageView bubble4 = new ImageView();
     @FXML
-    private ImageView ingredient5;
+    private ImageView bubble5 = new ImageView();
     @FXML
-    private ImageView ingredient6;
+    private ImageView bubble6 = new ImageView();
     @FXML
-    private ImageView ingredient7;
+    private ImageView bubble7 = new ImageView();
+
+
+    @FXML
+    private ImageView orderbase1 = new ImageView();
+    @FXML
+    private ImageView orderbase2 = new ImageView();
+    @FXML
+    private ImageView ingredient1 = new ImageView();
+    @FXML
+    private ImageView ingredient2 = new ImageView();
+    @FXML
+    private ImageView ingredient3 = new ImageView();
+    @FXML
+    private ImageView ingredient4 = new ImageView();
+    @FXML
+    private ImageView ingredient5 = new ImageView();
+    @FXML
+    private ImageView ingredient6 = new ImageView();
+    @FXML
+    private ImageView ingredient7 = new ImageView();
 
 
 
 
+    ImageView[] ingredients = {bubble1,
+            bubble2,
+            bubble3,
+            bubble4,
+            bubble5,
+            bubble6,
+            bubble7
+    };
 
 
 
-    CLRgame order = new CLRgame();
 
+    private CLRgame order = new CLRgame();
+    private boolean validcreation = false;
 
     @FXML
     protected void onHelloButtonClick() {
@@ -84,109 +110,123 @@ public class CLRController {
     }
     @FXML
     protected void clickedMushrooms() {
-        mushrooms.setDisable(true);
+        if(validcreation)
+            mushrooms.setDisable(true);
 
     }
 
     @FXML
     protected void clickedCheese() {
-        cheese.setDisable(true);
+        if(validcreation)
+            cheese.setDisable(true);
 
     }
     @FXML
     protected void clickedEgg() {
-        egg.setDisable(true);
+        if(validcreation)
+            egg.setDisable(true);
 
     }
     @FXML
     protected void clickedBacon() {
-        bacon.setDisable(true);
+        if(validcreation)
+            bacon.setDisable(true);
     }
     @FXML
     protected void clickedLettuce() {
-        lettuce.setDisable(true);
+        if(validcreation)
+            lettuce.setDisable(true);
 
     }
     @FXML
     protected void clickedPatty() {
-        patty.setDisable(true);
+        if(validcreation)
+            patty.setDisable(true);
 
     }
     @FXML
     protected void clickedTomatoh() {
-        tomatoh.setDisable(true);
+        if(validcreation)
+            tomatoh.setDisable(true);
 
     }
 
     @FXML
     protected void clickedTomatop() {
-        tomatop.setDisable(true);
+        if(validcreation)
+            tomatop.setDisable(true);
 
     }
 
     @FXML
     protected void clickedMozzarella() {
-        mozzarella.setDisable(true);
+        if(validcreation)
+            mozzarella.setDisable(true);
 
     }
     @FXML
     protected void clickedVegetable() {
-        vegetable.setDisable(true);
+        if(validcreation)
+            vegetable.setDisable(true);
 
     }
     @FXML
     protected void clickedSausage() {
-        sausage.setDisable(true);
+        if(validcreation)
+            sausage.setDisable(true);
 
     }
     @FXML
     protected void clickedSalami() {
-        salami.setDisable(true);
+        if(validcreation)
+            salami.setDisable(true);
 
     }
     @FXML
     protected void clickedPineapple() {
-        pineapple.setDisable(true);
+        if(validcreation)
+            pineapple.setDisable(true);
 
     }
     @FXML
     protected void clickedFish() {
-        fish.setDisable(true);
+        if(validcreation)
+            fish.setDisable(true);
 
     }
     @FXML
     protected void clickedBread1() {
-        bread1.setDisable(true);
-
+            validcreation=true;
+            bread1.setDisable(true);
     }
     @FXML
     protected void clickedBread2() {
-        bread2.setDisable(true);
-        base1.setVisible(true);
-        base2.setVisible(true);
+        if(validcreation)
+            bread2.setDisable(true);
     }
     @FXML
     protected void clickedImpasto() {
-        impasto.setDisable(true);
-        double currentx = base1.getLayoutX();
-        base1.setLayoutX(currentx+20);
-        base2.setLayoutX(base1.getLayoutX()+20);
-        base2.setLayoutY(base1.getLayoutY()-30);
+            validcreation=true;
+            impasto.setDisable(true);
+
     }
-
-
-
-
-
     @FXML
     protected void clickedStart() {
-        cleanup();
+        ImageView[] bubbles = {bubble1,
+                bubble2,
+                bubble3,
+                bubble4,
+                bubble5,
+                bubble6,
+                bubble7
+        };
+        cleanup(bubbles);
         int[] generatedorder = order.ordercreator();
-        order.initimages();
+        order.ingredients();
         Random decision = new Random();
 
+        showhamburgerbubble(generatedorder,bubbles);
 
-        showhamburgerbubble(generatedorder);
 
 
 
@@ -200,45 +240,76 @@ public class CLRController {
         }*/
     }
 
-    protected void cleanup(){
-        ingredient1.setVisible(false);
-        ingredient2.setVisible(false);
-        ingredient3.setVisible(false);
-        ingredient4.setVisible(false);
-        ingredient5.setVisible(false);
-        ingredient6.setVisible(false);
-        ingredient7.setVisible(false);
+    protected void cleanup(ImageView[]bubbles.length; i++)
+
+            bubbles[i].setVisible(false);
+        }
     }
 
     @FXML
-   protected void showhamburgerbubble(int []generatedorder){
+   protected void showhamburgerbubble(int []generatedorder, ImageView[] ingredients){
         base1.setImage(order.imagebread1);
         base1.setVisible(true);
-        double last = placeholderfiller(-1,CLRgame.imagetomatop);
+        double last=0;
+        //placeholderfiller(-1,CLRgame.imagetomatop);
         for(int i=0; i<generatedorder.length;i++){
 
             switch(generatedorder[i]){
                 case 1:
-                    last = placeholderfiller(i,CLRgame.imagetomatoh);
+                    //last = placeholderfiller(i,CLRgame.imagetomatoh);
+                    //break;
+                    ingredients[i].setVisible(true);
+                    ingredients[i].setImage(CLRgame.imagetomatoh);
+                    last=ingredients[i].getLayoutY();
                     break;
+
                 case 2:
-                    last = placeholderfiller(i,CLRgame.imagebacon);
+                    //last = placeholderfiller(i,CLRgame.imagebacon);
+                    //break;
+                    ingredients[i].setVisible(true);
+                    ingredients[i].setImage(CLRgame.imagebacon);
+                    last=ingredients[i].getLayoutY();
                     break;
+
                 case 3:
-                    last = placeholderfiller(i,CLRgame.imagecheese);
+                    //last = placeholderfiller(i,CLRgame.imagecheese);
+                    //break;
+                    ingredients[i].setVisible(true);
+                    ingredients[i].setImage(CLRgame.imagecheese);
+                    last=ingredients[i].getLayoutY();
                     break;
+
                 case 4:
-                    last = placeholderfiller(i,CLRgame.imageegg);
+                    //last = placeholderfiller(i,CLRgame.imageegg);
+                    //break;
+                    ingredients[i].setVisible(true);
+                    ingredients[i].setImage(CLRgame.imageegg);
+                    last=ingredients[i].getLayoutY();
                     break;
+
                 case 5:
-                    last = placeholderfiller(i,CLRgame.imagelettuce);
+                    //last = placeholderfiller(i,CLRgame.imagelettuce);
+                    //break;
+                    ingredients[i].setVisible(true);
+                    ingredients[i].setImage(CLRgame.imagelettuce);
+                    last=ingredients[i].getLayoutY();
                     break;
                 case 6:
-                    last = placeholderfiller(i,CLRgame.imagemushrooms);
+                    //last = placeholderfiller(i,CLRgame.imagemushrooms);
+                    //break;
+                    ingredients[i].setVisible(true);
+                    ingredients[i].setImage(CLRgame.imagemushrooms);
+                    last=ingredients[i].getLayoutY();
                     break;
+
                 case 7:
-                    last = placeholderfiller(i,CLRgame.imagepatty);
+                    //last = placeholderfiller(i,CLRgame.imagepatty);
+                    //break;
+                    ingredients[i].setVisible(true);
+                    ingredients[i].setImage(CLRgame.imagepatty);
+                    last=ingredients[i].getLayoutY();
                     break;
+
             }
         }
         double coordY = last-80;
@@ -247,7 +318,7 @@ public class CLRController {
         base2.setVisible(true);
     }
 
-    @FXML
+   /* @FXML
     protected double placeholderfiller(int pl, Image sprite)
     {
         switch(pl){
@@ -284,14 +355,5 @@ public class CLRController {
                 return ingredient7.getLayoutY();
         }
         return 0;
-    }
-
-
-    private void disablebuttongeneric(int but)
-    {
-        System.out.println("hello world \n");
-        test.setDisable(true);
-    }
-
-
+    }*/
 }
