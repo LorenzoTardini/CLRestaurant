@@ -63,7 +63,7 @@ public class CLRgame{
     }
 
 
-    public void initimages(){
+    public Image[] initimages(){
         try {
             imagepatty = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\hamburger\\patty.png"));
             imagetomatoh = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\hamburger\\tomatoh.png"));
@@ -87,5 +87,10 @@ public class CLRgame{
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
+        //here we define which image corresponds to which identifier in the "buttonfiller" function
+        Image[] ret = {imagepatty,imagetomatoh,imagemushrooms,imagelettuce,imageegg,imagecheese,
+                imagebacon, imagebread1,imagebread2,imageanchovy,imageaubergine,imagesalami,
+                imagepineapple, imagetomatop,imagemozzarella,imagesausage,imageimpasto};
+        return ret;
     }
 }

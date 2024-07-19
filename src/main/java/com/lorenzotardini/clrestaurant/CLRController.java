@@ -46,7 +46,6 @@ public class CLRController {
     private Button impasto;
 
 
-
     @FXML
     private ImageView base1;
     @FXML
@@ -86,17 +85,10 @@ public class CLRController {
     @FXML
     private ImageView ingredient7 = new ImageView();
 
+    @FXML
 
-
-
-    ImageView[] ingredients = {bubble1,
-            bubble2,
-            bubble3,
-            bubble4,
-            bubble5,
-            bubble6,
-            bubble7
-    };
+    int count = 0;
+    double last = 0.0;
 
 
     private CLRgame order = new CLRgame();
@@ -106,46 +98,84 @@ public class CLRController {
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
+
     @FXML
     protected void clickedMushrooms() {
         if(validcreation)
             mushrooms.setDisable(true);
-
+            buttonfiller(2);
+            //ingredients[count].setVisible(true);
+            //ingredients[count].setImage(CLRgame.imagemushrooms);
+            count++;
+        }
     }
 
     @FXML
     protected void clickedCheese() {
-        if(validcreation)
+        if (validcreation) {
             cheese.setDisable(true);
+            buttonfiller(5);
+            count++;
+        }
 
     }
+
     @FXML
     protected void clickedEgg() {
-        if(validcreation)
+        if (validcreation) {
             egg.setDisable(true);
+            buttonfiller(4);
+            //ingredients[count].setVisible(true);
+            //ingredients[count].setImage(CLRgame.imageegg);
+            count++;
+        }
 
     }
+
     @FXML
     protected void clickedBacon() {
-        if(validcreation)
+        if (validcreation) {
             bacon.setDisable(true);
+            buttonfiller(6);
+            //ingredients[count].setVisible(true);
+            //ingredients[count].setImage(CLRgame.imagebacon);
+            count++;
+        }
     }
+
     @FXML
     protected void clickedLettuce() {
-        if(validcreation)
+        if (validcreation) {
             lettuce.setDisable(true);
+            buttonfiller(3);
+            //ingredients[count].setVisible(true);
+            //ingredients[count].setImage(CLRgame.imagelettuce);
+            count++;
+        }
 
     }
+
     @FXML
     protected void clickedPatty() {
-        if(validcreation)
+        if (validcreation) {
             patty.setDisable(true);
+            buttonfiller(0);
+            //ingredients[count].setVisible(true);
+            //ingredients[count].setImage(CLRgame.imagepatty);
+            count++;
+        }
 
     }
+
     @FXML
     protected void clickedTomatoh() {
-        if(validcreation)
+        if (validcreation) {
             tomatoh.setDisable(true);
+            buttonfiller(1);
+            //ingredients[count].setVisible(true);
+            //ingredients[count].setImage(CLRgame.imagetomatoh);
+            count++;
+        }
 
     }
 
@@ -241,6 +271,7 @@ public class CLRController {
             bubbles[i].setVisible(false);
         }
     }
+
 
     @FXML
     protected void showhamburgerbubble(int []generatedorder, ImageView[] bubbles){
