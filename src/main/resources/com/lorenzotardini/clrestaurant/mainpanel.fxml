@@ -45,9 +45,9 @@
             <Button fx:id="impasto" layoutX="342.0" layoutY="255.0" mnemonicParsing="false" onAction="#clickedImpasto" text="impasto" />
 
 
-            <ImageView fx:id="base1" fitHeight="150.0" fitWidth="214.0" layoutX="600.0" layoutY="670.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <ImageView fx:id="bubblebase1" fitHeight="150.0" fitWidth="214.0" layoutX="600.0" layoutY="670.0" pickOnBounds="true" preserveRatio="true" visible="false">
             </ImageView>
-            <ImageView fx:id="base2" fitHeight="150.0" fitWidth="200.0" layoutX="600.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <ImageView fx:id="bubblebase2" fitHeight="150.0" fitWidth="200.0" layoutX="600.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" visible="false">
             </ImageView>
             <ImageView fx:id="bubble1" fitHeight="150.0" fitWidth="200.0" layoutX="600.0" layoutY="590.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="bubble2" fitHeight="150.0" fitWidth="200.0" layoutX="600.0" layoutY="510.0" pickOnBounds="true" preserveRatio="true" />

@@ -64,9 +64,9 @@ public class CLRController{
 
 
     @FXML
-    private ImageView base1;
+    private ImageView bubblebase1;
     @FXML
-    private ImageView base2;
+    private ImageView bubblebase2;
 
     @FXML
     private ImageView bubble1 = new ImageView();
@@ -113,7 +113,10 @@ public class CLRController{
     int count = 0;
     private CLRgame orderistance = new CLRgame();
     private boolean validcreation = false;
+    private boolean fooddecision;
     ArrayList<Integer> generatedbyuser = new ArrayList<Integer>();
+    double lastingredient=orderbase1.getLayoutY()-30;
+
 
 
     @FXML
@@ -234,6 +237,14 @@ public class CLRController{
 
         for (int i = 0; i < ingredients.length; i++) {
             if (i == identifier) {
+                fooddecision=true;
+                if(fooddecision) {
+                    ingredients[count].setLayoutY(orderbase1.getLayoutY() - 30 * (count + 1));
+                    lastingredient = ingredients[count].getLayoutY();
+                }
+                else{
+                    ingredients[count].setLayoutY(orderbase1.getLayoutY());
+                }
                 ingredients[count].setVisible(true);
                 ingredients[count].setImage(images[identifier]);
                 generatedbyuser.add(1+identifier);
@@ -294,6 +305,7 @@ public class CLRController{
         bread1.setDisable(false);
         bread2.setDisable(false);
         validcreation=false;
+        generatedbyuser.clear();
     }
 
 
@@ -357,16 +369,20 @@ public class CLRController{
                 bubble6,
                 bubble7
         };
+
         confetti.setVisible(false);
         resetplate();
         cleanup(bubbles);
+
+
         int[] generatedorder = orderistance.ordercreator();
         orderistance.initimages();
         showhamburgerbubble(generatedorder,bubbles);
+        Random rangen = new Random();
+        fooddecision = rangen.nextBoolean();
 
 
 
-        Random decision = new Random();
         /*if(decision.nextBoolean()){ //se decision == true allora abbiamo un hamburger
             System.out.println("hello world");
             showhamburgerbubble(generatedorder);
@@ -388,8 +404,8 @@ public class CLRController{
 
     @FXML
     protected void showhamburgerbubble(int []generatedorder, ImageView[] bubbles){
-        base1.setImage(orderistance.imagebread1);
-        base1.setVisible(true);
+        bubblebase1.setImage(orderistance.imagebread1);
+        bubblebase1.setVisible(true);
         double last=0;
         //placeholderfiller(-1,CLRgame.imagetomatop);
         for(int i=0; i<generatedorder.length;i++){
@@ -453,9 +469,9 @@ public class CLRController{
             }
         }
         double coordY = last-80;
-        base2.setLayoutY(coordY);
-        base2.setImage(orderistance.imagebread2);
-        base2.setVisible(true);
+        bubblebase2.setLayoutY(coordY);
+        bubblebase2.setImage(orderistance.imagebread2);
+        bubblebase2.setVisible(true);
     }
 
    /* @FXML
