@@ -7,7 +7,7 @@
 <Pane maxWidth="1000.0" minHeight="1000.0" minWidth="1000.0" prefHeight="1000.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lorenzotardini.clrestaurant.CLRController">
    <children>
 
-      <AnchorPane layoutY="57.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1000.0" style="-fx-background-image: url('file:../CLRestaurant/src/main/assets/mainpantemp.jpg');">
+      <AnchorPane layoutY="47.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1000.0" style="-fx-background-image: url('file:../CLRestaurant/src/main/assets/mainpantemp.jpg');">
          <children>
             <Button fx:id="start" layoutX="280.0" layoutY="30.0" mnemonicParsing="false" onAction="#clickedStart" text="start" />
             <Button fx:id="submit" layoutX="256.0" layoutY="121.0" mnemonicParsing="false" onAction="#clickedSubmit" text="SUBMIT" />
@@ -15,7 +15,14 @@
 
 
 
-            <Button fx:id="bacon" layoutX="42.0" layoutY="55.0" mnemonicParsing="false" onAction="#clickedBacon" text="bacon" AnchorPane.leftAnchor="42.0" />
+            <Button fx:id="bacon" layoutX="43.0" layoutY="26.0" mnemonicParsing="false" onAction="#clickedBacon" prefHeight="56.0" prefWidth="68.0" textFill="#212122" AnchorPane.leftAnchor="43.0">
+               <graphic>
+                  <ImageView fitHeight="53.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:..\CLRestaurant\src\main\assets\hamburger\bacon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
             <Button fx:id="cheese" layoutX="42.0" layoutY="94.0" mnemonicParsing="false" onAction="#clickedCheese" text="fomaggio" />
             <Button fx:id="egg" layoutX="42.0" layoutY="134.0" mnemonicParsing="false" onAction="#clickedEgg" text="uova" />
             <Button fx:id="lettuce" layoutX="42.0" layoutY="176.0" mnemonicParsing="false" onAction="#clickedLettuce" text="lattuga" />

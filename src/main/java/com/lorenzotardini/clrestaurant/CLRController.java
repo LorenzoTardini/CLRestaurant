@@ -215,7 +215,7 @@ public class CLRController{
     protected void clickedBread2() {
         if (validcreation) {
             bread2.setDisable(true);
-            //orderbase2.setLayoutY(lastingredient);
+            orderbase2.setLayoutY(lastingredient-30);
             orderbase2.setVisible(true);
             orderbase2.setImage(CLRgame.imagebread2);
         }
