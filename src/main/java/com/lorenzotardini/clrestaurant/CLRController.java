@@ -244,8 +244,7 @@ public class CLRController{
         };
 
         for (int i = 0; i < ingredients.length; i++) {
-            if (i == identifier) {
-                fooddecision=true;
+            if (i == identifier|| i == (identifier-7)) {
                 if(fooddecision) {
                     ingredients[count].setLayoutY(orderbase1.getLayoutY() - 30 * (count + 1));
                     lastingredient = ingredients[count].getLayoutY();
@@ -273,14 +272,15 @@ public class CLRController{
         for(int i = 0; i< generatedbyuser.size(); i++){
             System.out.print(generatedbyuser.get(i)+" ");
         }
+        submitcount = randomlygenerated.length;
         if(generatedbyuser.size()<randomlygenerated.length)
             submitcount = generatedbyuser.size();
-        else
-            submitcount = randomlygenerated.length;
         for(int i=0; i<submitcount; i++)
         {
-            if(generatedbyuser.get(i)!=randomlygenerated[i])
-                checkequal=false;
+            if(generatedbyuser.get(i)!=randomlygenerated[i] && fooddecision)
+                checkequal = false;
+            if(!fooddecision && generatedbyuser.get(i)-7!=randomlygenerated[i])
+                checkequal = false;
         }
         if(!checkequal) {
             System.out.println("Ordine sbagliato!");
@@ -321,45 +321,66 @@ public class CLRController{
 
     @FXML
     protected void clickedTomatop() {
-        if(validcreation)
+        if(validcreation) {
             tomatop.setDisable(true);
+            buttonfiller(11);
+            count++;
+        }
 
     }
 
     @FXML
     protected void clickedMozzarella() {
-        if(validcreation)
+        if(validcreation) {
             mozzarella.setDisable(true);
+            buttonfiller(12);
+            count++;
+        }
 
     }
     @FXML
     protected void clickedVegetable() {
-        if(validcreation)
+        if(validcreation) {
             vegetable.setDisable(true);
+            buttonfiller(8);
+            count++;
+        }
 
     }
     @FXML
     protected void clickedSausage() {
-        if(validcreation)
+        if(validcreation) {
             sausage.setDisable(true);
+            buttonfiller(13);
+            count++;
+        }
 
     }
     @FXML
     protected void clickedSalami() {
-        if(validcreation)
+        if(validcreation) {
             salami.setDisable(true);
+            buttonfiller(9);
+            count++;
+        }
 
     }
     @FXML
     protected void clickedPineapple() {
-        if(validcreation)
+        if(validcreation) {
             pineapple.setDisable(true);
+            buttonfiller(10);
+            count++;
+        }
 
     }
     @FXML
     protected void clickedFish() {
-        if(validcreation)
+        if(validcreation) {
             fish.setDisable(true);
+            buttonfiller(7);
+            count++;
+        }
 
     }
 
@@ -368,6 +389,9 @@ public class CLRController{
             validcreation=true;
             impasto.setDisable(true);
             submit.setDisable(false);
+            orderbase1.setVisible(true);
+            orderbase1.setImage(CLRgame.imageimpasto);
+
     }
     @FXML
     protected void clickedStart() {
