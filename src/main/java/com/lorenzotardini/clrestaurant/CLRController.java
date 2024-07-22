@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.*;
+import javafx.scene.layout.Pane;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -110,6 +111,10 @@ public class CLRController{
     @FXML
     private ImageView confetti = new ImageView();
 
+    @FXML
+    private Pane hamburgerpane;
+    @FXML
+    private Pane pizzapane;
 
 
     int count = 0;
@@ -215,6 +220,7 @@ public class CLRController{
         bread1.setDisable(true);
         orderbase1.setVisible(true);
         orderbase1.setImage(CLRgame.imagebread1);
+        submit.setDisable(false);
     }
 
     @FXML
@@ -261,6 +267,9 @@ public class CLRController{
         int submitcount=0;
         boolean checkequal=true;
         System.out.print("\nArray generato dall'utente: \n");
+        if(generatedbyuser.size()==0){
+            checkequal=false;
+        }
         for(int i = 0; i< generatedbyuser.size(); i++){
             System.out.print(generatedbyuser.get(i)+" ");
         }
@@ -287,7 +296,8 @@ public class CLRController{
     }
 
     protected void resetplate() {
-        Button[] buttonsvector = {tomatoh, bacon, egg, lettuce, mushrooms, patty, cheese};
+        Button[] buttonsvector = {tomatoh, bacon, egg, lettuce, mushrooms, patty, cheese, tomatop,
+                                    fish,vegetable,salami,pineapple,mozzarella,sausage,impasto,bread1,bread2};
         for (int i = 0; i < buttonsvector.length; i++) {
             buttonsvector[i].setDisable(false);
         }
@@ -304,8 +314,6 @@ public class CLRController{
         }
         orderbase1.setVisible(false);
         orderbase2.setVisible(false);
-        bread1.setDisable(false);
-        bread2.setDisable(false);
         validcreation=false;
         generatedbyuser.clear();
     }
@@ -359,7 +367,7 @@ public class CLRController{
     protected void clickedImpasto() {
             validcreation=true;
             impasto.setDisable(true);
-
+            submit.setDisable(false);
     }
     @FXML
     protected void clickedStart() {
@@ -371,7 +379,9 @@ public class CLRController{
                 bubble6,
                 bubble7
         };
-
+        submit.setDisable(true);
+        hamburgerpane.setVisible(true);
+        pizzapane.setVisible(true);
         confetti.setVisible(false);
         resetplate();
         cleanup(bubbles);
@@ -382,6 +392,14 @@ public class CLRController{
 
         Random rangen = new Random();
         fooddecision = rangen.nextBoolean();
+
+        if(fooddecision)
+        {
+            pizzapane.setVisible(false);
+        }
+        else{
+            hamburgerpane.setVisible(false);
+        }
 
         showbubble(generatedorder,bubbles);
 

@@ -6,42 +6,51 @@
 
 <Pane maxWidth="1000.0" minHeight="1000.0" minWidth="1000.0" prefHeight="1000.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lorenzotardini.clrestaurant.CLRController">
    <children>
-      <AnchorPane layoutY="47.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1000.0" style="-fx-background-image: url('file:../CLRestaurant/src/main/assets/mainpantemp.jpg');">
+      <AnchorPane layoutY="48.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1000.0" style="-fx-background-image: url('file:../CLRestaurant/src/main/assets/mainpantemp.jpg');">
          <children>
-            <Button fx:id="start" layoutX="265.0" layoutY="75.0" mnemonicParsing="false" onAction="#clickedStart" text="start" />
-            <Button fx:id="submit" layoutX="256.0" layoutY="121.0" mnemonicParsing="false" onAction="#clickedSubmit" text="SUBMIT" />
-
-
-
-
-            <Button fx:id="bacon" layoutX="43.0" layoutY="26.0" mnemonicParsing="false" onAction="#clickedBacon" prefHeight="56.0" prefWidth="68.0" textFill="#212122" AnchorPane.leftAnchor="43.0">
-               <graphic>
-                  <ImageView fitHeight="53.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="file:..\CLRestaurant\src\main\assets\hamburger\bacon.png" />
-                     </image>
-                  </ImageView>
-               </graphic></Button>
-            <Button fx:id="cheese" layoutX="42.0" layoutY="94.0" mnemonicParsing="false" onAction="#clickedCheese" text="fomaggio" />
-            <Button fx:id="egg" layoutX="42.0" layoutY="134.0" mnemonicParsing="false" onAction="#clickedEgg" text="uova" />
-            <Button fx:id="lettuce" layoutX="42.0" layoutY="176.0" mnemonicParsing="false" onAction="#clickedLettuce" text="lattuga" />
-            <Button fx:id="mushrooms" layoutX="42.0" layoutY="213.0" mnemonicParsing="false" onAction="#clickedMushrooms" text="funghi" />
-            <Button fx:id="patty" layoutX="42.0" layoutY="255.0" mnemonicParsing="false" onAction="#clickedPatty" text="svizzera" />
-            <Button fx:id="tomatoh" layoutX="42.0" layoutY="301.0" mnemonicParsing="false" onAction="#clickedTomatoh" text="pomodoro" />
-
-
-            <Button fx:id="tomatop" layoutX="470.0" layoutY="55.0" mnemonicParsing="false" onAction="#clickedTomatop" text="pomodoro" />
-            <Button fx:id="mozzarella" layoutX="470.0" layoutY="94.0" mnemonicParsing="false" onAction="#clickedMozzarella" text="mozzaerella" />
-            <Button fx:id="vegetable" layoutX="470.0" layoutY="134.0" mnemonicParsing="false" onAction="#clickedVegetable" text="verdure" />
-            <Button fx:id="sausage" layoutX="470.0" layoutY="176.0" mnemonicParsing="false" onAction="#clickedSausage" text="salsiccia" />
-            <Button fx:id="salami" layoutX="470.0" layoutY="213.0" mnemonicParsing="false" onAction="#clickedSalami" text="salame" />
-            <Button fx:id="pineapple" layoutX="470.0" layoutY="255.0" mnemonicParsing="false" onAction="#clickedPineapple" text="ananas" />
-            <Button fx:id="fish" layoutX="470.0" layoutY="289.0" mnemonicParsing="false" onAction="#clickedFish" text="acciughe" />
-
-
-            <Button fx:id="bread1" layoutX="222.0" layoutY="238.0" mnemonicParsing="false" onAction="#clickedBread1" text="bread 1" />
-            <Button fx:id="bread2" layoutX="222.0" layoutY="277.0" mnemonicParsing="false" onAction="#clickedBread2" text="bread 2" />
-            <Button fx:id="impasto" layoutX="342.0" layoutY="255.0" mnemonicParsing="false" onAction="#clickedImpasto" text="impasto" />
+            <Button fx:id="start" layoutX="291.0" layoutY="77.0" mnemonicParsing="false" onAction="#clickedStart" text="start" />
+            <Button fx:id="submit" layoutX="282.0" layoutY="123.0" mnemonicParsing="false" onAction="#clickedSubmit" text="SUBMIT" disable="true" />
+            <Pane fx:id="hamburgerpane" layoutX="42.0" layoutY="26.0">
+               <children>
+      
+      
+      
+      
+                  <Button fx:id="bacon" layoutX="1.0" mnemonicParsing="false" onAction="#clickedBacon" prefHeight="56.0" prefWidth="68.0" textFill="#212122">
+                     <graphic>
+                        <ImageView fitHeight="53.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:..\CLRestaurant\src\main\assets\hamburger\bacon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="cheese" layoutY="68.0" mnemonicParsing="false" onAction="#clickedCheese" text="fomaggio" />
+                  <Button fx:id="egg" layoutY="108.0" mnemonicParsing="false" onAction="#clickedEgg" text="uova" />
+                  <Button fx:id="lettuce" layoutY="150.0" mnemonicParsing="false" onAction="#clickedLettuce" text="lattuga" />
+                  <Button fx:id="mushrooms" layoutY="187.0" mnemonicParsing="false" onAction="#clickedMushrooms" text="funghi" />
+                  <Button fx:id="patty" layoutY="229.0" mnemonicParsing="false" onAction="#clickedPatty" text="svizzera" />
+                  <Button fx:id="tomatoh" layoutY="275.0" mnemonicParsing="false" onAction="#clickedTomatoh" text="pomodoro" />
+      
+      
+                  <Button fx:id="bread1" layoutX="180.0" layoutY="212.0" mnemonicParsing="false" onAction="#clickedBread1" text="bread 1" />
+                  <Button fx:id="bread2" layoutX="180.0" layoutY="251.0" mnemonicParsing="false" onAction="#clickedBread2" text="bread 2" />
+               </children>
+            </Pane>
+            <Pane fx:id="pizzapane" layoutX="385.0" layoutY="55.0">
+               <children>
+      
+      
+                  <Button fx:id="tomatop" layoutX="85.0" mnemonicParsing="false" onAction="#clickedTomatop" text="pomodoro" />
+                  <Button fx:id="mozzarella" layoutX="85.0" layoutY="39.0" mnemonicParsing="false" onAction="#clickedMozzarella" text="mozzaerella" />
+                  <Button fx:id="vegetable" layoutX="85.0" layoutY="79.0" mnemonicParsing="false" onAction="#clickedVegetable" text="verdure" />
+                  <Button fx:id="sausage" layoutX="85.0" layoutY="121.0" mnemonicParsing="false" onAction="#clickedSausage" text="salsiccia" />
+                  <Button fx:id="salami" layoutX="94.0" layoutY="161.0" mnemonicParsing="false" onAction="#clickedSalami" text="salame" />
+                  <Button fx:id="pineapple" layoutX="94.0" layoutY="200.0" mnemonicParsing="false" onAction="#clickedPineapple" text="ananas" />
+                  <Button fx:id="fish" layoutX="85.0" layoutY="234.0" mnemonicParsing="false" onAction="#clickedFish" text="acciughe" />
+                  <Button fx:id="impasto" layoutY="174.0" mnemonicParsing="false" onAction="#clickedImpasto" text="impasto" />
+               </children>
+            </Pane>
 
 
             <ImageView fx:id="bubblebase1" fitHeight="150.0" fitWidth="214.0" layoutX="600.0" layoutY="670.0" pickOnBounds="true" preserveRatio="true" visible="false">
@@ -66,11 +75,11 @@
             <ImageView fx:id="ingredient5" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="ingredient6" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="490.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="ingredient7" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="orderbase2" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true" viewOrder="-Infinity"/>
+            <ImageView fx:id="orderbase2" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true" viewOrder="-Infinity" />
 
 
             <ImageView fx:id="confetti" fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="trashcan" layoutX="253.0" layoutY="163.0" mnemonicParsing="false" text="TrashCan" onAction="#clickedTrashCan" />
+            <Button fx:id="trashcan" layoutX="279.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickedTrashCan" text="TrashCan" />
 
          </children>
       </AnchorPane>
