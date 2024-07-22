@@ -13,6 +13,8 @@ public class CLRController{
     private Label welcomeText;
     @FXML
     private Button submit;
+    @FXML
+    private Button trashcan;
 
 
 
@@ -472,6 +474,13 @@ public class CLRController{
         bubblebase2.setLayoutY(coordY);
         bubblebase2.setImage(orderistance.imagebread2);
         bubblebase2.setVisible(true);
+    }
+
+
+    @FXML
+    private void clickedTrashCan()
+    {
+        resetplate();
     }
 
    /* @FXML

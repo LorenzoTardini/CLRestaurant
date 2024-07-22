@@ -9,7 +9,7 @@
 
       <AnchorPane layoutY="47.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1000.0" style="-fx-background-image: url('file:../CLRestaurant/src/main/assets/mainpantemp.jpg');">
          <children>
-            <Button fx:id="start" layoutX="280.0" layoutY="30.0" mnemonicParsing="false" onAction="#clickedStart" text="start" />
+            <Button fx:id="start" layoutX="265.0" layoutY="75.0" mnemonicParsing="false" onAction="#clickedStart" text="start" />
             <Button fx:id="submit" layoutX="256.0" layoutY="121.0" mnemonicParsing="false" onAction="#clickedSubmit" text="SUBMIT" />
 
 
@@ -69,6 +69,7 @@
             <ImageView fx:id="ingredient7" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true" />
 
             <ImageView fx:id="confetti" fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fxx:id="trashcan" layoutX="253.0" layoutY="163.0" mnemonicParsing="false" text="TrashCan" onAction="#clickedTrashCan" />
 
          </children>
       </AnchorPane>
