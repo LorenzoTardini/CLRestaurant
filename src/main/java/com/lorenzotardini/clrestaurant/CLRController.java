@@ -118,6 +118,7 @@ public class CLRController{
     private boolean fooddecision;
     ArrayList<Integer> generatedbyuser = new ArrayList<Integer>();
     double lastingredient=orderbase1.getLayoutY()-30;
+    Image[] images;
 
 
 
@@ -235,7 +236,6 @@ public class CLRController{
                 ingredient5, ingredient6,
                 ingredient7
         };
-        Image[] images = orderistance.initimages();
 
         for (int i = 0; i < ingredients.length; i++) {
             if (i == identifier) {
@@ -378,11 +378,12 @@ public class CLRController{
 
 
         int[] generatedorder = orderistance.ordercreator();
-        orderistance.initimages();
-        showhamburgerbubble(generatedorder,bubbles);
+        images = orderistance.initimages();
+
         Random rangen = new Random();
         fooddecision = rangen.nextBoolean();
 
+        showbubble(generatedorder,bubbles);
 
 
         /*if(decision.nextBoolean()){ //se decision == true allora abbiamo un hamburger
@@ -400,15 +401,24 @@ public class CLRController{
     protected void cleanup(ImageView[] bubbles){
            for( int i=0; i<bubbles.length; i++){
             bubbles[i].setVisible(false);
+            bubblebase1.setVisible(false);
+            bubblebase2.setVisible(false);
         }
     }
 
 
     @FXML
-    protected void showhamburgerbubble(int []generatedorder, ImageView[] bubbles){
-        bubblebase1.setImage(orderistance.imagebread1);
-        bubblebase1.setVisible(true);
+    protected void showbubble(int []generatedorder, ImageView[] bubbles){
+        if(fooddecision) {
+            bubblebase1.setImage(images[15]);
+            bubblebase1.setVisible(true);
+        }
+        else{
+            bubblebase1.setImage(images[14]);
+            bubblebase1.setVisible(true);
+        }
         double last=0;
+
         //placeholderfiller(-1,CLRgame.imagetomatop);
         for(int i=0; i<generatedorder.length;i++){
 
@@ -417,7 +427,7 @@ public class CLRController{
                     //last = placeholderfiller(i,CLRgame.imagetomatoh);
                     //break;
                     bubbles[i].setVisible(true);
-                    bubbles[i].setImage(CLRgame.imagetomatoh);
+                    bubbles[i].setImage(images[generatedorder[i]+7*(fooddecision?0:1)-1]);
                     last=bubbles[i].getLayoutY();
                     break;
 
@@ -425,7 +435,7 @@ public class CLRController{
                     //last = placeholderfiller(i,CLRgame.imagebacon);
                     //break;
                     bubbles[i].setVisible(true);
-                    bubbles[i].setImage(CLRgame.imagebacon);
+                    bubbles[i].setImage(images[generatedorder[i]+7*(fooddecision?0:1)-1]);
                     last=bubbles[i].getLayoutY();
                     break;
 
@@ -433,7 +443,7 @@ public class CLRController{
                     //last = placeholderfiller(i,CLRgame.imagecheese);
                     //break;
                     bubbles[i].setVisible(true);
-                    bubbles[i].setImage(CLRgame.imagecheese);
+                    bubbles[i].setImage(images[generatedorder[i]+7*(fooddecision?0:1)-1]);
                     last=bubbles[i].getLayoutY();
                     break;
 
@@ -441,7 +451,7 @@ public class CLRController{
                     //last = placeholderfiller(i,CLRgame.imageegg);
                     //break;
                     bubbles[i].setVisible(true);
-                    bubbles[i].setImage(CLRgame.imageegg);
+                    bubbles[i].setImage(images[generatedorder[i]+7*(fooddecision?0:1)-1]);
                     last=bubbles[i].getLayoutY();
                     break;
 
@@ -449,14 +459,14 @@ public class CLRController{
                     //last = placeholderfiller(i,CLRgame.imagelettuce);
                     //break;
                     bubbles[i].setVisible(true);
-                    bubbles[i].setImage(CLRgame.imagelettuce);
+                    bubbles[i].setImage(images[generatedorder[i]+7*(fooddecision?0:1)-1]);
                     last=bubbles[i].getLayoutY();
                     break;
                 case 6:
                     //last = placeholderfiller(i,CLRgame.imagemushrooms);
                     //break;
                     bubbles[i].setVisible(true);
-                    bubbles[i].setImage(CLRgame.imagemushrooms);
+                    bubbles[i].setImage(images[generatedorder[i]+7*(fooddecision?0:1)-1]);
                     last=bubbles[i].getLayoutY();
                     break;
 
@@ -464,16 +474,18 @@ public class CLRController{
                     //last = placeholderfiller(i,CLRgame.imagepatty);
                     //break;
                     bubbles[i].setVisible(true);
-                    bubbles[i].setImage(CLRgame.imagepatty);
+                    bubbles[i].setImage(images[generatedorder[i]+7*(fooddecision?0:1)-1]);
                     last=bubbles[i].getLayoutY();
                     break;
 
             }
         }
         double coordY = last-80;
-        bubblebase2.setLayoutY(coordY);
-        bubblebase2.setImage(orderistance.imagebread2);
-        bubblebase2.setVisible(true);
+        if(fooddecision) {
+            bubblebase2.setLayoutY(coordY);
+            bubblebase2.setImage(images[16]);
+            bubblebase2.setVisible(true);
+        }
     }
 
 

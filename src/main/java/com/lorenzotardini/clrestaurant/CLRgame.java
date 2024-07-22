@@ -100,10 +100,10 @@ public class CLRgame{
             imageaubergine = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\aubergine.PNG"));
             imagesalami = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\salami.PNG"));
             imagepineapple = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\pineapple.PNG"));
-            imagetomatop = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\PLACEHOLDER.PNG"));
-            imagemozzarella = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\PLACEHOLDER.PNG"));
-            imagesausage = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\PLACEHOLDER.PNG"));
-            imageimpasto = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\PLACEHOLDER.PNG"));
+            imagetomatop = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\tomatop.png"));
+            imagemozzarella = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\mozzarella.png"));
+            imagesausage = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\sausage.png"));
+            imageimpasto = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\PLACEHOLDER2.PNG"));
 
 
 
@@ -114,8 +114,8 @@ public class CLRgame{
         }
         //here we define which image corresponds to which identifier in the "buttonfiller" function
         Image[] ret = {imagetomatoh,imagebacon,imagecheese,imageegg,imagelettuce,imagemushrooms,
-                imagepatty,imagebread1,imagebread2,imageanchovy,imageaubergine,imagesalami,
-                imagepineapple, imagetomatop,imagemozzarella,imagesausage,imageimpasto};
+                imagepatty,imageanchovy,imageaubergine,imagesalami, imagepineapple,
+                imagetomatop,imagemozzarella,imagesausage,imageimpasto,imagebread1,imagebread2};
 
         return ret;
     }
