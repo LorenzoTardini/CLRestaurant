@@ -1,7 +1,6 @@
 package com.lorenzotardini.clrestaurant;
 
 import javafx.scene.image.Image;
-import org.controlsfx.control.tableview2.filter.filtereditor.SouthFilter;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -26,7 +25,7 @@ public class CLRgame{
     static Image imagesalami;
     static Image imagepineapple;
     static Image imagemozzarella;
-    static Image imagetomatop;
+    static Image imagefries;
     static Image imageimpasto;
     static Image imagesausage;
     static Image imageconfetti;
@@ -100,7 +99,7 @@ public class CLRgame{
             imageaubergine = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\aubergine.PNG"));
             imagesalami = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\salami.PNG"));
             imagepineapple = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\pineapple.PNG"));
-            imagetomatop = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\tomatop.png"));
+            imagefries = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\tomatop.png"));
             imagemozzarella = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\mozzarella.png"));
             imagesausage = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\sausage.png"));
             imageimpasto = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\PLACEHOLDER2.PNG"));
@@ -113,7 +112,7 @@ public class CLRgame{
         //here we define which image corresponds to which identifier in the "buttonfiller" function
         Image[] ret = {imagetomatoh,imagebacon,imagecheese,imageegg,imagelettuce,imagemushrooms,
                 imagepatty,imageanchovy,imageaubergine,imagesalami, imagepineapple,
-                imagetomatop,imagemozzarella,imagesausage,imageimpasto,imagebread1,imagebread2};
+                imagefries,imagemozzarella,imagesausage,imageimpasto,imagebread1,imagebread2};
 
         return ret;
     }

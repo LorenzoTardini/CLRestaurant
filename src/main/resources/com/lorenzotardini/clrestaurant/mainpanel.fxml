@@ -8,9 +8,9 @@
    <children>
       <AnchorPane layoutY="48.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1000.0" style="-fx-background-image: url('file:../CLRestaurant/src/main/assets/mainpantemp.jpg');">
          <children>
-            <Button fx:id="start" layoutX="291.0" layoutY="77.0" mnemonicParsing="false" onAction="#clickedStart" text="start" />
-            <Button fx:id="submit" layoutX="282.0" layoutY="123.0" mnemonicParsing="false" onAction="#clickedSubmit" text="SUBMIT" disable="true" />
-            <Pane fx:id="hamburgerpane" layoutX="42.0" layoutY="26.0">
+            <Button fx:id="start" layoutX="279.0" layoutY="76.0" mnemonicParsing="false" onAction="#clickedStart" text="start" />
+            <Button fx:id="submit" disable="true" layoutX="270.0" layoutY="122.0" mnemonicParsing="false" onAction="#clickedSubmit" text="SUBMIT" />
+            <Pane fx:id="hamburgerpane" layoutX="42.0" layoutY="28.0">
                <children>
       
       
@@ -30,18 +30,18 @@
                   <Button fx:id="lettuce" layoutY="150.0" mnemonicParsing="false" onAction="#clickedLettuce" text="lattuga" />
                   <Button fx:id="mushrooms" layoutY="187.0" mnemonicParsing="false" onAction="#clickedMushrooms" text="funghi" />
                   <Button fx:id="patty" layoutY="229.0" mnemonicParsing="false" onAction="#clickedPatty" text="svizzera" />
-                  <Button fx:id="tomatoh" layoutY="275.0" mnemonicParsing="false" onAction="#clickedTomatoh" text="pomodoro" />
+                  <Button fx:id="tomatoh" layoutY="275.0" mnemonicParsing="false" onAction="#clickedTomatoh" text="patatine" />
       
       
-                  <Button fx:id="bread1" layoutX="180.0" layoutY="212.0" mnemonicParsing="false" onAction="#clickedBread1" text="bread 1" />
-                  <Button fx:id="bread2" layoutX="180.0" layoutY="251.0" mnemonicParsing="false" onAction="#clickedBread2" text="bread 2" />
+                  <Button fx:id="bread1" layoutX="108.0" layoutY="187.0" mnemonicParsing="false" onAction="#clickedBread1" text="bread 1" />
+                  <Button fx:id="bread2" layoutX="108.0" layoutY="226.0" mnemonicParsing="false" onAction="#clickedBread2" text="bread 2" />
                </children>
             </Pane>
             <Pane fx:id="pizzapane" layoutX="385.0" layoutY="55.0">
                <children>
       
       
-                  <Button fx:id="tomatop" layoutX="85.0" mnemonicParsing="false" onAction="#clickedTomatop" text="pomodoro" />
+                  <Button fx:id="fries" layoutX="85.0" mnemonicParsing="false" onAction="#clickedTomatop" text="pomodoro" />
                   <Button fx:id="mozzarella" layoutX="85.0" layoutY="39.0" mnemonicParsing="false" onAction="#clickedMozzarella" text="mozzaerella" />
                   <Button fx:id="vegetable" layoutX="85.0" layoutY="79.0" mnemonicParsing="false" onAction="#clickedVegetable" text="verdure" />
                   <Button fx:id="sausage" layoutX="85.0" layoutY="121.0" mnemonicParsing="false" onAction="#clickedSausage" text="salsiccia" />
@@ -79,7 +79,9 @@
 
 
             <ImageView fx:id="confetti" fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="trashcan" layoutX="279.0" layoutY="165.0" mnemonicParsing="false" onAction="#clickedTrashCan" text="TrashCan" />
+            <Button fx:id="trashcan" layoutX="267.0" layoutY="164.0" mnemonicParsing="false" onAction="#clickedTrashCan" text="TrashCan" />
+            <Label fx:id="punteggiolabel" layoutX="265.0" layoutY="252.0" prefHeight="40.0" prefWidth="65.0" text="punteggio" textAlignment="CENTER" />
+            <Label fx:id="punteggioverolabel" layoutX="265.0" layoutY="222.0" prefHeight="40.0" prefWidth="65.0" text="VEROPUNT" textAlignment="CENTER" />
 
          </children>
       </AnchorPane>

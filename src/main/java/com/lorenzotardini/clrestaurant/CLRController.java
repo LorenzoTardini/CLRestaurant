@@ -1,10 +1,13 @@
 package com.lorenzotardini.clrestaurant;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.*;
 import javafx.scene.layout.Pane;
+import javafx.util.Duration;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -47,7 +50,7 @@ public class CLRController{
     private Button impasto;
 
     @FXML
-    private Button tomatop;
+    private Button fries;
     @FXML
     private Button mozzarella;
     @FXML
@@ -116,14 +119,21 @@ public class CLRController{
     @FXML
     private Pane pizzapane;
 
+    @FXML
+    private Label punteggiolabel;
+    @FXML
+    private Label punteggioverolabel;
 
+    Timeline timer;
     int count = 0;
     private CLRgame orderistance = new CLRgame();
     private boolean validcreation = false;
     private boolean fooddecision;
+    private boolean isfirststart=true;
     ArrayList<Integer> generatedbyuser = new ArrayList<Integer>();
     double lastingredient=orderbase1.getLayoutY()-30;
     Image[] images;
+    int punteggiovalue=0;
 
 
 
@@ -284,20 +294,35 @@ public class CLRController{
         }
         if(!checkequal) {
             System.out.println("Ordine sbagliato!");
+            scorecalc(false);
             resetplate();
         }
         else{
             System.out.println("Ordine giusto!!!");
             confetti.setVisible(true);
             confetti.setImage(CLRgame.imageconfetti);
+            scorecalc(true);
         }
         generatedbyuser.clear();
         checkequal=true;
     }
 
+
+    protected void scorecalc(boolean orderiscorrect){
+        if(orderiscorrect){
+            punteggiovalue+= (int)((generatedbyuser.size()*100)*(1.6-0.01*Integer.parseInt(punteggiolabel.getText())));
+        }
+        else{
+            punteggiovalue-=generatedbyuser.size()*50;
+        }
+        punteggioverolabel.setText(String.valueOf(punteggiovalue));
+    }
+
+    
     protected void resetplate() {
-        Button[] buttonsvector = {tomatoh, bacon, egg, lettuce, mushrooms, patty, cheese, tomatop,
-                                    fish,vegetable,salami,pineapple,mozzarella,sausage,impasto,bread1,bread2};
+        Button[] buttonsvector = {tomatoh, bacon, egg, lettuce, mushrooms, patty, cheese, fries,
+                                    fish,vegetable,salami,pineapple,mozzarella,sausage,
+                                    impasto,bread1,bread2};
         for (int i = 0; i < buttonsvector.length; i++) {
             buttonsvector[i].setDisable(false);
         }
@@ -322,7 +347,7 @@ public class CLRController{
     @FXML
     protected void clickedTomatop() {
         if(validcreation) {
-            tomatop.setDisable(true);
+            fries.setDisable(true);
             buttonfiller(11);
             count++;
         }
@@ -354,7 +379,6 @@ public class CLRController{
             buttonfiller(13);
             count++;
         }
-
     }
     @FXML
     protected void clickedSalami() {
@@ -363,7 +387,6 @@ public class CLRController{
             buttonfiller(9);
             count++;
         }
-
     }
     @FXML
     protected void clickedPineapple() {
@@ -372,7 +395,6 @@ public class CLRController{
             buttonfiller(10);
             count++;
         }
-
     }
     @FXML
     protected void clickedFish() {
@@ -381,7 +403,6 @@ public class CLRController{
             buttonfiller(7);
             count++;
         }
-
     }
 
     @FXML
@@ -391,6 +412,16 @@ public class CLRController{
             submit.setDisable(false);
             orderbase1.setVisible(true);
             orderbase1.setImage(CLRgame.imageimpasto);
+    }
+
+    private void funzionediprovatimer(){
+        for(int i=1; i<61; i++)
+        {
+            int finalI = i;
+            KeyFrame kf = new KeyFrame(Duration.seconds(i),
+                    ActionEvent -> punteggiolabel.setText(String.valueOf(60- finalI)));
+            timer.getKeyFrames().add(kf);
+        }
 
     }
     @FXML
@@ -409,6 +440,14 @@ public class CLRController{
         confetti.setVisible(false);
         resetplate();
         cleanup(bubbles);
+        punteggiolabel.setText("ciao mamma");
+
+        if(isfirststart) {
+            timer = new Timeline();
+            funzionediprovatimer();
+            timer.play();
+            isfirststart = false;
+        }
 
 
         int[] generatedorder = orderistance.ordercreator();
