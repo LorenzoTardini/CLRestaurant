@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.Cursor?>
 <Pane maxWidth="1000.0" minHeight="1000.0" minWidth="1000.0" prefHeight="1000.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lorenzotardini.clrestaurant.CLRController">
    <children>
       <AnchorPane layoutY="48.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1000.0" style="-fx-background-image: url('file:../CLRestaurant/src/main/assets/mainpantemp.jpg');">
@@ -23,29 +23,6 @@
                         </ImageView>
                      </graphic>
                   </Button>
-
-
-
-                  <Pane layoutX="436.0" layoutY="423.0">
-                     <children>
-                        <ImageView fitHeight="53.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="file:..\CLRestaurant\src\main\assets\hamburger\bacon.png" />
-                           </image>
-                           <effect>
-                              <DropShadow />
-                           </effect>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </ImageView>
-                        <Button prefHeight="53.0" prefWidth="61.0" mnemonicParsing="false" text="Button" opacity="0.0" onAction="#provainvisibile">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                     </children>
-                  </Pane>
 
                   <Button fx:id="cheese" layoutY="68.0" mnemonicParsing="false" onAction="#clickedCheese" text="fomaggio" />
                   <Button fx:id="egg" layoutY="108.0" mnemonicParsing="false" onAction="#clickedEgg" text="uova" />
@@ -105,7 +82,39 @@
             <Label fx:id="punteggiolabel" layoutX="265.0" layoutY="252.0" prefHeight="40.0" prefWidth="65.0" text="punteggio" textAlignment="CENTER" />
             <Label fx:id="punteggioverolabel" layoutX="265.0" layoutY="222.0" prefHeight="40.0" prefWidth="65.0" text="VEROPUNT" textAlignment="CENTER" />
 
+
+
+            <Pane>
+               <children>
+                  <ImageView fitHeight="53.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:..\CLRestaurant\src\main\assets\hamburger\bacon.png" />
+                     </image>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Button mnemonicParsing="false" onAction="#provainvisibile" opacity="0.0" prefHeight="53.0" prefWidth="61.0" text="Button">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+
          </children>
       </AnchorPane>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <Pane fx:id="gameoverpane" prefHeight="1000.0" prefWidth="1000.0" visible="false">
+         <children>
+            <Label layoutX="362.0" layoutY="180.0" prefHeight="75.0" prefWidth="138.0" text="GAME OVER " />
+            <Label layoutX="341.0" layoutY="239.0" prefHeight="32.0" prefWidth="138.0" text="IL TUO PUNTEGGIO VALE" />
+            <Label layoutX="396.0" layoutY="271.0" />
+         </children>
+      </Pane>
    </children>
 </Pane>
