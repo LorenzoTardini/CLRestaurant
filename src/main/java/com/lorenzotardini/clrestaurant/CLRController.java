@@ -19,6 +19,8 @@ public class CLRController{
     private Button submit;
     @FXML
     private Button trashcan;
+    @FXML
+    private Button restart;
 
 
 
@@ -126,6 +128,8 @@ public class CLRController{
     private Label punteggiolabel;
     @FXML
     private Label punteggioverolabel;
+    @FXML
+    private Label finalscore;
 
     Timeline timer;
     int count = 0;
@@ -246,6 +250,19 @@ public class CLRController{
         }
     }
 
+    @FXML
+    protected void clickedRestart(){
+        punteggiovalue=0;
+        punteggioverolabel.setVisible(false);
+        gameoverpane.setVisible(false);
+        hamburgerpane.setVisible(true);
+        pizzapane.setVisible(true);
+        clickedStart();
+        timer = new Timeline();
+        funzionediprovatimer();
+        timer.play();
+    }
+
 
 
     private void buttonfiller(int identifier) {
@@ -319,7 +336,9 @@ public class CLRController{
         else{
             punteggiovalue-=generatedbyuser.size()*50;
         }
+
         punteggioverolabel.setText(String.valueOf(punteggiovalue));
+        punteggioverolabel.setVisible(true);
     }
 
     
@@ -427,6 +446,7 @@ public class CLRController{
                         ActionEvent -> {
                             pizzapane.setVisible(false);
                             hamburgerpane.setVisible(false);
+                            finalscore.setText(String.valueOf(punteggiovalue));
                             gameoverpane.setVisible(true);
                         });
                 timer.getKeyFrames().add(kf);
