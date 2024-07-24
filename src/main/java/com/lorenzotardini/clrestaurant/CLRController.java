@@ -302,6 +302,7 @@ public class CLRController{
             confetti.setVisible(true);
             confetti.setImage(CLRgame.imageconfetti);
             scorecalc(true);
+            clickedStart();
         }
         generatedbyuser.clear();
         checkequal=true;
@@ -418,11 +419,18 @@ public class CLRController{
         for(int i=1; i<61; i++)
         {
             int finalI = i;
+            if(finalI==60){
+                KeyFrame kf = new KeyFrame(Duration.seconds(i),
+                        ActionEvent -> {
+                            pizzapane.setVisible(false);
+                            hamburgerpane.setVisible(false);
+                        });
+                timer.getKeyFrames().add(kf);
+            }
             KeyFrame kf = new KeyFrame(Duration.seconds(i),
                     ActionEvent -> punteggiolabel.setText(String.valueOf(60- finalI)));
             timer.getKeyFrames().add(kf);
         }
-
     }
     @FXML
     protected void clickedStart() {
@@ -440,7 +448,6 @@ public class CLRController{
         confetti.setVisible(false);
         resetplate();
         cleanup(bubbles);
-        punteggiolabel.setText("ciao mamma");
 
         if(isfirststart) {
             timer = new Timeline();
@@ -614,4 +621,11 @@ public class CLRController{
         }
         return 0;
     }*/
+
+
+    @FXML
+    private void provainvisibile()
+    {
+        System.out.println("hello world");
+    }
 }
