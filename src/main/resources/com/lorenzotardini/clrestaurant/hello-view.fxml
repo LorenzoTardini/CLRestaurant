@@ -14,3 +14,45 @@
     <Label fx:id="welcomeText"/>
     <Button text="Hello!" onAction="#onHelloButtonClick"/>
 </VBox>
+
+<Pane fx:id="hamburgerpanee" layoutX="42.0" layoutY="28.0" visible="false">
+<children>
+
+    <Button fx:id="baconn" layoutX="1.0" mnemonicParsing="false" onAction="#provainvisibile" prefHeight="56.0" prefWidth="68.0" textFill="#212122">
+        <graphic>
+            <ImageView fitHeight="53.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="file:..\CLRestaurant\src\main\assets\hamburger\bacon.png" />
+                </image>
+            </ImageView>
+        </graphic>
+    </Button>
+
+
+    <Button fx:id="cheesee" layoutY="68.0" mnemonicParsing="false" onAction="#clickedCheese" text="fomaggio" />
+    <Button fx:id="eggg" layoutY="108.0" mnemonicParsing="false" onAction="#clickedEgg" text="uova" />
+    <Button fx:id="lettucee" layoutY="150.0" mnemonicParsing="false" onAction="#clickedLettuce" text="lattuga" />
+    <Button fx:id="mushroomss" layoutY="187.0" mnemonicParsing="false" onAction="#clickedMushrooms" text="funghi" />
+    <Button fx:id="pattyy" layoutY="229.0" mnemonicParsing="false" onAction="#clickedPatty" text="svizzera" />
+    <Button fx:id="tomatohh" layoutY="275.0" mnemonicParsing="false" onAction="#clickedTomatoh" text="patatine" />
+
+
+    <Button fx:id="bread11" layoutX="108.0" layoutY="187.0" mnemonicParsing="false" onAction="#clickedBread1" text="bread 1" />
+    <Button fx:id="bread22" layoutX="108.0" layoutY="226.0" mnemonicParsing="false" onAction="#clickedBread2" text="bread 2" visible="false" />
+</children>
+</Pane>
+
+<Pane fx:id="pizzapanee" layoutX="385.0" layoutY="55.0" visible="false">
+<children>
+
+
+    <Button fx:id="fries" layoutX="85.0" mnemonicParsing="false" onAction="#clickedFries" text="pomodoro" />
+    <Button fx:id="mozzarellaa" layoutX="85.0" layoutY="39.0" mnemonicParsing="false" onAction="#clickedMozzarella" text="mozzaerella" />
+    <Button fx:id="vegetablee" layoutX="85.0" layoutY="79.0" mnemonicParsing="false" onAction="#clickedVegetable" text="verdure" />
+    <Button fx:id="sausagee" layoutX="85.0" layoutY="121.0" mnemonicParsing="false" onAction="#clickedSausage" text="salsiccia" />
+    <Button fx:id="salamii" layoutX="94.0" layoutY="161.0" mnemonicParsing="false" onAction="#clickedSalami" text="salame" />
+    <Button fx:id="pineapplee" layoutX="94.0" layoutY="200.0" mnemonicParsing="false" onAction="#clickedPineapple" text="ananas" />
+    <Button fx:id="fishh" layoutX="85.0" layoutY="234.0" mnemonicParsing="false" onAction="#clickedFish" text="acciughe" />
+    <Button fx:id="impastoo" layoutY="174.0" mnemonicParsing="false" onAction="#clickedImpasto" text="impasto" />
+</children>
+</Pane>

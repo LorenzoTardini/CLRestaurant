@@ -12,46 +12,376 @@
          <children>
             <Button fx:id="start" layoutX="279.0" layoutY="76.0" mnemonicParsing="false" onAction="#clickedStart" text="start" />
             <Button fx:id="submit" disable="true" layoutX="270.0" layoutY="122.0" mnemonicParsing="false" onAction="#clickedSubmit" text="SUBMIT" />
+
             <Pane fx:id="hamburgerpane" layoutX="42.0" layoutY="28.0">
                <children>
 
-                  <Button fx:id="bacon" layoutX="1.0" mnemonicParsing="false" onAction="#clickedBacon" prefHeight="56.0" prefWidth="68.0" textFill="#212122">
-                     <graphic>
-                        <ImageView fitHeight="53.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                  <Pane layoutX="10.0" layoutY="10.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="file:..\CLRestaurant\src\main\assets\hamburger\bacon.png" />
                            </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </ImageView>
-                     </graphic>
-                  </Button>
+                        <Button fx:id="bacon" mnemonicParsing="false" onAction="#clickedBacon" opacity="0.0" prefHeight="53.0" prefWidth="61.0" text="bacon">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
 
+                  <Pane layoutX="10.0" layoutY="80.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:..\CLRestaurant\src\main\assets\hamburger\cheese.png" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Button fx:id="cheese" mnemonicParsing="false" onAction="#clickedCheese" opacity="0.0" prefHeight="53.0" prefWidth="61.0" text="cheese">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
 
-                  <Button fx:id="cheese" layoutY="68.0" mnemonicParsing="false" onAction="#clickedCheese" text="fomaggio" />
-                  <Button fx:id="egg" layoutY="108.0" mnemonicParsing="false" onAction="#clickedEgg" text="uova" />
-                  <Button fx:id="lettuce" layoutY="150.0" mnemonicParsing="false" onAction="#clickedLettuce" text="lattuga" />
-                  <Button fx:id="mushrooms" layoutY="187.0" mnemonicParsing="false" onAction="#clickedMushrooms" text="funghi" />
-                  <Button fx:id="patty" layoutY="229.0" mnemonicParsing="false" onAction="#clickedPatty" text="svizzera" />
-                  <Button fx:id="tomatoh" layoutY="275.0" mnemonicParsing="false" onAction="#clickedTomatoh" text="patatine" />
-      
-      
-                  <Button fx:id="bread1" layoutX="108.0" layoutY="187.0" mnemonicParsing="false" onAction="#clickedBread1" text="bread 1" />
-                  <Button fx:id="bread2" layoutX="108.0" layoutY="226.0" mnemonicParsing="false" onAction="#clickedBread2" text="bread 2" />
+                  <Pane layoutX="10.0" layoutY="130.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:..\CLRestaurant\src\main\assets\hamburger\egg.png" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Button fx:id="egg" mnemonicParsing="false" onAction="#clickedEgg" opacity="0.0" prefHeight="53.0" prefWidth="61.0" text="egg">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+
+                  <Pane layoutX="10.0" layoutY="180.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:..\CLRestaurant\src\main\assets\hamburger\lettuce.png" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Button fx:id="lettuce" mnemonicParsing="false" onAction="#clickedLettuce" opacity="0.0" prefHeight="53.0" prefWidth="61.0" text="lettuce">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+
+                  <Pane layoutX="10.0" layoutY="230.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:..\CLRestaurant\src\main\assets\hamburger\mushrooms.png" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Button fx:id="mushrooms" mnemonicParsing="false" onAction="#clickedMushrooms" opacity="0.0" prefHeight="53.0" prefWidth="61.0" text="mushrooms">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+
+                  <Pane layoutX="10.0" layoutY="280.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:..\CLRestaurant\src\main\assets\hamburger\patty.png" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Button fx:id="patty" mnemonicParsing="false" onAction="#clickedPatty" opacity="0.0" prefHeight="53.0" prefWidth="61.0" text="patty">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+
+                  <Pane layoutX="10.0" layoutY="330.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:..\CLRestaurant\src\main\assets\hamburger\tomatoh.png" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Button fx:id="tomatoh" layoutX="2.0" layoutY="27.0" mnemonicParsing="false" onAction="#clickedTomatoh" opacity="0.0" prefHeight="80.0" prefWidth="77.0" text="tomatoh">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+
+                  <Pane layoutX="150.0" layoutY="217.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:..\CLRestaurant\src\main\assets\hamburger\bread1.png" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Button fx:id="bread1" mnemonicParsing="false" onAction="#clickedBread1" opacity="0.0" prefHeight="53.0" prefWidth="61.0" text="bread1">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+
+                  <Pane layoutX="150.0" layoutY="300.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:..\CLRestaurant\src\main\assets\hamburger\bread2.png" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Button fx:id="bread2" mnemonicParsing="false" onAction="#clickedBread2" opacity="0.0" prefHeight="53.0" prefWidth="61.0" text="bread2">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
                </children>
             </Pane>
+
             <Pane fx:id="pizzapane" layoutX="385.0" layoutY="55.0">
                <children>
-      
-      
-                  <Button fx:id="fries" layoutX="85.0" mnemonicParsing="false" onAction="#clickedTomatop" text="pomodoro" />
-                  <Button fx:id="mozzarella" layoutX="85.0" layoutY="39.0" mnemonicParsing="false" onAction="#clickedMozzarella" text="mozzaerella" />
-                  <Button fx:id="vegetable" layoutX="85.0" layoutY="79.0" mnemonicParsing="false" onAction="#clickedVegetable" text="verdure" />
-                  <Button fx:id="sausage" layoutX="85.0" layoutY="121.0" mnemonicParsing="false" onAction="#clickedSausage" text="salsiccia" />
-                  <Button fx:id="salami" layoutX="94.0" layoutY="161.0" mnemonicParsing="false" onAction="#clickedSalami" text="salame" />
-                  <Button fx:id="pineapple" layoutX="94.0" layoutY="200.0" mnemonicParsing="false" onAction="#clickedPineapple" text="ananas" />
-                  <Button fx:id="fish" layoutX="85.0" layoutY="234.0" mnemonicParsing="false" onAction="#clickedFish" text="acciughe" />
-                  <Button fx:id="impasto" layoutY="174.0" mnemonicParsing="false" onAction="#clickedImpasto" text="impasto" />
+
+                  <Pane layoutX="10.0" layoutY="10.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\tomatop.png" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Button fx:id="fries" mnemonicParsing="false" onAction="#clickedFries" opacity="0.0" prefHeight="53.0" prefWidth="61.0" text="fries">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+
+
+                  <Pane layoutX="10.0" layoutY="80.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\mozzarella.png" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Button fx:id="mozzarella" mnemonicParsing="false" onAction="#clickedMozzarella" opacity="0.0" prefHeight="53.0" prefWidth="61.0" text="mozzarella">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+
+                  <Pane layoutX="-70.0" layoutY="174.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\PLACEHOLDER2.PNG" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Button fx:id="impasto" mnemonicParsing="false" onAction="#clickedImpasto" opacity="0.0" prefHeight="53.0" prefWidth="61.0" text="impasto">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+
+                  <Pane layoutX="10.0" layoutY="174.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\aubergine.png" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Button fx:id="vegetable" mnemonicParsing="false" onAction="#clickedVegetable" opacity="0.0" prefHeight="53.0" prefWidth="61.0" text="vegetable">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+
+                  <Pane layoutX="10.0" layoutY="250.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\sausage.png" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Button fx:id="sausage" mnemonicParsing="false" onAction="#clickedSausage" opacity="0.0" prefHeight="53.0" prefWidth="61.0" text="sausage">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+
+                  <Pane layoutX="10.0" layoutY="350.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\salami.png" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Button fx:id="salami" mnemonicParsing="false" onAction="#clickedSalami" opacity="0.0" prefHeight="53.0" prefWidth="61.0" text="salami">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+
+                  <Pane layoutX="10.0" layoutY="390.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\pineapple.PNG" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Button fx:id="pineapple" mnemonicParsing="false" onAction="#clickedPineapple" opacity="0.0" prefHeight="53.0" prefWidth="61.0" text="pinapple">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+
+                  <Pane layoutX="10.0" layoutY="450.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\anchovy.PNG" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Button fx:id="fish" mnemonicParsing="false" onAction="#clickedFish" opacity="0.0" prefHeight="53.0" prefWidth="61.0" text="fish">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+
                </children>
             </Pane>
+
 
 
             <ImageView fx:id="bubblebase1" fitHeight="150.0" fitWidth="214.0" layoutX="600.0" layoutY="670.0" pickOnBounds="true" preserveRatio="true" visible="false">
@@ -86,27 +416,7 @@
 
 
 
-            <Pane>
-               <children>
-                  <ImageView fitHeight="53.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="file:..\CLRestaurant\src\main\assets\hamburger\bacon.png" />
-                     </image>
-                     <effect>
-                        <DropShadow />
-                     </effect>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </ImageView>
-                  <Button mnemonicParsing="false" onAction="#provainvisibile" opacity="0.0" prefHeight="53.0" prefWidth="61.0" text="Button">
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </Button>
-               </children>
-            </Pane>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-37.0" layoutY="379.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="100.0" fitWidth="200.0" layoutX="-37.0" layoutY="559.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="147.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true" />
 
          </children>
