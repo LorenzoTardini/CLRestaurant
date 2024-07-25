@@ -369,7 +369,7 @@ public class CLRController{
 
 
     @FXML
-    protected void clickedTomatop() {
+    protected void clickedFries() {
         if(validcreation) {
             fries.setDisable(true);
             buttonfiller(11);
