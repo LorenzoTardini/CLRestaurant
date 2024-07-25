@@ -10,9 +10,13 @@
    <children>
       <AnchorPane layoutY="48.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1000.0" style="-fx-background-image: url('file:../CLRestaurant/src/main/assets/mainpantemp.jpg');">
          <children>
-            <Button fx:id="start" layoutX="279.0" layoutY="76.0" mnemonicParsing="false" onAction="#clickedStart" text="start" />
-            <Button fx:id="submit" disable="true" layoutX="270.0" layoutY="122.0" mnemonicParsing="false" onAction="#clickedSubmit" text="SUBMIT" />
-
+            <Pane fx:id="controlspane" layoutX="267.0" layoutY="76.0">
+               <children>
+                  <Button fx:id="start" layoutX="12.0" mnemonicParsing="false" onAction="#clickedStart" text="start" />
+                  <Button fx:id="submit" disable="true" layoutX="3.0" layoutY="46.0" mnemonicParsing="false" onAction="#clickedSubmit" text="SUBMIT" />
+                  <Button fx:id="trashcan" layoutY="88.0" mnemonicParsing="false" onAction="#clickedTrashCan" text="TrashCan" />
+               </children>
+            </Pane>
             <Pane fx:id="hamburgerpane" layoutX="42.0" layoutY="28.0">
                <children>
 
@@ -410,7 +414,7 @@
 
 
             <ImageView fx:id="confetti" fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="trashcan" layoutX="267.0" layoutY="164.0" mnemonicParsing="false" onAction="#clickedTrashCan" text="TrashCan" />
+
             <Label fx:id="punteggiolabel" layoutX="265.0" layoutY="252.0" prefHeight="40.0" prefWidth="65.0" text="punteggio" textAlignment="CENTER" />
             <Label fx:id="punteggioverolabel" layoutX="265.0" layoutY="222.0" prefHeight="40.0" prefWidth="65.0" text="VEROPUNT" textAlignment="CENTER" />
 

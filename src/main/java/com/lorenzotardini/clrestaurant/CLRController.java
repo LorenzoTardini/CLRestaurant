@@ -122,7 +122,8 @@ public class CLRController{
     private Pane pizzapane;
     @FXML
     private Pane gameoverpane;
-
+    @FXML
+    private Pane controlspane;
 
     @FXML
     private Label punteggiolabel;
@@ -446,6 +447,7 @@ public class CLRController{
                         ActionEvent -> {
                             pizzapane.setVisible(false);
                             hamburgerpane.setVisible(false);
+                            controlspane.setVisible(false);
                             finalscore.setText(String.valueOf(punteggiovalue));
                             gameoverpane.setVisible(true);
                         });
