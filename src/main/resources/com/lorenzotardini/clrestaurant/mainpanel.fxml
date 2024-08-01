@@ -211,14 +211,14 @@
                </children>
             </Pane>
 
-            <Pane fx:id="pizzapane" layoutX="385.0" layoutY="55.0">
+            <Pane fx:id="pizzapane" layoutX="400.0" layoutY="55.0">
                <children>
 
                   <Pane layoutX="10.0" layoutY="10.0">
                      <children>
                         <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\fries.png" />
+                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\fries.png" />
                            </image>
                            <effect>
                               <DropShadow />
@@ -227,7 +227,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <Button fx:id="fries" mnemonicParsing="false" onAction="#clickedFries" opacity="0.0" prefHeight="53.0" prefWidth="61.0" text="fries">
+                        <Button fx:id="fries" mnemonicParsing="false" onAction="#clickedFries" opacity="0.0" prefHeight="80.0" prefWidth="80.0" text="fries">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -235,12 +235,11 @@
                      </children>
                   </Pane>
 
-
                   <Pane layoutX="10.0" layoutY="80.0">
                      <children>
                         <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\mozzarella.png" />
+                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\mozzarella.png" />
                            </image>
                            <effect>
                               <DropShadow />
@@ -257,11 +256,11 @@
                      </children>
                   </Pane>
 
-                  <Pane layoutX="-70.0" layoutY="174.0">
+                  <Pane layoutX="10.0" layoutY="150.0">
                      <children>
                         <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\PLACEHOLDER2.PNG" />
+                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\aubergine.png" />
                            </image>
                            <effect>
                               <DropShadow />
@@ -270,7 +269,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <Button fx:id="impasto" mnemonicParsing="false" onAction="#clickedImpasto" opacity="0.0" prefHeight="53.0" prefWidth="61.0" text="impasto">
+                        <Button fx:id="vegetable" mnemonicParsing="false" onAction="#clickedVegetable" opacity="0.0" prefHeight="82.0" prefWidth="80.0" text="vegetable">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -278,32 +277,11 @@
                      </children>
                   </Pane>
 
-                  <Pane layoutX="10.0" layoutY="174.0">
+                  <Pane layoutX="10.0" layoutY="220.0">
                      <children>
                         <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\aubergine.png" />
-                           </image>
-                           <effect>
-                              <DropShadow />
-                           </effect>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </ImageView>
-                        <Button fx:id="vegetable" mnemonicParsing="false" onAction="#clickedVegetable" opacity="0.0" prefHeight="53.0" prefWidth="61.0" text="vegetable">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Button>
-                     </children>
-                  </Pane>
-
-                  <Pane layoutX="10.0" layoutY="250.0">
-                     <children>
-                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\sausage.png" />
+                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\sausage.png" />
                            </image>
                            <effect>
                               <DropShadow />
@@ -320,11 +298,11 @@
                      </children>
                   </Pane>
 
-                  <Pane layoutX="10.0" layoutY="350.0">
+                  <Pane layoutX="10.0" layoutY="290.0">
                      <children>
                         <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\salami.png" />
+                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\salami.png" />
                            </image>
                            <effect>
                               <DropShadow />
@@ -341,11 +319,11 @@
                      </children>
                   </Pane>
 
-                  <Pane layoutX="10.0" layoutY="390.0">
+                  <Pane layoutX="10.0" layoutY="360.0">
                      <children>
                         <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\pineapple.PNG" />
+                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\pineapple.PNG" />
                            </image>
                            <effect>
                               <DropShadow />
@@ -362,11 +340,11 @@
                      </children>
                   </Pane>
 
-                  <Pane layoutX="10.0" layoutY="450.0">
+                  <Pane layoutX="10.0" layoutY="430.0">
                      <children>
                         <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\anchovy.PNG" />
+                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\anchovy.PNG" />
                            </image>
                            <effect>
                               <DropShadow />
@@ -383,34 +361,63 @@
                      </children>
                   </Pane>
 
+                  <Pane layoutX="-90.0" layoutY="280.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\impasto.png" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Button fx:id="impasto" mnemonicParsing="false" onAction="#clickedImpasto" opacity="0.0" prefHeight="53.0" prefWidth="61.0" text="impasto">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+
                </children>
             </Pane>
-
-
-
-            <ImageView fx:id="bubblebase1" fitHeight="150.0" fitWidth="214.0" layoutX="600.0" layoutY="670.0" pickOnBounds="true" preserveRatio="true" visible="false">
+            <Pane layoutX="600.0" layoutY="30.0">
+               <children>
+      
+      
+      
+                  <ImageView fx:id="bubblebase1" fitHeight="150.0" fitWidth="214.0" layoutY="640.0" pickOnBounds="true" preserveRatio="true" visible="false">
             </ImageView>
-            <ImageView fx:id="bubblebase2" fitHeight="150.0" fitWidth="200.0" layoutX="600.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                  <ImageView fx:id="bubblebase2" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" visible="false">
             </ImageView>
-            <ImageView fx:id="bubble1" fitHeight="150.0" fitWidth="200.0" layoutX="600.0" layoutY="590.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="bubble2" fitHeight="150.0" fitWidth="200.0" layoutX="600.0" layoutY="510.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="bubble3" fitHeight="150.0" fitWidth="200.0" layoutX="600.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="bubble4" fitHeight="150.0" fitWidth="200.0" layoutX="600.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="bubble5" fitHeight="150.0" fitWidth="200.0" layoutX="600.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="bubble6" fitHeight="150.0" fitWidth="200.0" layoutX="600.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="bubble7" fitHeight="150.0" fitWidth="200.0" layoutX="600.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" />
-
-
-            <ImageView fx:id="orderbase1" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="670.0" pickOnBounds="true" preserveRatio="true" />
-
-            <ImageView fx:id="ingredient1" fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="640.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="ingredient2" fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="610.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="ingredient3" fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="580.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="ingredient4" fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="550.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="ingredient5" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="520.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="ingredient6" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="490.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="ingredient7" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="orderbase2" fitHeight="150.0" fitWidth="200.0" layoutX="43.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true" viewOrder="-Infinity" />
+                  <ImageView fx:id="bubble1" fitHeight="150.0" fitWidth="200.0" layoutY="560.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="bubble2" fitHeight="150.0" fitWidth="200.0" layoutY="480.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="bubble3" fitHeight="150.0" fitWidth="200.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="bubble4" fitHeight="150.0" fitWidth="200.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="bubble5" fitHeight="150.0" fitWidth="200.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="bubble6" fitHeight="150.0" fitWidth="200.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="bubble7" fitHeight="150.0" fitWidth="200.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Pane layoutX="42.0" layoutY="430.0">
+               <children>
+      
+      
+                  <ImageView fx:id="orderbase1" fitHeight="150.0" fitWidth="200.0" layoutX="1.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true" />
+      
+                  <ImageView fx:id="ingredient1" fitHeight="150.0" fitWidth="200.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="ingredient2" fitHeight="150.0" fitWidth="200.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="ingredient3" fitHeight="150.0" fitWidth="200.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="ingredient4" fitHeight="150.0" fitWidth="200.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="ingredient5" fitHeight="150.0" fitWidth="200.0" layoutX="1.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="ingredient6" fitHeight="150.0" fitWidth="200.0" layoutX="1.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="ingredient7" fitHeight="150.0" fitWidth="200.0" layoutX="1.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="orderbase2" fitHeight="150.0" fitWidth="200.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" viewOrder="-Infinity" />
+               </children>
+            </Pane>
 
 
             <ImageView fx:id="confetti" fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true" />

@@ -32,6 +32,17 @@ public class CLRgame{
 
 
 
+
+    static Image singleimageanchovy;
+    static Image singleimageaubergine;
+    static Image singleimagesalami;
+    static Image singleimagepineapple;
+    static Image singleimagefries;
+    static Image singleimagemozzarella;
+    static Image singleimagesausage;
+    static Image singleimageimpasto;
+
+
     static int[] localorder;
 
 
@@ -102,7 +113,19 @@ public class CLRgame{
             imagefries = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\fries.PNG"));
             imagemozzarella = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\mozzarella.PNG"));
             imagesausage = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\sausage.PNG"));
-            imageimpasto = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\PLACEHOLDER2.PNG"));
+            imageimpasto = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\impasto.png"));
+
+            singleimageanchovy = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\singles\\anchovy.PNG"));
+            singleimageaubergine = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\singles\\aubergine.PNG"));
+            singleimagesalami = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\singles\\salami.PNG"));
+            singleimagepineapple = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\singles\\pineapple.PNG"));
+            singleimagefries = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\singles\\fries.PNG"));
+            singleimagemozzarella = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\singles\\mozzarella.PNG"));
+            singleimagesausage = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\singles\\sausage.PNG"));
+            singleimageimpasto = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\singles\\impasto.png"));
+
+
+
 
             imageconfetti = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\coriandoli.gif"));
         }
@@ -112,7 +135,9 @@ public class CLRgame{
         //here we define which image corresponds to which identifier in the "buttonfiller" function
         Image[] ret = {imagetomatoh,imagebacon,imagecheese,imageegg,imagelettuce,imagemushrooms,
                 imagepatty,imageanchovy,imageaubergine,imagesalami, imagepineapple,
-                imagefries,imagemozzarella,imagesausage,imageimpasto,imagebread1,imagebread2};
+                imagefries,imagemozzarella,imagesausage,imageimpasto,imagebread1,
+                imagebread2,singleimageanchovy, singleimageaubergine, singleimagesalami, singleimagepineapple,
+                singleimagefries, singleimagemozzarella, singleimagesausage, singleimageimpasto}; //lenght = 24
 
         return ret;
     }

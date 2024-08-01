@@ -23,12 +23,10 @@ public class CLRController{
     private Button restart;
 
 
-
     @FXML
     private Button bread1;
     @FXML
     private Button bread2;
-
 
 
     @FXML
@@ -45,7 +43,6 @@ public class CLRController{
     private Button patty;
     @FXML
     private Button tomatoh;
-
 
 
     @FXML
@@ -66,11 +63,6 @@ public class CLRController{
     @FXML
     private Button fish;
 
-
-
-
-
-
     @FXML
     private ImageView bubblebase1;
     @FXML
@@ -90,8 +82,6 @@ public class CLRController{
     private ImageView bubble6 = new ImageView();
     @FXML
     private ImageView bubble7 = new ImageView();
-
-
 
 
     @FXML
@@ -149,7 +139,6 @@ public class CLRController{
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
-
     @FXML
     protected void clickedMushrooms() {
         if (validcreation) {
@@ -160,7 +149,6 @@ public class CLRController{
             count++;
         }
     }
-
     @FXML
     protected void clickedCheese() {
         if (validcreation) {
@@ -170,7 +158,6 @@ public class CLRController{
         }
 
     }
-
     @FXML
     protected void clickedEgg() {
         if (validcreation) {
@@ -182,7 +169,6 @@ public class CLRController{
         }
 
     }
-
     @FXML
     protected void clickedBacon() {
         if (validcreation) {
@@ -193,7 +179,6 @@ public class CLRController{
             count++;
         }
     }
-
     @FXML
     protected void clickedLettuce() {
         if (validcreation) {
@@ -205,7 +190,6 @@ public class CLRController{
         }
 
     }
-
     @FXML
     protected void clickedPatty() {
         if (validcreation) {
@@ -217,7 +201,6 @@ public class CLRController{
         }
 
     }
-
     @FXML
     protected void clickedTomatoh() {
         if (validcreation) {
@@ -228,10 +211,6 @@ public class CLRController{
             count++;
         }
     }
-
-
-
-
     @FXML
     protected void clickedBread1() {
         validcreation = true;
@@ -240,7 +219,6 @@ public class CLRController{
         orderbase1.setImage(CLRgame.imagebread1);
         submit.setDisable(false);
     }
-
     @FXML
     protected void clickedBread2() {
         if (validcreation) {
@@ -251,121 +229,6 @@ public class CLRController{
         }
     }
 
-    @FXML
-    protected void clickedRestart(){
-        punteggiovalue=0;
-        punteggioverolabel.setVisible(false);
-        gameoverpane.setVisible(false);
-        hamburgerpane.setVisible(true);
-        pizzapane.setVisible(true);
-        clickedStart();
-        timer = new Timeline();
-        funzionediprovatimer();
-        timer.play();
-    }
-
-
-
-    private void buttonfiller(int identifier) {
-        ImageView[] ingredients = {
-                ingredient1, ingredient2,
-                ingredient3, ingredient4,
-                ingredient5, ingredient6,
-                ingredient7
-        };
-
-        for (int i = 0; i < ingredients.length; i++) {
-            if (i == identifier|| i == (identifier-7)) {
-                if(fooddecision) {
-                    ingredients[count].setLayoutY(orderbase1.getLayoutY() - 30 * (count + 1));
-                    lastingredient = ingredients[count].getLayoutY();
-                }
-                else{
-                    ingredients[count].setLayoutY(orderbase1.getLayoutY());
-                }
-                ingredients[count].setVisible(true);
-                ingredients[count].setImage(images[identifier]);
-                generatedbyuser.add(1+identifier);
-                break;
-            }
-        }
-    }
-
-    @FXML
-    protected void clickedSubmit(){
-        int[] randomlygenerated = orderistance.getLocalorder();
-        int submitcount=0;
-        boolean checkequal=true;
-        System.out.print("\nArray generato dall'utente: \n");
-        if(generatedbyuser.size()==0){
-            checkequal=false;
-        }
-        for(int i = 0; i< generatedbyuser.size(); i++){
-            System.out.print(generatedbyuser.get(i)+" ");
-        }
-        submitcount = randomlygenerated.length;
-        if(generatedbyuser.size()<randomlygenerated.length)
-            submitcount = generatedbyuser.size();
-        for(int i=0; i<submitcount; i++)
-        {
-            if(generatedbyuser.get(i)!=randomlygenerated[i] && fooddecision)
-                checkequal = false;
-            if(!fooddecision && generatedbyuser.get(i)-7!=randomlygenerated[i])
-                checkequal = false;
-        }
-        if(!checkequal) {
-            System.out.println("Ordine sbagliato!");
-            scorecalc(false);
-            resetplate();
-        }
-        else{
-            System.out.println("Ordine giusto!!!");
-            confetti.setVisible(true);
-            confetti.setImage(CLRgame.imageconfetti);
-            scorecalc(true);
-            clickedStart();
-        }
-        generatedbyuser.clear();
-        checkequal=true;
-    }
-
-
-    protected void scorecalc(boolean orderiscorrect){
-        if(orderiscorrect){
-            punteggiovalue+= (int)((generatedbyuser.size()*100)*(1.6-0.01*Integer.parseInt(punteggiolabel.getText())));
-        }
-        else{
-            punteggiovalue-=generatedbyuser.size()*50;
-        }
-
-        punteggioverolabel.setText(String.valueOf(punteggiovalue));
-        punteggioverolabel.setVisible(true);
-    }
-
-    
-    protected void resetplate() {
-        Button[] buttonsvector = {tomatoh, bacon, egg, lettuce, mushrooms, patty, cheese, fries,
-                                    fish,vegetable,salami,pineapple,mozzarella,sausage,
-                                    impasto,bread1,bread2};
-        for (int i = 0; i < buttonsvector.length; i++) {
-            buttonsvector[i].setDisable(false);
-        }
-        count = 0; //TO FIX: VECTOR "INGREDIENT" IS DECLARED TWICE. MUST BE OPTIMIZED
-        ImageView[] ingredients = {
-                ingredient1, ingredient2,
-                ingredient3, ingredient4,
-                ingredient5, ingredient6,
-                ingredient7
-        };
-        for (int i = 0; i < ingredients.length; i++)
-        {
-            ingredients[i].setVisible(false);
-        }
-        orderbase1.setVisible(false);
-        orderbase2.setVisible(false);
-        validcreation=false;
-        generatedbyuser.clear();
-    }
 
 
     @FXML
@@ -377,7 +240,6 @@ public class CLRController{
         }
 
     }
-
     @FXML
     protected void clickedMozzarella() {
         if(validcreation) {
@@ -421,15 +283,6 @@ public class CLRController{
         }
     }
     @FXML
-    protected void clickedFish() {
-        if(validcreation) {
-            fish.setDisable(true);
-            buttonfiller(7);
-            count++;
-        }
-    }
-
-    @FXML
     protected void clickedImpasto() {
             validcreation=true;
             impasto.setDisable(true);
@@ -438,7 +291,131 @@ public class CLRController{
             orderbase1.setImage(CLRgame.imageimpasto);
     }
 
-    private void funzionediprovatimer(){
+
+
+    @FXML
+    protected void clickedFish() {
+        if(validcreation) {
+            fish.setDisable(true);
+            buttonfiller(7);
+            count++;
+        }
+    }
+
+
+    @FXML
+    protected void clickedRestart(){
+        punteggiovalue=0;
+        punteggioverolabel.setVisible(false);
+        gameoverpane.setVisible(false);
+        hamburgerpane.setVisible(true);
+        pizzapane.setVisible(true);
+        controlspane.setVisible(true);
+        timer = new Timeline();
+        timerfunction();
+        timer.play();
+        clickedStart();
+    }
+
+
+    private void buttonfiller(int identifier) {
+        ImageView[] ingredients = {
+                ingredient1, ingredient2,
+                ingredient3, ingredient4,
+                ingredient5, ingredient6,
+                ingredient7
+        };
+
+        for (int i = 0; i < ingredients.length; i++) {
+            if (i == identifier|| i == (identifier-7)) {
+                if(fooddecision) {
+                    ingredients[count].setLayoutY(orderbase1.getLayoutY() - 30 * (count + 1));
+                    lastingredient = ingredients[count].getLayoutY();
+                }
+                else{
+                    ingredients[count].setLayoutY(orderbase1.getLayoutY());
+                }
+                ingredients[count].setVisible(true);
+                ingredients[count].setImage(images[identifier]);
+                generatedbyuser.add(1+identifier);
+                break;
+            }
+        }
+    }
+    @FXML
+    protected void clickedSubmit(){
+        int[] randomlygenerated = orderistance.getLocalorder();
+        int submitcount=0;
+        boolean checkequal=true;
+        System.out.print("\nArray generato dall'utente: \n");
+        if(generatedbyuser.size()==0){
+            checkequal=false;
+        }
+        for(int i = 0; i< generatedbyuser.size(); i++){
+            System.out.print(generatedbyuser.get(i)+" ");
+        }
+        submitcount = randomlygenerated.length;
+        if(generatedbyuser.size()!=randomlygenerated.length)
+            checkequal=false;
+        for(int i=0; i<submitcount; i++)
+        {
+            if(!checkequal)
+                break;
+            if(generatedbyuser.get(i)!=randomlygenerated[i] && fooddecision)
+                checkequal = false;
+            if(!fooddecision && generatedbyuser.get(i)-7!=randomlygenerated[i])
+                checkequal = false;
+        }
+        if(!checkequal) {
+            System.out.println("Ordine sbagliato!");
+            scorecalc(false);
+            resetplate();
+        }
+        else{
+            System.out.println("Ordine giusto!!!");
+            confetti.setVisible(true);
+            confetti.setImage(CLRgame.imageconfetti);
+            scorecalc(true);
+            clickedStart();
+        }
+        generatedbyuser.clear();
+    }
+    protected void scorecalc(boolean orderiscorrect){
+        if(orderiscorrect){
+            punteggiovalue+= (int)((generatedbyuser.size()*100)*(1.6-0.01*Integer.parseInt(punteggiolabel.getText())));
+        }
+        else{
+            punteggiovalue-=generatedbyuser.size()*50;
+        }
+
+        punteggioverolabel.setText(String.valueOf(punteggiovalue));
+        punteggioverolabel.setVisible(true);
+    }
+    protected void resetplate() {
+        Button[] buttonsvector = {tomatoh, bacon, egg, lettuce, mushrooms, patty, cheese, fries,
+                fish,vegetable,salami,pineapple,mozzarella,sausage,
+                impasto,bread1,bread2};
+        for (int i = 0; i < buttonsvector.length; i++) {
+            buttonsvector[i].setDisable(false);
+        }
+        count = 0; //TO FIX: VECTOR "INGREDIENT" IS DECLARED TWICE. MUST BE OPTIMIZED
+        ImageView[] ingredients = {
+                ingredient1, ingredient2,
+                ingredient3, ingredient4,
+                ingredient5, ingredient6,
+                ingredient7
+        };
+        for (int i = 0; i < ingredients.length; i++)
+        {
+            ingredients[i].setVisible(false);
+        }
+        orderbase1.setVisible(false);
+        orderbase2.setVisible(false);
+        validcreation=false;
+        generatedbyuser.clear();
+    }
+
+    private void timerfunction(){
         for(int i=1; i<61; i++)
         {
             int finalI = i;
@@ -477,7 +454,7 @@ public class CLRController{
 
         if(isfirststart) {
             timer = new Timeline();
-            funzionediprovatimer();
+            timerfunction();
             timer.play();
             isfirststart = false;
         }
@@ -497,7 +474,7 @@ public class CLRController{
             hamburgerpane.setVisible(false);
         }
 
-        showbubble(generatedorder,bubbles);
+        bubbleviewer(generatedorder,bubbles);
 
 
         /*if(decision.nextBoolean()){ //se decision == true allora abbiamo un hamburger
@@ -510,8 +487,6 @@ public class CLRController{
         }*/
     }
 
-
-
     protected void cleanup(ImageView[] bubbles){
            for( int i=0; i<bubbles.length; i++){
             bubbles[i].setVisible(false);
@@ -520,15 +495,14 @@ public class CLRController{
         }
     }
 
-
     @FXML
-    protected void showbubble(int []generatedorder, ImageView[] bubbles){
+    protected void bubbleviewer(int []generatedorder, ImageView[] bubbles){
         if(fooddecision) {
             bubblebase1.setImage(images[15]);
             bubblebase1.setVisible(true);
         }
         else{
-            bubblebase1.setImage(images[14]);
+            bubblebase1.setImage(images[24]);
             bubblebase1.setVisible(true);
         }
         double last=0;
@@ -541,7 +515,7 @@ public class CLRController{
                     //last = placeholderfiller(i,CLRgame.imagetomatoh);
                     //break;
                     bubbles[i].setVisible(true);
-                    bubbles[i].setImage(images[generatedorder[i]+7*(fooddecision?0:1)-1]);
+                    bubbles[i].setImage(images[generatedorder[i]+17*(fooddecision?0:1)-1]);
                     last=bubbles[i].getLayoutY();
                     break;
 
@@ -549,7 +523,7 @@ public class CLRController{
                     //last = placeholderfiller(i,CLRgame.imagebacon);
                     //break;
                     bubbles[i].setVisible(true);
-                    bubbles[i].setImage(images[generatedorder[i]+7*(fooddecision?0:1)-1]);
+                    bubbles[i].setImage(images[generatedorder[i]+17*(fooddecision?0:1)-1]);
                     last=bubbles[i].getLayoutY();
                     break;
 
@@ -557,7 +531,7 @@ public class CLRController{
                     //last = placeholderfiller(i,CLRgame.imagecheese);
                     //break;
                     bubbles[i].setVisible(true);
-                    bubbles[i].setImage(images[generatedorder[i]+7*(fooddecision?0:1)-1]);
+                    bubbles[i].setImage(images[generatedorder[i]+17*(fooddecision?0:1)-1]);
                     last=bubbles[i].getLayoutY();
                     break;
 
@@ -565,7 +539,7 @@ public class CLRController{
                     //last = placeholderfiller(i,CLRgame.imageegg);
                     //break;
                     bubbles[i].setVisible(true);
-                    bubbles[i].setImage(images[generatedorder[i]+7*(fooddecision?0:1)-1]);
+                    bubbles[i].setImage(images[generatedorder[i]+17*(fooddecision?0:1)-1]);
                     last=bubbles[i].getLayoutY();
                     break;
 
@@ -573,14 +547,14 @@ public class CLRController{
                     //last = placeholderfiller(i,CLRgame.imagelettuce);
                     //break;
                     bubbles[i].setVisible(true);
-                    bubbles[i].setImage(images[generatedorder[i]+7*(fooddecision?0:1)-1]);
+                    bubbles[i].setImage(images[generatedorder[i]+17*(fooddecision?0:1)-1]);
                     last=bubbles[i].getLayoutY();
                     break;
                 case 6:
                     //last = placeholderfiller(i,CLRgame.imagemushrooms);
                     //break;
                     bubbles[i].setVisible(true);
-                    bubbles[i].setImage(images[generatedorder[i]+7*(fooddecision?0:1)-1]);
+                    bubbles[i].setImage(images[generatedorder[i]+17*(fooddecision?0:1)-1]);
                     last=bubbles[i].getLayoutY();
                     break;
 
@@ -588,7 +562,7 @@ public class CLRController{
                     //last = placeholderfiller(i,CLRgame.imagepatty);
                     //break;
                     bubbles[i].setVisible(true);
-                    bubbles[i].setImage(images[generatedorder[i]+7*(fooddecision?0:1)-1]);
+                    bubbles[i].setImage(images[generatedorder[i]+17*(fooddecision?0:1)-1]);
                     last=bubbles[i].getLayoutY();
                     break;
 
@@ -601,7 +575,6 @@ public class CLRController{
             bubblebase2.setVisible(true);
         }
     }
-
 
     @FXML
     private void clickedTrashCan()
@@ -647,8 +620,6 @@ public class CLRController{
         }
         return 0;
     }*/
-
-
     @FXML
     private void provainvisibile()
     {
