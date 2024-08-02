@@ -386,7 +386,7 @@
                </children>
             </Pane>
 
-            <Pane fx:id="bubblepane" layoutX="1270.0" layoutY="50.0">
+            <Pane fx:id="bubblepane" layoutX="1270.0" layoutY="70.0">
                <children>
                   <ImageView fx:id="bubblebase1" fitHeight="150.0" fitWidth="214.0" layoutY="640.0" pickOnBounds="true" preserveRatio="true" visible="false"/>
                   <ImageView fx:id="bubblebase2" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" visible="false"/>
@@ -401,28 +401,36 @@
                </children>
             </Pane>
 
-            <Pane fx:id="orderpane" layoutX="42.0" layoutY="430.0">
+            <Pane fx:id="orderpane" layoutX="500.0" layoutY="350.0">
                <children>
       
       
-                  <ImageView fx:id="orderbase1" fitHeight="150.0" fitWidth="200.0" layoutX="1.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true" />
-      
-                  <ImageView fx:id="ingredient1" fitHeight="150.0" fitWidth="200.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="ingredient2" fitHeight="150.0" fitWidth="200.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="ingredient3" fitHeight="150.0" fitWidth="200.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="ingredient4" fitHeight="150.0" fitWidth="200.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="ingredient5" fitHeight="150.0" fitWidth="200.0" layoutX="1.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="ingredient6" fitHeight="150.0" fitWidth="200.0" layoutX="1.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="ingredient7" fitHeight="150.0" fitWidth="200.0" layoutX="1.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="orderbase2" fitHeight="150.0" fitWidth="200.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" viewOrder="-Infinity" />
+                  <ImageView fx:id="orderbase1" fitHeight="200.0" fitWidth="250.0" layoutX="1.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="orderbase2" fitHeight="200.0" fitWidth="250.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" viewOrder="-Infinity" />
+
+                  <ImageView fx:id="ingredient1" fitHeight="200.0" fitWidth="250.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="ingredient2" fitHeight="200.0" fitWidth="250.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="ingredient3" fitHeight="200.0" fitWidth="250.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="ingredient4" fitHeight="200.0" fitWidth="250.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="ingredient5" fitHeight="200.0" fitWidth="250.0" layoutX="1.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="ingredient6" fitHeight="200.0" fitWidth="250.0" layoutX="1.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="ingredient7" fitHeight="200.0" fitWidth="250.0" layoutX="1.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" />
+
                </children>
             </Pane>
 
 
+
+            <Pane fx:id="pointspane" layoutX="250.0" layoutY="150.0">
+               <Label fx:id="punteggiolabel" layoutX="265.0" layoutY="252.0" prefHeight="40.0" prefWidth="65.0" text="punteggio" textAlignment="CENTER" />
+               <Label fx:id="punteggioverolabel" layoutX="265.0" layoutY="222.0" prefHeight="40.0" prefWidth="65.0" text="VEROPUNT" textAlignment="CENTER" />
+            </Pane>
+
+
+
             <ImageView fx:id="confetti" fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true" />
 
-            <Label fx:id="punteggiolabel" layoutX="265.0" layoutY="252.0" prefHeight="40.0" prefWidth="65.0" text="punteggio" textAlignment="CENTER" />
-            <Label fx:id="punteggioverolabel" layoutX="265.0" layoutY="222.0" prefHeight="40.0" prefWidth="65.0" text="VEROPUNT" textAlignment="CENTER" />
+
 
 
 

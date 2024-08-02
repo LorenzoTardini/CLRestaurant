@@ -143,7 +143,7 @@ public class CLRController{
     protected void clickedMushrooms() {
         if (validcreation) {
             mushrooms.setDisable(true);
-            buttonfiller(5);
+            orderplatefiller(5);
             //ingredients[count].setVisible(true);
             //ingredients[count].setImage(CLRgame.imagemushrooms);
             count++;
@@ -153,7 +153,7 @@ public class CLRController{
     protected void clickedCheese() {
         if (validcreation) {
             cheese.setDisable(true);
-            buttonfiller(2);
+            orderplatefiller(2);
             count++;
         }
 
@@ -162,7 +162,7 @@ public class CLRController{
     protected void clickedEgg() {
         if (validcreation) {
             egg.setDisable(true);
-            buttonfiller(3);
+            orderplatefiller(3);
             //ingredients[count].setVisible(true);
             //ingredients[count].setImage(CLRgame.imageegg);
             count++;
@@ -173,7 +173,7 @@ public class CLRController{
     protected void clickedBacon() {
         if (validcreation) {
             bacon.setDisable(true);
-            buttonfiller(1);
+            orderplatefiller(1);
             //ingredients[count].setVisible(true);
             //ingredients[count].setImage(CLRgame.imagebacon);
             count++;
@@ -183,7 +183,7 @@ public class CLRController{
     protected void clickedLettuce() {
         if (validcreation) {
             lettuce.setDisable(true);
-            buttonfiller(4);
+            orderplatefiller(4);
             //ingredients[count].setVisible(true);
             //ingredients[count].setImage(CLRgame.imagelettuce);
             count++;
@@ -194,7 +194,7 @@ public class CLRController{
     protected void clickedPatty() {
         if (validcreation) {
             patty.setDisable(true);
-            buttonfiller(6);
+            orderplatefiller(6);
             //ingredients[count].setVisible(true);
             //ingredients[count].setImage(CLRgame.imagepatty);
             count++;
@@ -205,7 +205,7 @@ public class CLRController{
     protected void clickedTomatoh() {
         if (validcreation) {
             tomatoh.setDisable(true);
-            buttonfiller(0);
+            orderplatefiller(0);
             //ingredients[count].setVisible(true);
             //ingredients[count].setImage(CLRgame.imagetomatoh);
             count++;
@@ -235,7 +235,7 @@ public class CLRController{
     protected void clickedFries() {
         if(validcreation) {
             fries.setDisable(true);
-            buttonfiller(11);
+            orderplatefiller(11);
             count++;
         }
 
@@ -244,7 +244,7 @@ public class CLRController{
     protected void clickedMozzarella() {
         if(validcreation) {
             mozzarella.setDisable(true);
-            buttonfiller(12);
+            orderplatefiller(12);
             count++;
         }
 
@@ -253,7 +253,7 @@ public class CLRController{
     protected void clickedVegetable() {
         if(validcreation) {
             vegetable.setDisable(true);
-            buttonfiller(8);
+            orderplatefiller(8);
             count++;
         }
 
@@ -262,7 +262,7 @@ public class CLRController{
     protected void clickedSausage() {
         if(validcreation) {
             sausage.setDisable(true);
-            buttonfiller(13);
+            orderplatefiller(13);
             count++;
         }
     }
@@ -270,7 +270,7 @@ public class CLRController{
     protected void clickedSalami() {
         if(validcreation) {
             salami.setDisable(true);
-            buttonfiller(9);
+            orderplatefiller(9);
             count++;
         }
     }
@@ -278,7 +278,7 @@ public class CLRController{
     protected void clickedPineapple() {
         if(validcreation) {
             pineapple.setDisable(true);
-            buttonfiller(10);
+            orderplatefiller(10);
             count++;
         }
     }
@@ -287,8 +287,14 @@ public class CLRController{
             validcreation=true;
             impasto.setDisable(true);
             submit.setDisable(false);
-            orderbase1.setVisible(true);
+
+        orderbase1.setLayoutY(orderbase1.getLayoutY()-100);
+        orderbase1.setLayoutX(orderbase1.getLayoutX()-140);
+            orderbase1.setFitHeight(orderbase1.getFitHeight()*2.0);
+            orderbase1.setFitWidth(orderbase1.getFitWidth()*2.0);
             orderbase1.setImage(CLRgame.imageimpasto);
+
+            orderbase1.setVisible(true);
     }
 
 
@@ -297,7 +303,7 @@ public class CLRController{
     protected void clickedFish() {
         if(validcreation) {
             fish.setDisable(true);
-            buttonfiller(7);
+            orderplatefiller(7);
             count++;
         }
     }
@@ -318,7 +324,7 @@ public class CLRController{
     }
 
 
-    private void buttonfiller(int identifier) {
+    private void orderplatefiller(int identifier) {
         ImageView[] ingredients = {
                 ingredient1, ingredient2,
                 ingredient3, ingredient4,
@@ -334,7 +340,11 @@ public class CLRController{
                 }
                 else{
                     ingredients[count].setLayoutY(orderbase1.getLayoutY());
+                    ingredients[count].setFitHeight(ingredients[count].getFitHeight()*2.0);
+                    ingredients[count].setFitWidth(ingredients[count].getFitWidth()*2.0);
+                    ingredients[count].setLayoutX(ingredients[count].getLayoutX()-140);
                 }
+
                 ingredients[count].setVisible(true);
                 ingredients[count].setImage(images[identifier]);
                 generatedbyuser.add(1+identifier);

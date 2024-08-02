@@ -14,7 +14,7 @@ public class CLRApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(CLRApplication.class.getResource("mainpanel.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        stage.setTitle("CLRestaurant");
         stage.setResizable(false);
         stage.setMinHeight(940.0);
         stage.setMinWidth(1500.0);
