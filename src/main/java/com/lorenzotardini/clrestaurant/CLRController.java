@@ -457,11 +457,12 @@ public class CLRController{
             timerfunction();
             timer.play();
             isfirststart = false;
+            images = orderistance.initimages(); //it is IMPERATIVE that the init. of all images must be done one time only. (it lags everything out)
         }
 
 
         int[] generatedorder = orderistance.ordercreator();
-        images = orderistance.initimages();
+
 
         Random rangen = new Random();
         fooddecision = rangen.nextBoolean();
