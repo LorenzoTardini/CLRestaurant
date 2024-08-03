@@ -128,6 +128,7 @@ public class CLRController{
     private boolean validcreation = false;
     private boolean fooddecision;
     private boolean isfirststart=true;
+    private boolean closedpanin=false;
     ArrayList<Integer> generatedbyuser = new ArrayList<Integer>();
     double lastingredient=orderbase1.getLayoutY()-30;
     Image[] images;
@@ -223,6 +224,7 @@ public class CLRController{
     protected void clickedBread2() {
         if (validcreation) {
             bread2.setDisable(true);
+            closedpanin = true;
             orderbase2.setLayoutY(lastingredient-30);
             orderbase2.setVisible(true);
             orderbase2.setImage(CLRgame.imagebread2);
@@ -288,8 +290,8 @@ public class CLRController{
             impasto.setDisable(true);
             submit.setDisable(false);
 
-        orderbase1.setLayoutY(orderbase1.getLayoutY()-100);
-        orderbase1.setLayoutX(orderbase1.getLayoutX()-140);
+            orderbase1.setLayoutY(orderbase1.getLayoutY()-100);
+            orderbase1.setLayoutX(orderbase1.getLayoutX()-140);
             orderbase1.setFitHeight(orderbase1.getFitHeight()*2.0);
             orderbase1.setFitWidth(orderbase1.getFitWidth()*2.0);
             orderbase1.setImage(CLRgame.imageimpasto);
@@ -340,9 +342,9 @@ public class CLRController{
                 }
                 else{
                     ingredients[count].setLayoutY(orderbase1.getLayoutY());
-                    ingredients[count].setFitHeight(ingredients[count].getFitHeight()*2.0);
-                    ingredients[count].setFitWidth(ingredients[count].getFitWidth()*2.0);
-                    ingredients[count].setLayoutX(ingredients[count].getLayoutX()-140);
+                    ingredients[count].setFitHeight(400.0);
+                    ingredients[count].setFitWidth(500.0);
+                    ingredients[count].setLayoutX(ingredients[count].getLayoutX()-140); //IF A PIZZA IS COMPOSED, THEN START IS CLICKED AND A HAMBURGER IS PROPOSED, INGREDIENTS SIZE DOESN'T RETURN TO NORMAL!!
                 }
 
                 ingredients[count].setVisible(true);
@@ -358,7 +360,7 @@ public class CLRController{
         int submitcount=0;
         boolean checkequal=true;
         System.out.print("\nArray generato dall'utente: \n");
-        if(generatedbyuser.size()==0){
+        if(generatedbyuser.size()==0||(fooddecision&&!closedpanin)){
             checkequal=false;
         }
         for(int i = 0; i< generatedbyuser.size(); i++){
@@ -408,7 +410,7 @@ public class CLRController{
         for (int i = 0; i < buttonsvector.length; i++) {
             buttonsvector[i].setDisable(false);
         }
-        count = 0; //TO FIX: VECTOR "INGREDIENT" IS DECLARED TWICE. MUST BE OPTIMIZED
+        count = 0; //TO FIX: VECTOR "INGREDIENTS" IS DECLARED TWICE. MUST BE OPTIMIZED
         ImageView[] ingredients = {
                 ingredient1, ingredient2,
                 ingredient3, ingredient4,
@@ -419,13 +421,32 @@ public class CLRController{
         {
             ingredients[i].setVisible(false);
         }
+
+        if(!fooddecision&&generatedbyuser.size()!=0)
+        {
+            orderbase1.setLayoutY(orderbase1.getLayoutY()+100);
+            orderbase1.setLayoutX(orderbase1.getLayoutX()+140);
+            orderbase1.setFitHeight(200.0);
+            orderbase1.setFitWidth(250);
+
+            for(int i=0; i<generatedbyuser.size(); i++)
+            {
+                ingredients[i].setFitHeight(200.0);
+                ingredients[i].setFitWidth(250);
+                ingredients[i].setLayoutX(1.0);
+            }
+        }
+
+        closedpanin=false;
         orderbase1.setVisible(false);
         orderbase2.setVisible(false);
         validcreation=false;
         generatedbyuser.clear();
     }
 
-    private void timerfunction(){
+    private void timerfunction() //this function should be replaced by the one below, this is a debug-purposed empty function
+    {}
+    private void timerfunctionn(){
         for(int i=1; i<61; i++)
         {
             int finalI = i;
