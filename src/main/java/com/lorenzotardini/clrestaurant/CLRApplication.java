@@ -16,7 +16,7 @@ public class CLRApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("CLRestaurant");
         stage.setResizable(false);
-        stage.setMinHeight(840.0);
+        stage.setMinHeight(940.0);
         stage.setMinWidth(1500.0);
         stage.getIcons().add(new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizzaslice.png")));
         stage.setScene(scene);

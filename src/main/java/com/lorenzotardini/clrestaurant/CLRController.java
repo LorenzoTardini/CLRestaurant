@@ -114,6 +114,8 @@ public class CLRController{
     private Pane gameoverpane;
     @FXML
     private Pane controlspane;
+    @FXML
+    private Pane orderpane;
 
     @FXML
     private Label punteggiolabel;
@@ -286,17 +288,19 @@ public class CLRController{
     }
     @FXML
     protected void clickedImpasto() {
-            validcreation=true;
-            impasto.setDisable(true);
-            submit.setDisable(false);
+        System.out.println(orderpane.getLayoutX()+ " " +orderpane.getLayoutY()+" "+ orderpane.getWidth());
+        validcreation=true;
+        impasto.setDisable(true);
+        submit.setDisable(false);
 
-            orderbase1.setLayoutY(orderbase1.getLayoutY()-100);
-            orderbase1.setLayoutX(orderbase1.getLayoutX()-140);
-            orderbase1.setFitHeight(orderbase1.getFitHeight()*2.0);
-            orderbase1.setFitWidth(orderbase1.getFitWidth()*2.0);
-            orderbase1.setImage(CLRgame.imageimpasto);
+        orderbase1.setLayoutY(orderbase1.getLayoutY()-100);
+        orderbase1.setLayoutX(orderbase1.getLayoutX()-140);
+        orderbase1.setFitHeight(250);
+        orderbase1.setFitWidth(500);
+        orderbase1.setImage(CLRgame.imageimpasto);
 
-            orderbase1.setVisible(true);
+        orderbase1.setVisible(true);
+        System.out.println(orderpane.getLayoutX()+ " " +orderpane.getLayoutY()+" "+ orderpane.getWidth());
     }
 
 
@@ -444,9 +448,11 @@ public class CLRController{
         generatedbyuser.clear();
     }
 
-    private void timerfunction() //this function should be replaced by the one below, this is a debug-purposed empty function
-    {}
-    private void timerfunctionn(){
+    private void timerfunctionn() //this function should be replaced by the one below, this is a debug-purposed empty function
+    {
+
+    }
+    private void timerfunction(){
         for(int i=1; i<61; i++)
         {
             int finalI = i;
@@ -464,6 +470,112 @@ public class CLRController{
             KeyFrame kf = new KeyFrame(Duration.seconds(i),
                     ActionEvent -> punteggiolabel.setText(String.valueOf(60- finalI)));
             timer.getKeyFrames().add(kf);
+        }
+    }
+    @FXML
+    protected void cleanup(ImageView[] bubbles){
+           for( int i=0; i<bubbles.length; i++){
+            bubbles[i].setVisible(false);
+            bubblebase1.setVisible(false);
+            bubblebase2.setVisible(false);
+        }
+    }
+    @FXML
+    protected void bubbleviewer(int []generatedorder, ImageView[] bubbles){
+        for(int i=0; i<bubbles.length;i++){
+            bubbles[i].setLayoutY(560-80*i);
+        }
+
+        if(fooddecision) {
+            bubblebase1.setImage(images[15]);
+            bubblebase1.setVisible(true);
+        }
+        else{
+            bubblebase1.setImage(images[24]);
+            bubblebase1.setVisible(true);
+        }
+        double last=0;
+
+        //placeholderfiller(-1,CLRgame.imagetomatop);
+        for(int i=0; i<generatedorder.length;i++){
+            if(!fooddecision){
+                bubbles[i].setLayoutY(bubbles[i].getLayoutY()-6-6*i);
+                bubbles[i].setFitWidth(130);
+                bubbles[i].setFitHeight(130);
+                bubbles[i].setLayoutX(10.0);
+            }
+            else{
+                bubbles[i].setLayoutY(560-80*i);
+                bubbles[i].setFitWidth(200);
+                bubbles[i].setFitHeight(150);
+                bubbles[i].setLayoutX(1.0);
+            }
+            bubbles[i].setVisible(true);
+            bubbles[i].setImage(images[generatedorder[i]+17*(fooddecision?0:1)-1]);
+            last=bubbles[i].getLayoutY();
+
+            /*switch(generatedorder[i]){
+                case 1:
+                    //last = placeholderfiller(i,CLRgame.imagetomatoh);
+                    //break;
+                    bubbles[i].setVisible(true);
+                    bubbles[i].setImage(images[generatedorder[i]+17*(fooddecision?0:1)-1]);
+                    last=bubbles[i].getLayoutY();
+                    break;
+
+                case 2:
+                    //last = placeholderfiller(i,CLRgame.imagebacon);
+                    //break;
+                    bubbles[i].setVisible(true);
+                    bubbles[i].setImage(images[generatedorder[i]+17*(fooddecision?0:1)-1]);
+                    last=bubbles[i].getLayoutY();
+                    break;
+
+                case 3:
+                    //last = placeholderfiller(i,CLRgame.imagecheese);
+                    //break;
+                    bubbles[i].setVisible(true);
+                    bubbles[i].setImage(images[generatedorder[i]+17*(fooddecision?0:1)-1]);
+                    last=bubbles[i].getLayoutY();
+                    break;
+
+                case 4:
+                    //last = placeholderfiller(i,CLRgame.imageegg);
+                    //break;
+                    bubbles[i].setVisible(true);
+                    bubbles[i].setImage(images[generatedorder[i]+17*(fooddecision?0:1)-1]);
+                    last=bubbles[i].getLayoutY();
+                    break;
+
+                case 5:
+                    //last = placeholderfiller(i,CLRgame.imagelettuce);
+                    //break;
+                    bubbles[i].setVisible(true);
+                    bubbles[i].setImage(images[generatedorder[i]+17*(fooddecision?0:1)-1]);
+                    last=bubbles[i].getLayoutY();
+                    break;
+                case 6:
+                    //last = placeholderfiller(i,CLRgame.imagemushrooms);
+                    //break;
+                    bubbles[i].setVisible(true);
+                    bubbles[i].setImage(images[generatedorder[i]+17*(fooddecision?0:1)-1]);
+                    last=bubbles[i].getLayoutY();
+                    break;
+
+                case 7:
+                    //last = placeholderfiller(i,CLRgame.imagepatty);
+                    //break;
+                    bubbles[i].setVisible(true);
+                    bubbles[i].setImage(images[generatedorder[i]+17*(fooddecision?0:1)-1]);
+                    last=bubbles[i].getLayoutY();
+                    break;
+            }*/
+        }
+        double coordY = last-80;
+        if(fooddecision) {
+            bubblebase2.setLayoutY(coordY);
+            bubblebase2.setImage(images[16]);
+            bubblebase2.setVisible(true);
         }
     }
     @FXML
@@ -519,94 +631,9 @@ public class CLRController{
         }*/
     }
 
-    protected void cleanup(ImageView[] bubbles){
-           for( int i=0; i<bubbles.length; i++){
-            bubbles[i].setVisible(false);
-            bubblebase1.setVisible(false);
-            bubblebase2.setVisible(false);
-        }
-    }
 
-    @FXML
-    protected void bubbleviewer(int []generatedorder, ImageView[] bubbles){
-        if(fooddecision) {
-            bubblebase1.setImage(images[15]);
-            bubblebase1.setVisible(true);
-        }
-        else{
-            bubblebase1.setImage(images[24]);
-            bubblebase1.setVisible(true);
-        }
-        double last=0;
 
-        //placeholderfiller(-1,CLRgame.imagetomatop);
-        for(int i=0; i<generatedorder.length;i++){
 
-            switch(generatedorder[i]){
-                case 1:
-                    //last = placeholderfiller(i,CLRgame.imagetomatoh);
-                    //break;
-                    bubbles[i].setVisible(true);
-                    bubbles[i].setImage(images[generatedorder[i]+17*(fooddecision?0:1)-1]);
-                    last=bubbles[i].getLayoutY();
-                    break;
-
-                case 2:
-                    //last = placeholderfiller(i,CLRgame.imagebacon);
-                    //break;
-                    bubbles[i].setVisible(true);
-                    bubbles[i].setImage(images[generatedorder[i]+17*(fooddecision?0:1)-1]);
-                    last=bubbles[i].getLayoutY();
-                    break;
-
-                case 3:
-                    //last = placeholderfiller(i,CLRgame.imagecheese);
-                    //break;
-                    bubbles[i].setVisible(true);
-                    bubbles[i].setImage(images[generatedorder[i]+17*(fooddecision?0:1)-1]);
-                    last=bubbles[i].getLayoutY();
-                    break;
-
-                case 4:
-                    //last = placeholderfiller(i,CLRgame.imageegg);
-                    //break;
-                    bubbles[i].setVisible(true);
-                    bubbles[i].setImage(images[generatedorder[i]+17*(fooddecision?0:1)-1]);
-                    last=bubbles[i].getLayoutY();
-                    break;
-
-                case 5:
-                    //last = placeholderfiller(i,CLRgame.imagelettuce);
-                    //break;
-                    bubbles[i].setVisible(true);
-                    bubbles[i].setImage(images[generatedorder[i]+17*(fooddecision?0:1)-1]);
-                    last=bubbles[i].getLayoutY();
-                    break;
-                case 6:
-                    //last = placeholderfiller(i,CLRgame.imagemushrooms);
-                    //break;
-                    bubbles[i].setVisible(true);
-                    bubbles[i].setImage(images[generatedorder[i]+17*(fooddecision?0:1)-1]);
-                    last=bubbles[i].getLayoutY();
-                    break;
-
-                case 7:
-                    //last = placeholderfiller(i,CLRgame.imagepatty);
-                    //break;
-                    bubbles[i].setVisible(true);
-                    bubbles[i].setImage(images[generatedorder[i]+17*(fooddecision?0:1)-1]);
-                    last=bubbles[i].getLayoutY();
-                    break;
-
-            }
-        }
-        double coordY = last-80;
-        if(fooddecision) {
-            bubblebase2.setLayoutY(coordY);
-            bubblebase2.setImage(images[16]);
-            bubblebase2.setVisible(true);
-        }
-    }
 
     @FXML
     private void clickedTrashCan()

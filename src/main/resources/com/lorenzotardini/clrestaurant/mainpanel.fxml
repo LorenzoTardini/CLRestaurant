@@ -220,7 +220,7 @@
                </children>
             </Pane>
 
-            <Pane fx:id="pizzapane" layoutX="842.0" layoutY="-2.0" prefHeight="784.0" prefWidth="330.0">
+            <Pane fx:id="pizzapane" layoutX="842.0" layoutY="-2.0" prefHeight="784.0" prefWidth="330.0" viewOrder="-Infinity">
                <children>
       
                   <Pane layoutX="60.0" layoutY="40.0">
@@ -413,21 +413,19 @@
                <children>
       
       
-                  <ImageView fx:id="orderbase1" fitHeight="200.0" fitWidth="250.0" layoutX="1.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="orderbase1" fitHeight="200.0" fitWidth="250.0" layoutX="1.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true" viewOrder="Infinity" />
                   <ImageView fx:id="orderbase2" fitHeight="200.0" fitWidth="250.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" viewOrder="-Infinity" />
 
-                  <ImageView fx:id="ingredient1" fitHeight="200.0" fitWidth="250.0"               layoutY="210.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="ingredient2" fitHeight="200.0" fitWidth="250.0"               layoutY="180.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="ingredient3" fitHeight="200.0" fitWidth="250.0"               layoutY="150.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="ingredient4" fitHeight="200.0" fitWidth="250.0"               layoutY="120.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="ingredient1" fitHeight="200.0" fitWidth="250.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="ingredient2" fitHeight="200.0" fitWidth="250.0" layoutY="180.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="ingredient3" fitHeight="200.0" fitWidth="250.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="ingredient4" fitHeight="200.0" fitWidth="250.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true" />
                   <ImageView fx:id="ingredient5" fitHeight="200.0" fitWidth="250.0" layoutX="1.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" />
                   <ImageView fx:id="ingredient6" fitHeight="200.0" fitWidth="250.0" layoutX="1.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
                   <ImageView fx:id="ingredient7" fitHeight="200.0" fitWidth="250.0" layoutX="1.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" />
 
                </children>
             </Pane>
-
-
 
             <Pane fx:id="pointspane" layoutX="532.0" layoutY="225.0" prefHeight="125.0" prefWidth="102.0">
                <Label fx:id="punteggiolabel" layoutX="19.0" layoutY="23.0" prefHeight="40.0" prefWidth="65.0" text="punteggio" textAlignment="CENTER" />

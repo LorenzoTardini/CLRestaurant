@@ -56,8 +56,13 @@ public class CLRgame{
         int randomsize=0;
         while(randomsize==0)
             randomsize = randomgen.nextInt(8);
+
+
+        // randomsize = 7; LINEA DEBUG PER FINIRE IL PROGETTO DELL'UI
+
         int[] retarr = new int[randomsize];
         Integer[] referencearr = new Integer[7];
+
 
         System.out.print("Array generato randomicamente: \n");
 
@@ -102,9 +107,13 @@ public class CLRgame{
             imagelettuce = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\hamburger\\lettuce.png"));
             imageegg = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\hamburger\\egg.png"));
             imagecheese = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\hamburger\\cheese.png"));
+            imagebacon = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\hamburger\\bacon.png"));
+
             imagebread1 = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\hamburger\\bread1.png"));
             imagebread2 = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\hamburger\\bread2.png"));
-            imagebacon = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\hamburger\\bacon.png"));
+
+
+
 
             imageanchovy = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\anchovy.PNG"));
             imageaubergine = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\aubergine.PNG"));
@@ -113,7 +122,10 @@ public class CLRgame{
             imagefries = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\fries.PNG"));
             imagemozzarella = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\mozzarella.PNG"));
             imagesausage = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\sausage.PNG"));
+
             imageimpasto = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\impasto.png"));
+
+
 
             singleimageanchovy = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\singles\\anchovy.PNG"));
             singleimageaubergine = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\singles\\aubergine.PNG"));
@@ -122,6 +134,7 @@ public class CLRgame{
             singleimagefries = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\singles\\fries.PNG"));
             singleimagemozzarella = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\singles\\mozzarella.PNG"));
             singleimagesausage = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\singles\\sausage.PNG"));
+
             singleimageimpasto = new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizza\\singles\\impasto.png"));
 
 
