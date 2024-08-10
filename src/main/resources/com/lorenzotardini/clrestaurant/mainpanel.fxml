@@ -170,7 +170,7 @@
                      </children>
                   </Pane>
 
-                  <Pane fx:id="bread1imgpane" layoutX="267.0" layoutY="541.0">
+                  <Pane fx:id="bread1imgpane" layoutX="297.0" layoutY="441.0">
                      <children>
                         <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -191,7 +191,7 @@
                      </children>
                   </Pane>
 
-                  <Pane fx:id="bread2imgpane" layoutX="141.0" layoutY="663.0">
+                  <Pane fx:id="bread2imgpane" layoutX="171.0" layoutY="563.0">
                      <children>
                         <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -433,11 +433,13 @@
 
 
             <Button fx:id="start" layoutX="519.0" layoutY="814.0" mnemonicParsing="false" onAction="#clickedStart" prefHeight="60.0" prefWidth="170.0" text="start" />
-            <Pane fx:id="trashcanimgpane" layoutX="982.0" layoutY="682.0" prefHeight="100.0" prefWidth="102.0">
+            <Pane fx:id="trashcanimgpane" layoutX="982.0" layoutY="682.0" prefHeight="100.0" prefWidth="102.0" visible="false">
                <children>
 
                   <ImageView fitHeight="100.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true" >
-
+                     <effect>
+                        <DropShadow />
+                     </effect>
                      <image>
                         <Image url="file:..\CLRestaurant\src\main\assets\recycle.png" />
                      </image>

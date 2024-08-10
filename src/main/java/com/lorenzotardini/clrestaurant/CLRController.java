@@ -16,6 +16,7 @@ import java.util.Random;
 public class CLRController{
 
 
+
     @FXML
     private Label welcomeText;
     @FXML
@@ -119,6 +120,8 @@ public class CLRController{
     private Pane controlspane;
     @FXML
     private Pane orderpane;
+    @FXML
+    private Pane trashcanimgpane;
 
 
     @FXML
@@ -486,8 +489,8 @@ public class CLRController{
         else{
             punteggiovalue-=generatedbyuser.size()*50;
         }
-
-        punteggioverolabel.setText(String.valueOf(punteggiovalue));
+        String temp = String.format("%05d",punteggiovalue);
+        punteggioverolabel.setText(temp);
         punteggioverolabel.setVisible(true);
     }
     protected void resetplate() {
@@ -689,6 +692,7 @@ public class CLRController{
             timerlabel.setText("01:00");
             punteggioverolabel.setFont(segments);
             timerlabel.setFont(segments);
+            trashcanimgpane.setVisible(true);
 
             timer = new Timeline();
             timerfunction();

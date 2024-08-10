@@ -18,7 +18,7 @@ public class CLRApplication extends Application {
         stage.setTitle("CLRestaurant");
         stage.setResizable(false);
         stage.setMinHeight(940.0);
-        stage.setMinWidth(1500.0);
+        stage.setMinWidth(1510.0);
         stage.getIcons().add(new Image(new FileInputStream("..\\CLRestaurant\\src\\main\\assets\\pizzaslice.png")));
 
         CLRController.images = CLRController.orderistance.initimages();
