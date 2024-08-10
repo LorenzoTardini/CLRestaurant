@@ -3,11 +3,11 @@ package com.lorenzotardini.clrestaurant;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
-import javafx.scene.Cursor;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.*;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Font;
 import javafx.util.Duration;
 
 import java.util.ArrayList;
@@ -160,7 +160,7 @@ public class CLRController{
 
 
     @FXML
-    private Label punteggiolabel;
+    private Label timerlabel;
     @FXML
     private Label punteggioverolabel;
     @FXML
@@ -177,6 +177,7 @@ public class CLRController{
     double lastingredient=orderbase1.getLayoutY()-30;
     static Image[] images;
     int punteggiovalue=0;
+    int timervalue=0;
 
 
 
@@ -478,7 +479,9 @@ public class CLRController{
     }
     protected void scorecalc(boolean orderiscorrect){
         if(orderiscorrect){
-            punteggiovalue+= (int)((generatedbyuser.size()*100)*(1.6-0.01*Integer.parseInt(punteggiolabel.getText())));
+            //punteggiovalue+= (int)((generatedbyuser.size()*100)*(1.6-0.01*Integer.parseInt(timerlabel.getText())));
+            punteggiovalue+= (int)((generatedbyuser.size()*100)*(1.6-0.01*timervalue));
+
         }
         else{
             punteggiovalue-=generatedbyuser.size()*50;
@@ -549,7 +552,11 @@ public class CLRController{
                 timer.getKeyFrames().add(kf);
             }
             KeyFrame kf = new KeyFrame(Duration.seconds(i),
-                    ActionEvent -> punteggiolabel.setText(String.valueOf(60- finalI)));
+                    ActionEvent -> {
+                        timervalue = 60-finalI;
+                        String temp = String.format("%02d",timervalue);
+                        timerlabel.setText("00:"+temp);
+                    });
             timer.getKeyFrames().add(kf);
         }
     }
@@ -677,6 +684,12 @@ public class CLRController{
         cleanup(bubbles);
 
         if(isfirststart) {
+            Font segments = Font.loadFont("file:..\\CLRestaurant\\src\\main\\assets\\16Segments-Basic.otf",35);
+            punteggioverolabel.setText("00000");
+            timerlabel.setText("01:00");
+            punteggioverolabel.setFont(segments);
+            timerlabel.setFont(segments);
+
             timer = new Timeline();
             timerfunction();
             timer.play();

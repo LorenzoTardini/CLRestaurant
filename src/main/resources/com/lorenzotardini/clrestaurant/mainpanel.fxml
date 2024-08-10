@@ -18,15 +18,9 @@
       </ImageView>
       <AnchorPane layoutY="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1500.0" style="-fx-background-image: url('file:../CLRestaurant/src/main/assets/mainpanelsecondtest.png');">
          <children>
-            <Pane fx:id="controlspane" layoutX="550.0" layoutY="76.0">
-               <children>
-                  <Button fx:id="start" layoutX="12.0" mnemonicParsing="false" onAction="#clickedStart" text="start" />
-                  <Button fx:id="submit" disable="true" layoutX="3.0" layoutY="46.0" mnemonicParsing="false" onAction="#clickedSubmit" text="SUBMIT" />
-                  <Button fx:id="trashcan" layoutY="88.0" mnemonicParsing="false" onAction="#clickedTrashCan" text="TrashCan" />
-               </children>
-            </Pane>
+            <Pane fx:id="controlspane" layoutX="550.0" layoutY="76.0" />
 
-            <Pane fx:id="hamburgerpane" layoutX="-2.0" layoutY="1.0" prefHeight="784.0" prefWidth="361.0" visible="false" viewOrder="-Infinity">
+            <Pane fx:id="hamburgerpane" layoutX="-2.0" layoutY="1.0" prefHeight="784.0" prefWidth="361.0" viewOrder="-Infinity" visible="false">
                <children>
 
                   <Pane fx:id="baconimgpane" layoutX="167.0" layoutY="10.0">
@@ -36,7 +30,7 @@
                               <Image url="file:..\CLRestaurant\src\main\assets\hamburger\bacon.png" />
                            </image>
                            <effect>
-                              <DropShadow />
+                              <DropShadow color="white" />
                            </effect>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -57,7 +51,7 @@
                               <Image url="file:..\CLRestaurant\src\main\assets\hamburger\cheese.png" />
                            </image>
                            <effect>
-                              <DropShadow />
+                              <DropShadow color="white" />
                            </effect>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -78,7 +72,7 @@
                               <Image url="file:..\CLRestaurant\src\main\assets\hamburger\egg.png" />
                            </image>
                            <effect>
-                              <DropShadow />
+                              <DropShadow color="white" />
                            </effect>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -99,7 +93,7 @@
                               <Image url="file:..\CLRestaurant\src\main\assets\hamburger\lettuce.png" />
                            </image>
                            <effect>
-                              <DropShadow />
+                              <DropShadow color="white" />
                            </effect>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -120,7 +114,7 @@
                               <Image url="file:..\CLRestaurant\src\main\assets\hamburger\mushrooms.png" />
                            </image>
                            <effect>
-                              <DropShadow />
+                              <DropShadow color="white" />
                            </effect>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -141,7 +135,7 @@
                               <Image url="file:..\CLRestaurant\src\main\assets\hamburger\tomatoh.png" />
                            </image>
                            <effect>
-                              <DropShadow />
+                              <DropShadow color="white" />
                            </effect>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -162,7 +156,7 @@
                               <Image url="file:..\CLRestaurant\src\main\assets\hamburger\patty.png" />
                            </image>
                            <effect>
-                              <DropShadow />
+                              <DropShadow color="white" />
                            </effect>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -220,7 +214,7 @@
                </children>
             </Pane>
 
-            <Pane fx:id="pizzapane" layoutX="842.0" layoutY="-2.0" prefHeight="784.0" prefWidth="330.0" visible="false" viewOrder="-Infinity">
+            <Pane fx:id="pizzapane" layoutX="842.0" layoutY="-2.0" prefHeight="784.0" prefWidth="330.0" viewOrder="-Infinity" visible="false">
                <children>
       
                   <Pane fx:id="friesimgpane" layoutX="40.0" layoutY="40.0" prefWidth="90.0">
@@ -230,7 +224,7 @@
                               <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\fries.png" />
                            </image>
                            <effect>
-                              <DropShadow />
+                              <DropShadow color="white" />
                            </effect>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -251,7 +245,7 @@
                               <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\mozzarella.png" />
                            </image>
                            <effect>
-                              <DropShadow />
+                              <DropShadow color="white" />
                            </effect>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -272,7 +266,7 @@
                               <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\aubergine.png" />
                            </image>
                            <effect>
-                              <DropShadow />
+                              <DropShadow color="white" />
                            </effect>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -293,7 +287,7 @@
                               <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\sausage.png" />
                            </image>
                            <effect>
-                              <DropShadow />
+                              <DropShadow color="white" />
                            </effect>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -314,7 +308,7 @@
                               <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\salami.png" />
                            </image>
                            <effect>
-                              <DropShadow />
+                              <DropShadow color="white" />
                            </effect>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -335,7 +329,7 @@
                               <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\pineapple.PNG" />
                            </image>
                            <effect>
-                              <DropShadow />
+                              <DropShadow color="white" />
                            </effect>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -356,7 +350,7 @@
                               <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\anchovy.PNG" />
                            </image>
                            <effect>
-                              <DropShadow />
+                              <DropShadow color="white" />
                            </effect>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -377,7 +371,7 @@
                               <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\impasto.png" />
                            </image>
                            <effect>
-                              <DropShadow />
+                              <DropShadow color="white" />
                            </effect>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -427,17 +421,40 @@
                </children>
             </Pane>
 
-            <Pane fx:id="pointspane" layoutX="532.0" layoutY="225.0" prefHeight="125.0" prefWidth="102.0">
-               <Label fx:id="punteggiolabel" layoutX="19.0" layoutY="23.0" prefHeight="40.0" prefWidth="65.0" text="punteggio" textAlignment="CENTER" />
-               <Label fx:id="punteggioverolabel" layoutX="19.0" layoutY="71.0" prefHeight="40.0" prefWidth="65.0" text="VEROPUNT" textAlignment="CENTER" />
-            </Pane>
+            <Pane fx:id="pointspane" layoutX="532.0" layoutY="225.0" prefHeight="125.0" prefWidth="102.0" />
 
             <ImageView fx:id="confetti" fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="314.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fitHeight="100.0" fitWidth="200.0" layoutX="-37.0" layoutY="559.0" pickOnBounds="true" preserveRatio="true" />
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="147.0" layoutY="382.0" pickOnBounds="true" preserveRatio="true" />
 
+
+            <Label fx:id="timerlabel" layoutX="165.0" layoutY="824.0" prefHeight="40.0" prefWidth="131.0" text=" " textAlignment="CENTER" textFill="#892628" />
+            <Label fx:id="punteggioverolabel" layoutX="982.0" layoutY="827.0" prefHeight="40.0" prefWidth="114.0" text=" " textAlignment="CENTER" textFill="#3b8b35" />
+
+
+            <Button fx:id="start" layoutX="519.0" layoutY="814.0" mnemonicParsing="false" onAction="#clickedStart" prefHeight="60.0" prefWidth="170.0" text="start" />
+            <Pane fx:id="trashcanimgpane" layoutX="982.0" layoutY="682.0" prefHeight="100.0" prefWidth="102.0">
+               <children>
+
+                  <ImageView fitHeight="100.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true" >
+
+                     <image>
+                        <Image url="file:..\CLRestaurant\src\main\assets\recycle.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="trashcan" mnemonicParsing="false" onAction="#clickedTrashCan" opacity="0.0" prefHeight="100.0" prefWidth="102.0" text="TrashCan"  >
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+            <Button fx:id="submit" disable="true" layoutX="443.0" layoutY="811.0" mnemonicParsing="false" onAction="#clickedSubmit" text="SUBMIT" />
+
          </children>
       </AnchorPane>
+
+
       <Pane fx:id="gameoverpane" layoutX="2.0" layoutY="2.0" prefHeight="784.0" prefWidth="1166.0" style="-fx-background-color: red;" visible="false">
          <children>
             <Label fx:id="finalscore" layoutX="386.0" layoutY="162.0" prefHeight="25.0" prefWidth="114.0" />
