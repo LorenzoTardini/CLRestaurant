@@ -445,7 +445,10 @@ public class CLRController{
             checkequal=false;
         }
         for(int i = 0; i< generatedbyuser.size(); i++){
-            System.out.print(generatedbyuser.get(i)+" ");
+            int j=0;
+            if(!fooddecision)
+                j=7;
+            System.out.print(generatedbyuser.get(i)-j+" ");
         }
         submitcount = randomlygenerated.length;
         if(generatedbyuser.size()!=randomlygenerated.length)
