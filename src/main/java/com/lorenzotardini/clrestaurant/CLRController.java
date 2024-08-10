@@ -3,6 +3,7 @@ package com.lorenzotardini.clrestaurant;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
+import javafx.scene.Cursor;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.*;
@@ -13,6 +14,8 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class CLRController{
+
+
     @FXML
     private Label welcomeText;
     @FXML
@@ -117,6 +120,45 @@ public class CLRController{
     @FXML
     private Pane orderpane;
 
+
+    @FXML
+    private Pane impastoimgpane;
+    @FXML
+    private Pane friesimgpane;
+    @FXML
+    private Pane mozzarellaimgpane;
+    @FXML
+    private Pane vegetableimgpane;
+    @FXML
+    private Pane salamiimgpane;
+    @FXML
+    private Pane sausageimgpane;
+    @FXML
+    private Pane pineappleimgpane;
+    @FXML
+    private Pane fishimgpane;
+
+    @FXML
+    private Pane bread1imgpane;
+    @FXML
+    private Pane bread2imgpane;
+    @FXML
+    private Pane baconimgpane;
+    @FXML
+    private Pane cheeseimgpane;
+    @FXML
+    private Pane eggimgpane;
+    @FXML
+    private Pane lettuceimgpane;
+    @FXML
+    private Pane mushroomsimgpane;
+    @FXML
+    private Pane tomatohimgpane;
+    @FXML
+    private Pane pattyimgpane;
+
+
+
     @FXML
     private Label punteggiolabel;
     @FXML
@@ -126,14 +168,14 @@ public class CLRController{
 
     Timeline timer;
     int count = 0;
-    private CLRgame orderistance = new CLRgame();
+    static CLRgame orderistance = new CLRgame();
     private boolean validcreation = false;
     private boolean fooddecision;
     private boolean isfirststart=true;
     private boolean closedpanin=false;
     ArrayList<Integer> generatedbyuser = new ArrayList<Integer>();
     double lastingredient=orderbase1.getLayoutY()-30;
-    Image[] images;
+    static Image[] images;
     int punteggiovalue=0;
 
 
@@ -144,18 +186,20 @@ public class CLRController{
     }
     @FXML
     protected void clickedMushrooms() {
-        if (validcreation) {
-            mushrooms.setDisable(true);
+        if (validcreation&&!closedpanin) {
+            //mushrooms.setDisable(true);
+            mushroomsimgpane.setDisable(true);
+            mushroomsimgpane.setOpacity(0.0);
             orderplatefiller(5);
-            //ingredients[count].setVisible(true);
-            //ingredients[count].setImage(CLRgame.imagemushrooms);
             count++;
         }
     }
     @FXML
     protected void clickedCheese() {
-        if (validcreation) {
-            cheese.setDisable(true);
+        if (validcreation&&!closedpanin) {
+            //cheese.setDisable(true);
+            cheeseimgpane.setDisable(true);
+            cheeseimgpane.setOpacity(0.0);
             orderplatefiller(2);
             count++;
         }
@@ -163,19 +207,24 @@ public class CLRController{
     }
     @FXML
     protected void clickedEgg() {
-        if (validcreation) {
-            egg.setDisable(true);
+        if (validcreation&&!closedpanin) {
+            //egg.setDisable(true);
+            eggimgpane.setDisable(true);
+            eggimgpane.setOpacity(0.0);
             orderplatefiller(3);
+            count++;
             //ingredients[count].setVisible(true);
             //ingredients[count].setImage(CLRgame.imageegg);
-            count++;
+
         }
 
     }
     @FXML
     protected void clickedBacon() {
-        if (validcreation) {
-            bacon.setDisable(true);
+        if (validcreation&&!closedpanin) {
+            //bacon.setDisable(true);
+            baconimgpane.setDisable(true);
+            baconimgpane.setOpacity(0.0);
             orderplatefiller(1);
             //ingredients[count].setVisible(true);
             //ingredients[count].setImage(CLRgame.imagebacon);
@@ -184,8 +233,10 @@ public class CLRController{
     }
     @FXML
     protected void clickedLettuce() {
-        if (validcreation) {
-            lettuce.setDisable(true);
+        if (validcreation&&!closedpanin) {
+            //lettuce.setDisable(true);
+            lettuceimgpane.setDisable(true);
+            lettuceimgpane.setOpacity(0.0);
             orderplatefiller(4);
             //ingredients[count].setVisible(true);
             //ingredients[count].setImage(CLRgame.imagelettuce);
@@ -195,8 +246,10 @@ public class CLRController{
     }
     @FXML
     protected void clickedPatty() {
-        if (validcreation) {
-            patty.setDisable(true);
+        if (validcreation&&!closedpanin) {
+            //patty.setDisable(true);
+            pattyimgpane.setDisable(true);
+            pattyimgpane.setOpacity(0.0);
             orderplatefiller(6);
             //ingredients[count].setVisible(true);
             //ingredients[count].setImage(CLRgame.imagepatty);
@@ -206,8 +259,10 @@ public class CLRController{
     }
     @FXML
     protected void clickedTomatoh() {
-        if (validcreation) {
-            tomatoh.setDisable(true);
+        if (validcreation&&!closedpanin) {
+            //tomatoh.setDisable(true);
+            tomatohimgpane.setDisable(true);
+            tomatohimgpane.setOpacity(0.0);
             orderplatefiller(0);
             //ingredients[count].setVisible(true);
             //ingredients[count].setImage(CLRgame.imagetomatoh);
@@ -217,7 +272,9 @@ public class CLRController{
     @FXML
     protected void clickedBread1() {
         validcreation = true;
-        bread1.setDisable(true);
+        //bread1.setDisable(true);
+        bread1imgpane.setDisable(true);
+        bread1imgpane.setOpacity(0.0);
         orderbase1.setVisible(true);
         orderbase1.setImage(CLRgame.imagebread1);
         submit.setDisable(false);
@@ -225,7 +282,9 @@ public class CLRController{
     @FXML
     protected void clickedBread2() {
         if (validcreation) {
-            bread2.setDisable(true);
+            //bread2.setDisable(true);
+            bread2imgpane.setDisable(true);
+            bread2imgpane.setOpacity(0.0);
             closedpanin = true;
             orderbase2.setLayoutY(lastingredient-30);
             orderbase2.setVisible(true);
@@ -238,7 +297,9 @@ public class CLRController{
     @FXML
     protected void clickedFries() {
         if(validcreation) {
-            fries.setDisable(true);
+            friesimgpane.setDisable(true);
+            friesimgpane.setOpacity(0.0);
+            //fries.setDisable(true);
             orderplatefiller(11);
             count++;
         }
@@ -247,7 +308,9 @@ public class CLRController{
     @FXML
     protected void clickedMozzarella() {
         if(validcreation) {
-            mozzarella.setDisable(true);
+            mozzarellaimgpane.setDisable(true);
+            mozzarellaimgpane.setOpacity(0.0);
+            //mozzarella.setDisable(true);
             orderplatefiller(12);
             count++;
         }
@@ -256,7 +319,9 @@ public class CLRController{
     @FXML
     protected void clickedVegetable() {
         if(validcreation) {
-            vegetable.setDisable(true);
+            vegetableimgpane.setDisable(true);
+            vegetableimgpane.setOpacity(0.0);
+            //vegetable.setDisable(true);
             orderplatefiller(8);
             count++;
         }
@@ -265,7 +330,9 @@ public class CLRController{
     @FXML
     protected void clickedSausage() {
         if(validcreation) {
-            sausage.setDisable(true);
+            sausageimgpane.setDisable(true);
+            sausageimgpane.setOpacity(0.0);
+            //sausage.setDisable(true);
             orderplatefiller(13);
             count++;
         }
@@ -273,7 +340,9 @@ public class CLRController{
     @FXML
     protected void clickedSalami() {
         if(validcreation) {
-            salami.setDisable(true);
+            salamiimgpane.setDisable(true);
+            salamiimgpane.setOpacity(0.0);
+            //salami.setDisable(true);
             orderplatefiller(9);
             count++;
         }
@@ -281,38 +350,46 @@ public class CLRController{
     @FXML
     protected void clickedPineapple() {
         if(validcreation) {
-            pineapple.setDisable(true);
+            pineappleimgpane.setDisable(true);
+            pineappleimgpane.setOpacity(0.0);
+            //pineapple.setDisable(true);
             orderplatefiller(10);
             count++;
         }
     }
+
+    @FXML
+    protected void clickedFish() {
+        if(validcreation) {
+            fishimgpane.setDisable(true);
+            fishimgpane.setOpacity(0.0);
+            orderplatefiller(7);
+            count++;
+        }
+    }
+
     @FXML
     protected void clickedImpasto() {
-        System.out.println(orderpane.getLayoutX()+ " " +orderpane.getLayoutY()+" "+ orderpane.getWidth());
+        //System.out.println(orderpane.getLayoutX()+ " " +orderpane.getLayoutY()+" "+ orderpane.getWidth());
         validcreation=true;
-        impasto.setDisable(true);
+        impastoimgpane.setDisable(true);
+        impastoimgpane.setOpacity(0.0);
+
+        //impasto.setDisable(true);
         submit.setDisable(false);
 
-        orderbase1.setLayoutY(orderbase1.getLayoutY()-100);
-        orderbase1.setLayoutX(orderbase1.getLayoutX()-140);
+        orderbase1.setLayoutY(140.0);
+        orderbase1.setLayoutX(-139);
         orderbase1.setFitHeight(250);
         orderbase1.setFitWidth(500);
         orderbase1.setImage(CLRgame.imageimpasto);
 
         orderbase1.setVisible(true);
-        System.out.println(orderpane.getLayoutX()+ " " +orderpane.getLayoutY()+" "+ orderpane.getWidth());
+        //System.out.println(orderpane.getLayoutX()+ " " +orderpane.getLayoutY()+" "+ orderpane.getWidth());
     }
 
 
 
-    @FXML
-    protected void clickedFish() {
-        if(validcreation) {
-            fish.setDisable(true);
-            orderplatefiller(7);
-            count++;
-        }
-    }
 
 
     @FXML
@@ -346,7 +423,7 @@ public class CLRController{
                 }
                 else{
                     ingredients[count].setLayoutY(orderbase1.getLayoutY());
-                    ingredients[count].setFitHeight(400.0);
+                    ingredients[count].setFitHeight(250.0);
                     ingredients[count].setFitWidth(500.0);
                     ingredients[count].setLayoutX(ingredients[count].getLayoutX()-140); //IF A PIZZA IS COMPOSED, THEN START IS CLICKED AND A HAMBURGER IS PROPOSED, INGREDIENTS SIZE DOESN'T RETURN TO NORMAL!!
                 }
@@ -408,11 +485,12 @@ public class CLRController{
         punteggioverolabel.setVisible(true);
     }
     protected void resetplate() {
-        Button[] buttonsvector = {tomatoh, bacon, egg, lettuce, mushrooms, patty, cheese, fries,
-                fish,vegetable,salami,pineapple,mozzarella,sausage,
-                impasto,bread1,bread2};
+        Pane[] buttonsvector = {tomatohimgpane, baconimgpane, eggimgpane, lettuceimgpane, mushroomsimgpane, pattyimgpane, cheeseimgpane, friesimgpane,
+                fishimgpane,vegetableimgpane,salamiimgpane,pineappleimgpane,mozzarellaimgpane ,sausageimgpane,
+                impastoimgpane,bread1imgpane,bread2imgpane};
         for (int i = 0; i < buttonsvector.length; i++) {
             buttonsvector[i].setDisable(false);
+            buttonsvector[i].setOpacity(1.0);
         }
         count = 0; //TO FIX: VECTOR "INGREDIENTS" IS DECLARED TWICE. MUST BE OPTIMIZED
         ImageView[] ingredients = {
@@ -426,10 +504,10 @@ public class CLRController{
             ingredients[i].setVisible(false);
         }
 
-        if(!fooddecision&&generatedbyuser.size()!=0)
+        if(!fooddecision)
         {
-            orderbase1.setLayoutY(orderbase1.getLayoutY()+100);
-            orderbase1.setLayoutX(orderbase1.getLayoutX()+140);
+            orderbase1.setLayoutY(240.0);
+            orderbase1.setLayoutX(1.0);
             orderbase1.setFitHeight(200.0);
             orderbase1.setFitWidth(250);
 
@@ -600,7 +678,7 @@ public class CLRController{
             timerfunction();
             timer.play();
             isfirststart = false;
-            images = orderistance.initimages(); //it is IMPERATIVE that the init. of all images must be done one time only. (it lags everything out)
+            //images = orderistance.initimages(); //it is IMPERATIVE that the init. of all images must be done one time only. (it lags everything out)
         }
 
 

@@ -26,12 +26,12 @@
                </children>
             </Pane>
 
-            <Pane fx:id="hamburgerpane" layoutX="-2.0" layoutY="1.0" prefHeight="784.0" prefWidth="361.0">
+            <Pane fx:id="hamburgerpane" layoutX="-2.0" layoutY="1.0" prefHeight="784.0" prefWidth="361.0" visible="false" viewOrder="-Infinity">
                <children>
 
-                  <Pane layoutX="187.0" layoutY="40.0">
+                  <Pane fx:id="baconimgpane" layoutX="167.0" layoutY="10.0">
                      <children>
-                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="file:..\CLRestaurant\src\main\assets\hamburger\bacon.png" />
                            </image>
@@ -42,7 +42,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <Button fx:id="bacon" mnemonicParsing="false" onAction="#clickedBacon" opacity="0.0" prefHeight="80.0" prefWidth="80.0" text="bacon">
+                        <Button fx:id="bacon" mnemonicParsing="false" onAction="#clickedBacon" opacity="0.0" prefHeight="130.0" prefWidth="130.0" text="bacon">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -50,9 +50,9 @@
                      </children>
                   </Pane>
 
-                  <Pane layoutX="50.0" layoutY="100.0">
+                  <Pane fx:id="cheeseimgpane" layoutX="30.0" layoutY="70.0">
                      <children>
-                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="file:..\CLRestaurant\src\main\assets\hamburger\cheese.png" />
                            </image>
@@ -63,7 +63,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <Button fx:id="cheese" mnemonicParsing="false" onAction="#clickedCheese" opacity="0.0" prefHeight="80.0" prefWidth="80.0" text="cheese">
+                        <Button fx:id="cheese" mnemonicParsing="false" onAction="#clickedCheese" opacity="0.0" prefHeight="130.0" prefWidth="130.0" text="cheese">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -71,9 +71,9 @@
                      </children>
                   </Pane>
 
-                  <Pane layoutX="203.0" layoutY="200.0">
+                  <Pane fx:id="eggimgpane" layoutX="180.0" layoutY="170.0">
                      <children>
-                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="file:..\CLRestaurant\src\main\assets\hamburger\egg.png" />
                            </image>
@@ -84,7 +84,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <Button fx:id="egg" mnemonicParsing="false" onAction="#clickedEgg" opacity="0.0" prefHeight="80.0" prefWidth="80.0" text="egg">
+                        <Button fx:id="egg" mnemonicParsing="false" onAction="#clickedEgg" opacity="0.0" prefHeight="130.0" prefWidth="130.0" text="egg">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -92,9 +92,9 @@
                      </children>
                   </Pane>
 
-                  <Pane layoutX="50.0" layoutY="247.0">
+                  <Pane fx:id="lettuceimgpane" layoutX="30.0" layoutY="220.0">
                      <children>
-                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="file:..\CLRestaurant\src\main\assets\hamburger\lettuce.png" />
                            </image>
@@ -105,7 +105,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <Button fx:id="lettuce" mnemonicParsing="false" onAction="#clickedLettuce" opacity="0.0" prefHeight="80.0" prefWidth="80.0" text="lettuce">
+                        <Button fx:id="lettuce" mnemonicParsing="false" onAction="#clickedLettuce" opacity="0.0" prefHeight="130.0" prefWidth="130.0" text="lettuce">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -113,9 +113,9 @@
                      </children>
                   </Pane>
       
-                  <Pane layoutX="203.0" layoutY="340.0">
+                  <Pane fx:id="mushroomsimgpane" layoutX="180.0" layoutY="310.0">
                      <children>
-                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="file:..\CLRestaurant\src\main\assets\hamburger\mushrooms.png" />
                            </image>
@@ -126,7 +126,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <Button fx:id="mushrooms" mnemonicParsing="false" onAction="#clickedMushrooms" opacity="0.0" prefHeight="80.0" prefWidth="80.0" text="mushrooms">
+                        <Button fx:id="mushrooms" mnemonicParsing="false" onAction="#clickedMushrooms" opacity="0.0" prefHeight="130.0" prefWidth="130.0" text="mushrooms">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -134,9 +134,9 @@
                      </children>
                   </Pane>
       
-                        <Pane layoutX="50.0" layoutY="410.0" prefHeight="80.0" prefWidth="80.0">
+                  <Pane fx:id="tomatohimgpane" layoutX="30.0" layoutY="380.0" prefHeight="80.0" prefWidth="80.0">
                      <children>
-                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="file:..\CLRestaurant\src\main\assets\hamburger\tomatoh.png" />
                            </image>
@@ -147,7 +147,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <Button fx:id="tomatoh" layoutX="2.0" mnemonicParsing="false" onAction="#clickedTomatoh" opacity="0.0" prefHeight="80.0" prefWidth="77.0" text="tomatoh">
+                        <Button fx:id="tomatoh" mnemonicParsing="false" onAction="#clickedTomatoh" opacity="0.0" prefHeight="130.0" prefWidth="130.0" text="tomatoh">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -155,9 +155,9 @@
                      </children>
                   </Pane>
 
-                  <Pane layoutX="50.0" layoutY="540.0">
+                  <Pane fx:id="pattyimgpane" layoutX="30.0" layoutY="510.0">
                      <children>
-                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="file:..\CLRestaurant\src\main\assets\hamburger\patty.png" />
                            </image>
@@ -168,7 +168,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <Button fx:id="patty" mnemonicParsing="false" onAction="#clickedPatty" opacity="0.0" prefHeight="80.0" prefWidth="80.0" text="patty">
+                        <Button fx:id="patty" mnemonicParsing="false" onAction="#clickedPatty" opacity="0.0" prefHeight="130.0" prefWidth="130.0" text="patty">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -176,9 +176,9 @@
                      </children>
                   </Pane>
 
-                  <Pane layoutX="267.0" layoutY="541.0">
+                  <Pane fx:id="bread1imgpane" layoutX="267.0" layoutY="541.0">
                      <children>
-                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="file:..\CLRestaurant\src\main\assets\hamburger\bread1.png" />
                            </image>
@@ -197,9 +197,9 @@
                      </children>
                   </Pane>
 
-                  <Pane layoutX="141.0" layoutY="663.0">
+                  <Pane fx:id="bread2imgpane" layoutX="141.0" layoutY="663.0">
                      <children>
-                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="file:..\CLRestaurant\src\main\assets\hamburger\bread2.png" />
                            </image>
@@ -220,12 +220,12 @@
                </children>
             </Pane>
 
-            <Pane fx:id="pizzapane" layoutX="842.0" layoutY="-2.0" prefHeight="784.0" prefWidth="330.0" viewOrder="-Infinity">
+            <Pane fx:id="pizzapane" layoutX="842.0" layoutY="-2.0" prefHeight="784.0" prefWidth="330.0" visible="false" viewOrder="-Infinity">
                <children>
       
-                  <Pane layoutX="60.0" layoutY="40.0">
+                  <Pane fx:id="friesimgpane" layoutX="40.0" layoutY="40.0" prefWidth="90.0">
                      <children>
-                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="80.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\fries.png" />
                            </image>
@@ -236,7 +236,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <Button fx:id="fries" mnemonicParsing="false" onAction="#clickedFries" opacity="0.0" prefHeight="80.0" prefWidth="80.0" text="fries">
+                        <Button fx:id="fries" mnemonicParsing="false" onAction="#clickedFries" opacity="0.0" prefHeight="80.0" prefWidth="130.0" text="fries">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -244,9 +244,9 @@
                      </children>
                   </Pane>
 
-                  <Pane layoutX="193.0" layoutY="105.0">
+                  <Pane fx:id="mozzarellaimgpane" layoutX="170.0" layoutY="105.0">
                      <children>
-                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="80.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\mozzarella.png" />
                            </image>
@@ -257,7 +257,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <Button fx:id="mozzarella" mnemonicParsing="false" onAction="#clickedMozzarella" opacity="0.0" prefHeight="82.0" prefWidth="80.0" text="mozzarella">
+                        <Button fx:id="mozzarella" mnemonicParsing="false" onAction="#clickedMozzarella" opacity="0.0" prefHeight="80.0" prefWidth="130.0" text="mozzarella">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -265,9 +265,9 @@
                      </children>
                   </Pane>
 
-                  <Pane layoutX="42.0" layoutY="200.0">
+                  <Pane fx:id="vegetableimgpane" layoutX="20.0" layoutY="200.0">
                      <children>
-                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="80.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\aubergine.png" />
                            </image>
@@ -278,7 +278,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <Button fx:id="vegetable" mnemonicParsing="false" onAction="#clickedVegetable" opacity="0.0" prefHeight="82.0" prefWidth="80.0" text="vegetable">
+                        <Button fx:id="vegetable" mnemonicParsing="false" onAction="#clickedVegetable" opacity="0.0" prefHeight="82.0" prefWidth="130.0" text="vegetable">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -286,9 +286,9 @@
                      </children>
                   </Pane>
 
-                  <Pane layoutX="193.0" layoutY="250.0">
+                  <Pane fx:id="sausageimgpane" layoutX="170.0" layoutY="250.0">
                      <children>
-                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="80.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\sausage.png" />
                            </image>
@@ -299,7 +299,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <Button fx:id="sausage" mnemonicParsing="false" onAction="#clickedSausage" opacity="0.0" prefHeight="80.0" prefWidth="80.0" text="sausage">
+                        <Button fx:id="sausage" mnemonicParsing="false" onAction="#clickedSausage" opacity="0.0" prefHeight="80.0" prefWidth="130.0" text="sausage">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -307,9 +307,9 @@
                      </children>
                   </Pane>
 
-                  <Pane layoutX="42.0" layoutY="340.0">
+                  <Pane fx:id="salamiimgpane" layoutX="30.0" layoutY="340.0">
                      <children>
-                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="80.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\salami.png" />
                            </image>
@@ -320,7 +320,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <Button fx:id="salami" mnemonicParsing="false" onAction="#clickedSalami" opacity="0.0" prefHeight="80.0" prefWidth="80.0" text="salami">
+                        <Button fx:id="salami" mnemonicParsing="false" onAction="#clickedSalami" opacity="0.0" prefHeight="80.0" prefWidth="130.0" text="salami">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -328,9 +328,9 @@
                      </children>
                   </Pane>
 
-                  <Pane layoutX="193.0" layoutY="410.0">
+                  <Pane fx:id="pineappleimgpane" layoutX="168.0" layoutY="408.0">
                      <children>
-                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="80.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\pineapple.PNG" />
                            </image>
@@ -341,7 +341,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <Button fx:id="pineapple" mnemonicParsing="false" onAction="#clickedPineapple" opacity="0.0" prefHeight="80.0" prefWidth="80.0" text="pinapple">
+                        <Button fx:id="pineapple" mnemonicParsing="false" onAction="#clickedPineapple" opacity="0.0" prefHeight="80.0" prefWidth="131.0" text="pinapple">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -349,9 +349,9 @@
                      </children>
                   </Pane>
 
-                  <Pane layoutX="202.0" layoutY="540.0">
+                  <Pane fx:id="fishimgpane" layoutX="170.0" layoutY="550.0">
                      <children>
-                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="80.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\anchovy.PNG" />
                            </image>
@@ -362,7 +362,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </ImageView>
-                        <Button fx:id="fish" mnemonicParsing="false" onAction="#clickedFish" opacity="0.0" prefHeight="80.0" prefWidth="80.0" text="fish">
+                        <Button fx:id="fish" mnemonicParsing="false" onAction="#clickedFish" opacity="0.0" prefHeight="80.0" prefWidth="130.0" text="fish">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -370,9 +370,9 @@
                      </children>
                   </Pane>
 
-                  <Pane layoutX="14.0" layoutY="550.0">
+                  <Pane fx:id="impastoimgpane" layoutX="14.0" layoutY="550.0">
                      <children>
-                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="file:..\CLRestaurant\src\main\assets\pizza\singles\impasto.png" />
                            </image>
@@ -413,7 +413,7 @@
                <children>
       
       
-                  <ImageView fx:id="orderbase1" fitHeight="200.0" fitWidth="250.0" layoutX="1.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true" viewOrder="Infinity" />
+                  <ImageView fx:id="orderbase1" fitHeight="200.0" fitWidth="250.0" layoutX="1.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true" />
                   <ImageView fx:id="orderbase2" fitHeight="200.0" fitWidth="250.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" viewOrder="-Infinity" />
 
                   <ImageView fx:id="ingredient1" fitHeight="200.0" fitWidth="250.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true" />
