@@ -173,7 +173,7 @@ public class CLRController{
     private boolean fooddecision;
     private boolean isfirststart=true;
     private boolean closedpanin=false;
-    ArrayList<Integer> generatedbyuser = new ArrayList<Integer>();
+    ArrayList<Integer> generatedbyuser = new ArrayList<>();
     double lastingredient=orderbase1.getLayoutY()-30;
     static Image[] images;
     int punteggiovalue=0;
