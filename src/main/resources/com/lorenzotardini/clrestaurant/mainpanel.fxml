@@ -8,6 +8,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 <Pane maxWidth="1500.0" minHeight="900.0" minWidth="1500.0" prefHeight="900.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lorenzotardini.clrestaurant.CLRController">
    <children>
@@ -18,7 +19,54 @@
       </ImageView>
       <AnchorPane layoutY="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1500.0" style="-fx-background-image: url('file:../CLRestaurant/src/main/assets/mainpanelsecondtest.png');">
          <children>
-            <Pane fx:id="controlspane" layoutX="550.0" layoutY="76.0" />
+
+            <Pane fx:id="controlspane" layoutX="349.0" layoutY="769.0" prefHeight="150.0" prefWidth="478.0">
+               <children>
+
+
+                  <Pane fx:id="startimgpane" layoutX="55.0" layoutY="32.0" prefHeight="92.0" prefWidth="102.0">
+                     <children>
+                        <ImageView fitHeight="92.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:..\CLRestaurant\src\main\assets\startbutton.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Button fx:id="start" layoutX="6.0" layoutY="5.0" mnemonicParsing="false" onAction="#clickedStart" opacity="0.0" prefHeight="82.0" prefWidth="90.0" text="start" />
+                     </children>
+                  </Pane>
+
+                  <Pane fx:id="submitimgpane" layoutX="340.0" layoutY="32.0" prefHeight="92.0" prefWidth="90.0" visible="false">
+                     <children>
+                        <ImageView fitHeight="92.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:..\CLRestaurant\src\main\assets\submitbutton.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Button fx:id="submit" disable="false" mnemonicParsing="false" onAction="#clickedSubmit" opacity="0.0" prefHeight="92.0" prefWidth="90.0" text="SUBMIT" />
+                     </children>
+                  </Pane>
+
+                  <Pane fx:id="skipimgpane" layoutX="200.0" layoutY="32.0" prefHeight="92.0" prefWidth="102.0" visible="false">
+                     <children>
+                        <ImageView fitHeight="92.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:..\CLRestaurant\src\main\assets\skipbutton.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <Button mnemonicParsing="false" onAction="#clickedSkip" opacity="0.0" prefHeight="92.0" prefWidth="102.0" text="skip" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
 
             <Pane fx:id="hamburgerpane" layoutX="-2.0" layoutY="1.0" prefHeight="784.0" prefWidth="361.0" viewOrder="-Infinity" visible="false">
                <children>
@@ -431,12 +479,10 @@
             <Label fx:id="timerlabel" layoutX="165.0" layoutY="824.0" prefHeight="40.0" prefWidth="131.0" text=" " textAlignment="CENTER" textFill="#892628" />
             <Label fx:id="punteggioverolabel" layoutX="982.0" layoutY="827.0" prefHeight="40.0" prefWidth="114.0" text=" " textAlignment="CENTER" textFill="#3b8b35" />
 
-
-            <Button fx:id="start" layoutX="519.0" layoutY="814.0" mnemonicParsing="false" onAction="#clickedStart" prefHeight="60.0" prefWidth="170.0" text="start" />
             <Pane fx:id="trashcanimgpane" layoutX="982.0" layoutY="682.0" prefHeight="100.0" prefWidth="102.0" visible="false">
                <children>
 
-                  <ImageView fitHeight="100.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true" >
+                  <ImageView fitHeight="100.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
                      <effect>
                         <DropShadow />
                      </effect>
@@ -444,26 +490,46 @@
                         <Image url="file:..\CLRestaurant\src\main\assets\recycle.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="trashcan" mnemonicParsing="false" onAction="#clickedTrashCan" opacity="0.0" prefHeight="100.0" prefWidth="102.0" text="TrashCan"  >
+                  <Button fx:id="trashcan" mnemonicParsing="false" onAction="#clickedTrashCan" opacity="0.0" prefHeight="100.0" prefWidth="102.0" text="TrashCan">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
                </children>
             </Pane>
-            <Button fx:id="submit" disable="true" layoutX="443.0" layoutY="811.0" mnemonicParsing="false" onAction="#clickedSubmit" text="SUBMIT" />
 
          </children>
       </AnchorPane>
 
-
-      <Pane fx:id="gameoverpane" layoutX="2.0" layoutY="2.0" prefHeight="784.0" prefWidth="1166.0" style="-fx-background-color: red;" visible="false">
+      <Pane fx:id="gameoverpane" layoutX="2.0" layoutY="2.0" prefHeight="784.0" prefWidth="1166.0" visible="true" >
          <children>
-            <Label fx:id="finalscore" layoutX="386.0" layoutY="162.0" prefHeight="25.0" prefWidth="114.0" />
-            <Button fx:id="restart" layoutX="336.0" layoutY="241.0" mnemonicParsing="false" onAction="#clickedRestart" prefHeight="82.0" prefWidth="224.0" text="RESTART" />
+            <Label layoutX="386.0" layoutY="162.0" prefHeight="25.0" prefWidth="114.0" viewOrder="-Infinity" />
+
             <Label layoutX="362.0" layoutY="41.0" prefHeight="40.0" prefWidth="138.0" text="GAME OVER " textFill="#1b1a1a" />
-            <Label layoutX="341.0" layoutY="108.0" prefHeight="25.0" prefWidth="138.0" text="IL TUO PUNTEGGIO VALE" />
+            <Label fx:id="finalscore" layoutX="533.0" layoutY="415.0" prefHeight="82.0" prefWidth="157.0" text="9999" textFill="WHITE" viewOrder="-Infinity">
+               <font>
+                  <Font name="Comic Sans MS Bold Italic" size="58.0" />
+               </font></Label>
+            <ImageView fitHeight="784.0" fitWidth="1172.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:..\CLRestaurant\src\main\assets\gameoverpane.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="520.0" layoutY="600.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:..\CLRestaurant\src\main\assets\restartbutton.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Button fx:id="restart" mnemonicParsing="false" onAction="#clickedRestart" opacity="0.0 " prefHeight="82.0" prefWidth="224.0" text="RESTART" />
+               </children>
+            </Pane>
          </children>
       </Pane>
+
    </children>
 </Pane>

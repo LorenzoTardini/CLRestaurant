@@ -15,6 +15,12 @@ import java.util.Random;
 
 public class CLRController{
 
+    @FXML
+    private Pane startimgpane;
+    @FXML
+    private Pane submitimgpane;
+    @FXML
+    private Pane skipimgpane;
 
 
     @FXML
@@ -281,11 +287,12 @@ public class CLRController{
         bread1imgpane.setOpacity(0.0);
         orderbase1.setVisible(true);
         orderbase1.setImage(CLRgame.imagebread1);
-        submit.setDisable(false);
+        //submit.setDisable(false);
+        submitimgpane.setVisible(true);
     }
     @FXML
     protected void clickedBread2() {
-        if (validcreation) {
+        if (validcreation&&generatedbyuser.size()!=0){
             //bread2.setDisable(true);
             bread2imgpane.setDisable(true);
             bread2imgpane.setOpacity(0.0);
@@ -380,7 +387,8 @@ public class CLRController{
         impastoimgpane.setOpacity(0.0);
 
         //impasto.setDisable(true);
-        submit.setDisable(false);
+        //submit.setDisable(false);
+        submitimgpane.setVisible(true);
 
         orderbase1.setLayoutY(140.0);
         orderbase1.setLayoutX(-139);
@@ -396,19 +404,7 @@ public class CLRController{
 
 
 
-    @FXML
-    protected void clickedRestart(){
-        punteggiovalue=0;
-        punteggioverolabel.setVisible(false);
-        gameoverpane.setVisible(false);
-        hamburgerpane.setVisible(true);
-        pizzapane.setVisible(true);
-        controlspane.setVisible(true);
-        timer = new Timeline();
-        timerfunction();
-        timer.play();
-        clickedStart();
-    }
+
 
 
     private void orderplatefiller(int identifier) {
@@ -469,6 +465,7 @@ public class CLRController{
         if(!checkequal) {
             System.out.println("Ordine sbagliato!");
             scorecalc(false);
+            submitimgpane.setVisible(false);
             resetplate();
         }
         else{
@@ -489,9 +486,15 @@ public class CLRController{
         else{
             punteggiovalue-=generatedbyuser.size()*50;
         }
+        setscorelabel();
+        //String temp = String.format("%05d",punteggiovalue);
+        //punteggioverolabel.setText(temp);
+        //punteggioverolabel.setVisible(true);
+    }
+
+    private void setscorelabel(){
         String temp = String.format("%05d",punteggiovalue);
         punteggioverolabel.setText(temp);
-        punteggioverolabel.setVisible(true);
     }
     protected void resetplate() {
         Pane[] buttonsvector = {tomatohimgpane, baconimgpane, eggimgpane, lettuceimgpane, mushroomsimgpane, pattyimgpane, cheeseimgpane, friesimgpane,
@@ -539,6 +542,39 @@ public class CLRController{
     {
 
     }
+
+    @FXML
+    private void gameoverfunction()
+    {
+        pizzapane.setVisible(false);
+        hamburgerpane.setVisible(false);
+        controlspane.setVisible(false);
+        finalscore.setText(String.valueOf(punteggiovalue));
+        gameoverpane.setVisible(true);
+    }
+
+    @FXML
+    protected void clickedSkip(){
+        punteggiovalue-=15;
+        setscorelabel();
+        clickedStart();
+    }
+
+    @FXML
+    protected void clickedRestart(){
+        punteggiovalue=0;
+        punteggioverolabel.setText("00000");
+        //punteggioverolabel.setVisible(false);
+        gameoverpane.setVisible(false);
+        hamburgerpane.setVisible(true);
+        pizzapane.setVisible(true);
+        controlspane.setVisible(true);
+        timer = new Timeline();
+        timerfunction();
+        timer.play();
+        clickedStart();
+    }
+
     private void timerfunction(){
         for(int i=1; i<61; i++)
         {
@@ -546,11 +582,7 @@ public class CLRController{
             if(finalI==60){
                 KeyFrame kf = new KeyFrame(Duration.seconds(i),
                         ActionEvent -> {
-                            pizzapane.setVisible(false);
-                            hamburgerpane.setVisible(false);
-                            controlspane.setVisible(false);
-                            finalscore.setText(String.valueOf(punteggiovalue));
-                            gameoverpane.setVisible(true);
+                            gameoverfunction();
                         });
                 timer.getKeyFrames().add(kf);
             }
@@ -679,21 +711,28 @@ public class CLRController{
                 bubble6,
                 bubble7
         };
-        submit.setDisable(true);
+
+        validcreation=false;
+
+        skipimgpane.setVisible(true);
+        startimgpane.setVisible(false);
+
+        submitimgpane.setVisible(false);
+        //submit.setDisable(true);
         hamburgerpane.setVisible(true);
         pizzapane.setVisible(true);
         confetti.setVisible(false);
         resetplate();
         cleanup(bubbles);
 
+
         if(isfirststart) {
-            Font segments = Font.loadFont("file:..\\CLRestaurant\\src\\main\\assets\\16Segments-Basic.otf",35);
-            punteggioverolabel.setText("00000");
             timerlabel.setText("01:00");
+            punteggioverolabel.setText("00000");
+            Font segments = Font.loadFont("file:..\\CLRestaurant\\src\\main\\assets\\16Segments-Basic.otf",35);
             punteggioverolabel.setFont(segments);
             timerlabel.setFont(segments);
             trashcanimgpane.setVisible(true);
-
             timer = new Timeline();
             timerfunction();
             timer.play();
